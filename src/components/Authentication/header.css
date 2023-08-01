@@ -1,0 +1,264 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.Main-tag{
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+  font-family: sans-serif;
+  font-weight: 400;
+  background-color: #b4245d;
+  color: white;
+  align-items: center;
+}
+
+.tag-line{
+  font-size: 14px;
+  padding-left: 30px;
+  margin: 0;
+  color: white;
+}
+.link-App-review{
+  font-size: 14px;
+  margin-right : 20px;
+}
+.link-App-download{
+  font-size: 14px;
+}
+
+.button {
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.icon{
+  width: 11.75;
+  height: 20px;
+}
+
+.navbar-nav{
+  color: #b4245d;
+}
+.Section-Navbar{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e72e77;
+}
+
+.flex-container{
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  height: 51px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.navbar-brand{
+  margin-left: 25px;
+  float: left;
+  line-height: 14px;
+  margin-top: 7px;
+}
+.EventEase{
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 25px;
+  float: left;
+  color: #fff;
+  margin-left: 70px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.headline-image {
+  background: url(https://images.wedmegood.com/images/otploginsidebardesktop.png) 100% center / cover no-repeat;
+  max-width: 400px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  line-height: 60px;
+  padding: 20px;
+  min-width: 400px;
+  height: 600px;
+}
+
+.pic-and-login {
+width: 1000px;
+height: 600px;
+display: flex;
+margin-top: 30px;
+flex-direction: row;
+background: rgb(255, 255, 255);
+}
+
+.main-block-login {
+display: flex;
+width: 100%;
+height: 100%;
+flex-direction: column;
+align-items: center;
+}
+.margin{
+margin-bottom: 40px;
+}
+
+.block-for-login .form-heading {
+font-size: 28px;
+text-align: center;
+font-weight: 600;
+font-family: sans-serif;
+color: #4a4a4a;
+line-height: 26px;
+}
+
+.full-area-signin {
+display: flex;
+width: 100%;
+height: 100%;
+flex-direction: column;
+justify-content: space-between;
+}
+.upper-area-signin{
+display: flex;
+margin-left: 20px;
+margin-right: 20px;
+}
+.block-for-login{
+  width: 100%;
+  min-height: 320px;
+  padding: 30px;
+}
+.input-mail-id {
+height: 30px;
+padding: 10px 2px;
+margin-top: 20px;
+margin-bottom: unset;
+width: 100%;
+font-size: 14px;
+position: relative;
+border: 1px solid rgb(215, 215, 215);
+border-radius: 2px;
+display: flex;
+align-items: center;
+color: rgb(74, 74, 74);
+}
+
+
+.input-mail-id .icon {
+border-right: 1px solid rgb(215, 215, 215);
+padding: 0px 20px;
+display: flex;
+background-size: contain;
+background-position: 50% center;
+max-height: 26px;
+}
+
+.icon {
+max-height: 20px;
+}
+.icon, .icon-large {
+width: auto;
+vertical-align: middle;
+}
+img {
+max-width: 100%;
+}
+
+
+.input-mail-id input{
+  font-family: proxima-nova, sans-serif;
+  background: transparent;
+  width: 100%;
+  border: none;
+  padding: 0px 20px;
+}
+input{
+outline: none;
+background: none;
+}
+
+.OR{
+display: flex;
+margin-top: 40px;
+}
+.or-heading{
+padding-left: 3%; 
+padding-right: 3%;
+font-family: sans-serif;
+font-size: 14px;
+}
+
+.Continue-with-text{
+font-size: 20px;
+font-family: proxima-nova, sans-serif;
+text-align: center;
+margin-top: 25px;
+font-weight: 600;
+color: #4a4a4a;
+}
+.other-logins{
+display: flex;
+margin-top: 25px;
+justify-content: space-between;
+font-family: proxima-nova, sans-serif;
+font-size: 14px;
+font-weight: 400;
+}
+.social-icons-fb {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 2px;
+  margin-right: 20px;
+}
+.social-icons-google{
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 2px;
+}
+
+.facebook-login {
+padding-top: 16px;
+padding-bottom: 15px;
+padding-left: 15px;
+}
+.google-login{
+padding-top: 16px;
+padding-left: 15px;
+padding-bottom: 15px;
+}
+
+
+.ContinueBtn{
+margin-top: 40px;
+width: 100%;
+color: #fff;
+background-color: rgb(229 47 119);
+height: 50px;
+font-size: 20px;
+font-family: sans-serif;
+border: none;
+}
