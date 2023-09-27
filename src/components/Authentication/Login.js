@@ -4,9 +4,14 @@ import './header.css'; // Import the CSS file
 function Login(){
     const[emailOrPhone,setEmailOrPhone]=useState("");
     const [showButton, setShowButton] = useState(false);
+    const[name,SetName]=useState("");
     const handleChange= (event)=>{
         setEmailOrPhone(event.target.value);
         setShowButton(event.target.value !== "");
+    };
+
+    const handlePassword=(event)=>{
+      SetName(event.target.value);
     };
 
     return (
@@ -21,6 +26,10 @@ function Login(){
               <div class="input-mail-id">
                 <img src="Pictures/user.png" alt="" class="icon"/>
                 <input id="email-phone-field" placeholder="Enter email or mobile*" name="emailOrPhone" value={emailOrPhone} onChange={handleChange}/>
+              </div>
+              <div class="input-mail-id">
+                <img src="Pictures/user.png" alt="" class="icon"/>
+                <input id="email-phone-id" placeholder="Enter Password" name="name" value={name} onChange={handlePassword}/>
               </div>
               <button class="ContinueBtn" style={{ display: showButton ? "block" : "none" }}>Continue</button>
             </div>
