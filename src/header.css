@@ -324,3 +324,91 @@ border: none;
 
 
 
+/* CityPop Up */
+/* Center the popup container */
+.popup-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  min-height: 100vh;       /* Ensure full viewport height */
+  background-color: #4a4a4a;
+}
+
+/* Style for UpperDiv-CityPop */
+.UpperDiv-CityPop {
+  height: 450px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  width: 1000px;
+}
+
+/* Style for Search-Div */
+
+/* Style for the search input container */
+.search-input-container {
+  outline: 0.1px solid rgb(144, 144, 144);
+  margin: 25px 20px 0 0;
+  height: 50px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the icon */
+.icon {
+  color: rgb(144, 144, 144);
+  margin-left: 10px;
+}
+
+/* Style for the input */
+input[type="text"] {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  /* Add your input styles here */
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  justify-content: center; /* Equal spacing between children */
+  width: 100%; /* Ensure it spans the full width of its parent */
+  border-radius: 2px;
+}
+
+.child1,.child2,.child3,.child4{
+  flex: 1; /* Equal width for all children */
+  height: 355px; /* Adjust the height as needed */ 
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.Top-Cities,.Popular-Cities,.Other-Cities,.International-Cities{ 
+  width: 210px;
+  height: 280px; /* Just for visibility, you can change the color */
+}
+.HeadDing-City{
+  color: #e72e77;
+  font-family: "proxima-nova",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.CityName{
+  color: #4a4a4a;
+  display: block;
+  font-family: "proxima-nova",sans-serif;
+  font-size: 14px;
+  padding: 2px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

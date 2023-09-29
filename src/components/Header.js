@@ -10,7 +10,7 @@ const Header = () => {
       </div>
       <div className="header-cities" style={{height:"30px", width:"200px",backgroundColor:"white" }}>
         <div className="wedding-city" style={{marginLeft:"10px", color:"black", width:"auto", height:"auto"}}>Udaipur</div>
-
+        <i className="fa fa-caret-down h5 text-secondary v-center" style={{color:"black", alignItems:"center", alignSelf:"center", marginLeft:"auto", marginRight:"10px"}}></i>
       </div>
       <div className="navbar-right">
         <a className="button-header" href="#">
