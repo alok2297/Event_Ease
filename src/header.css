@@ -296,7 +296,7 @@ border: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 11%;
+  margin-bottom: 7.5%;
   text-align: center;
   width: 100%;
 }
@@ -400,8 +400,27 @@ input[type="text"] {
   font-size: 14px;
   padding: 2px 0px;
 }
+.Search-Vendors{
+  margin-top: 20px;
+  height: 50px;
+  background-color: #e72e77;
+  fill: #fff;
+  align-items: center;
+}
 
-
+.Find-Vendors{
+  background-color: #fff;
+  width: 750px;
+  color: #e72e77;
+  font-family: "proxima-nova",sans-serif;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 13px;
+  font-weight: 600;
+  height: 50px;
+}
 
 
 
