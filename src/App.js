@@ -11,6 +11,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const handlePop = (e) => {
+    console.log("Alok");
     setOpen(e);
   };
   return (
