@@ -269,12 +269,12 @@ border: none;
 .HeroDiv{
   position: relative;
   height: 500px;
-  width: 1343px;
+  width: 100%;
 }
 .HeroDiv img{
   object-fit: cover;
   height: 500px;
-  width: 1343px;
+  width: 100%;
 }
 .HeroSection-Img{
   position: relative;

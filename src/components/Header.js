@@ -1,17 +1,24 @@
 import React from "react";
-// import './header.css'; // Import the CSS file
 
-const Header = () => {
+const Header = (props) => {
+
+  const Vendors=["Venues","Vendors","Photos","Real Wedding","Blog","Shop"];
+
+   const handleClick=()=>{
+    console.log(true); 
+    props.OpenCityPop(true);
+  }
+
   return (
     <div>
     <nav className="Main-tag">
       <div className="navbar-left">
         <h1 className="tag-line">India's Favourite Event Organizing Platform</h1>
       </div>
-      <div className="header-cities" style={{height:"30px", width:"200px",backgroundColor:"white" }}>
+      <dniv className="header-cities" onClick={handleClick} style={{height:"30px", width:"200px",backgroundColor:"white" }}>
         <div className="wedding-city" style={{marginLeft:"10px", color:"black", width:"auto", height:"auto"}}>Udaipur</div>
         <i className="fa fa-caret-down h5 text-secondary v-center" style={{color:"black", alignItems:"center", alignSelf:"center", marginLeft:"auto", marginRight:"10px"}}></i>
-      </div>
+      </dniv>
       <div className="navbar-right">
         <a className="button-header" href="#">
           <img
@@ -37,36 +44,13 @@ const Header = () => {
             Event Ease
           </a>
         </li>
-        <li>
-          <a className="navbar-brand" href="#">
-            Venues
+        {Vendors.map((item, index) => (
+        <li key={index}>
+          <a className="navbar-brand" name={item}>
+            {item}
           </a>
         </li>
-        <li>
-          <a className="navbar-brand" href="#">
-            Vendors
-          </a>
-        </li>
-        <li>
-          <a className="navbar-brand" href="#">
-            Photos
-          </a>
-        </li>
-        <li>
-          <a className="navbar-brand" href="#">
-            Real Weddings
-          </a>
-        </li>
-        <li>
-          <a className="navbar-brand" href="#">
-            Blog
-          </a>
-        </li>
-        <li>
-          <a className="navbar-brand" href="#">
-            Shop
-          </a>
-        </li>
+      ))}
         <li>
           <a className="navbar-brand" href="#">
             E-Invites

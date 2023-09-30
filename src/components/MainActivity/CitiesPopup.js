@@ -52,6 +52,7 @@ const CitiesPopup = () => {
     { id: 38, category: "International Cities", city: "USA" },
     { id: 39, category: "International Cities", city: "Canada" }
   ];
+  
 
   return (
     <div
