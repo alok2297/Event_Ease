@@ -10,7 +10,7 @@ import { set } from "mongoose";
 function App() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
-  const ok = (e) => {
+  const handlePop = (e) => {
     setOpen(e);
   };
   return (
@@ -23,7 +23,7 @@ function App() {
       >
         <CitiesPopup />
       </Modal>
-      <Header OpenCityPop={ok} />
+      <Header OpenCityPop={handlePop} />
       <HeroSection />
     </div>
   );
