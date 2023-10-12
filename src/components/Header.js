@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import CitiesPopup from "./MainActivity/CitiesPopup";
 import Modal from "@mui/material/Modal";
 
-const Header = () => {
+const Header = (props) => {
+  const [city,setCity]=useState("Udaipur");
   const Vendors = [
     "Venues",
     "Vendors",
@@ -12,13 +13,22 @@ const Header = () => {
     "Shop",
   ];
 
-  const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     console.log(true);
-    // props.OpenCityPop(true);
-    setOpen(true); // Open the modal
+    setOpen(true);
   };
+
+  const handleCallback = (childData) => {
+    console.log(childData);
+    setOpen(false);
+    
+    props.getCity(childData);
+    setCity(childData);
+
+}
+const [open, setOpen] = React.useState(false);
+const handleClose = () => setOpen(false);
 
   return (
     <div>
@@ -42,7 +52,7 @@ const Header = () => {
               height: "auto",
             }}
           >
-            Udaipur
+           {city}
           </div>
           <i
             className="fa fa-caret-down h5 text-secondary v-center"
@@ -81,11 +91,11 @@ const Header = () => {
             backgroundColor: "transparent",
           }}
           open={open}
-          onClose={() => setOpen(false)}
+          onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <CitiesPopup />
+          <CitiesPopup parentCallback={handleCallback} />
         </Modal>
       </nav>
       <ul className="flex-container Section-Navbar">
