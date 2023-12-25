@@ -1,11 +1,12 @@
 import "./header.css";
-import "./components/Header";
-import Header from "./components/Header";
-import HeroSection from "./components/MainActivity/HeroSection";
+import "./components/Header/Header";
+import Header from "./components/Header/Header";
+import HeroSection from "./components/HeroSection/HeroSection";
 import { useState } from "react";
-import PopularSlider from "./components/MainActivity/PopularSlider";
+import PopularSlider from "./components/PopularSlider/PopularSlider";
 import slides from "./LocalFile/PopularVenues.json"
-import Category from "./components/MainActivity/Category";
+import Category from "./components/Category/Category";
+import SliderTwo from "./components/SliderTwo/SliderTwo";
 
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
@@ -17,7 +18,8 @@ function App() {
     <div>
       <Header getCity={getCity} />
       <HeroSection selectedCity={selectedCity}/>
-      <PopularSlider slides={slides} swiperWidth="1200px" swiperHeight="186px" boxImgWidth="180px" boxImgHeight="120px"/>
+      <PopularSlider slides={slides} swiperWidth="1200px" swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px"/>
+      <SliderTwo/>
       <Category/>
     </div>
   );

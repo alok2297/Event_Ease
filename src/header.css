@@ -8,7 +8,7 @@ a{
   color: #fff;
 }
 
-.Main-tag{
+/* .Main-tag{
   display: flex;
   justify-content: space-between;
   height: 42px;
@@ -17,38 +17,38 @@ a{
   background-color: #b4245d;
   color: white;
   align-items: center;
-}
+} */
 
-.tag-line{
+/* .tag-line{
   font-size: 14px;
   padding-left: 30px;
   margin: 0;
   color: white;
-}
-.link-App-review{
+} */
+/* .link-App-review{
   font-size: 14px;
   margin-right : 20px;
 }
 .link-App-download{
   font-size: 14px;
-}
+} */
 
-.button-header {
+/* .button-header {
   padding: 10px 20px;
   color: #fff;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-}
+} */
 .icon{
   width: 11.75;
   margin-right: 5px;
   height: 20px;
 }
 
-.navbar-nav{
+/* .navbar-nav{
   color: #b4245d;
-}
-.Section-Navbar{
+} */
+/* .Section-Navbar{
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@ a{
   padding: 0;
   overflow: hidden;
   background-color: #e72e77;
-}
+} */
 
 .flex-container{
   color: white;
@@ -67,14 +67,14 @@ a{
   font-weight: 400;
   text-decoration: none;
 }
-.navbar-brand{
+/* .navbar-brand{
   margin-left: 30px;
   float: left;
   display: flex;
   align-items: center;
   line-height: 14px;
-}
-.EventEase{
+} */
+/* .EventEase{
   font-size: 25px;
   font-family: sans-serif;
   font-weight: 700;
@@ -84,7 +84,7 @@ a{
   margin-left: 29px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 .headline-image {
   background: url(https://images.wedmegood.com/images/otploginsidebardesktop.png) 100% center / cover no-repeat;
@@ -266,7 +266,7 @@ border: none;
 }
 
 /* HeroSection */
-.HeroDiv{
+/* .HeroDiv{
   position: relative;
   height: 500px;
   width: 100%;
@@ -320,7 +320,7 @@ border: none;
   align-self: center;
   font-family: "proxima-nova",sans-serif;
   font-size: 14px;
-}
+} */
 
 
 
@@ -424,7 +424,7 @@ input[type="text"] {
 
 
 /* Swiper */
-.PopuplarText{
+/* .PopuplarText{
   font-size: 22px;
   font-weight: 600;
   font-family: proxima-nova,sans-serif;
@@ -478,12 +478,12 @@ a{
 
 .margin-r-5{
   margin-right: 5px;
-}
+} */
 
 /* Catergory */
 
 
-.Wedding_Categories{
+/* .Wedding_Categories{
   margin-top: 110px;
   margin-left: 5%;
   width: 90%;
@@ -582,7 +582,7 @@ a{
   font-family: proxima-nova,sans-serif;
   font-weight: 400;
   color: #4a4a4a;
-}
+} */
 
 
 

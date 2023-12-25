@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import CitiesPopup from "./MainActivity/CitiesPopup";
+import CitiesPopup from "../CitiesPopUp/CitiesPopup";
+import './Header.css';
 import Modal from "@mui/material/Modal";
 
 const Header = (props) => {
   const [city,setCity]=useState("Udaipur");
+  const [rotate, setRotate] = useState(0); // usefor rotation
   const Vendors = [
     "Venues",
     "Vendors",
@@ -13,22 +15,25 @@ const Header = (props) => {
     "Shop",
   ];
 
-
   const handleClick = () => {
     console.log(true);
+    setRotate(rotate===0?1:0);
     setOpen(true);
   };
 
   const handleCallback = (childData) => {
     console.log(childData);
     setOpen(false);
-    
+    setRotate(0);
     props.getCity(childData);
     setCity(childData);
 
 }
 const [open, setOpen] = React.useState(false);
-const handleClose = () => setOpen(false);
+const handleClose = () => {
+  setOpen(false);
+  setRotate(0);
+}
 
   return (
     <div>
@@ -54,16 +59,17 @@ const handleClose = () => setOpen(false);
           >
            {city}
           </div>
-          <i
-            className="fa fa-caret-down h5 text-secondary v-center"
-            style={{
-              color: "black",
-              alignItems: "center",
-              alignSelf: "center",
-              marginLeft: "auto",
-              marginRight: "10px",
-            }}
-          ></i>
+        <i
+          className="fa fa-caret-down h5 text-secondary v-center"
+          style={{
+            color: "black",
+            alignItems: "center",
+            alignSelf: "center",
+            marginLeft: "auto",
+            marginRight: "10px",
+            transform: `rotate(${rotate * 180}deg)`,
+          }}
+        ></i>
         </div>
         <div className="navbar-right">
           <a className="button-header" href="#">
@@ -115,12 +121,13 @@ const handleClose = () => setOpen(false);
           <a className="navbar-brand" href="#">
             E-Invites
             <img
-              src="https://image.wedmegood.com/resized/30X/images/deals/store-new-badges.png"
+              src="https://image.wedmegood.com/resized/30X/images/deals/store-new-badges.png" 
               style={{ marginLeft: 5 }}
               alt=""
             />
           </a>
         </li>
+        <div className="loginBtn"><span>Log In</span></div>
       </ul>
     </div>
   );

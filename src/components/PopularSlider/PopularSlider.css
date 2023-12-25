@@ -1,0 +1,56 @@
+.PopuplarText{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: proxima-nova,sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .swiper{
+    display: flex;
+    margin: 0 auto;
+  }
+  .box-of-image{
+    display: flex;
+  }
+  .box-of-image img{
+    border-radius: 5px;
+  } 
+  .text-main{
+    margin-left: 20px;
+    width: 220px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+  }
+  .star-hotels{
+    size: 20px;
+    padding: 5px 2px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    color: #4a4a4a;;
+  }
+  .city-for-hotels{
+    color: #e72e77;
+    line-height: 21px;
+    font-family: sans-serif;
+    margin-right: 60px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .city{
+    padding: 5px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  .margin-r-5{
+    margin-right: 5px;
+  }

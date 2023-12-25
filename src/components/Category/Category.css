@@ -1,0 +1,103 @@
+.Wedding_Categories{
+    margin-top: 110px;
+    margin-left: 5%;
+    max-width: 1200px;
+    max-height: 390px;
+    display: flex;
+  }
+  
+  .Wedding-Categories{
+    font-family: proxima-nova,sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a4a4a;
+  }
+  .All-Categories{
+    font-family: proxima-nova,sans-serif;
+    margin-left: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    color: #e72e77;
+  }
+  
+  .Six_Categories{
+    max-width: 1200px;
+    max-height: 390px;
+    height: auto;
+    margin-left: 5%;
+  }
+  
+  .Upper_Two{
+    margin-top: 15px;
+    display: flex;
+  }
+  .Middle_two{
+    margin-top: 15px;
+    display: flex;
+  }
+  .Last_two{
+    margin-top: 15px;
+    display: flex;
+  }
+  
+  .First_Category{
+    background-color: rgb(216, 223, 252);
+  }
+  .Second_Category{
+    background-color: rgb(244, 213, 194);
+    margin-left: 20px;
+  }
+  .Third_Category{
+    background-color: rgb(223, 178, 173);
+  }
+  .Fourth_Category{
+    background-color: rgb(207, 205, 184);
+    margin-left: 20px;
+  }
+  
+  .Fifth_Category{
+    background-color: rgb(220, 247, 247);
+  }
+  .Six_Category{
+    background-color: rgb(229, 211, 189);
+    margin-left: 20px;
+  }
+  
+  .Common_Category{
+    width: 590px;
+    height: 120px;
+    margin-right: auto;
+    display: flex;
+  }
+  .text_div{
+    height: 120px;
+    width: 340px;
+  }
+  .image_div{
+    height: 120px;
+    width: 250px;
+  }
+  .first_image{
+    clip-path: ellipse(99% 140px at 100% 50%);
+    object-fit: cover;
+  }
+  .text_div_container{
+    width: 250px;
+    padding: 30px 25px;
+  }
+  
+  .text_div_first{
+    font-size: 22px;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 600;
+    color: #4a4a4a;
+  }
+  .text_div_second{
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+  }
+  

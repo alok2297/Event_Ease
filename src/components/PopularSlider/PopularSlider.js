@@ -1,12 +1,13 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import './PopularSlider.css';
 const PopularSlider = (props) => {
   const { slides, swiperWidth, swiperHeight,boxImgWidth,boxImgHeight} = props;
   console.log(swiperWidth);
   return (
+    <><h1 className="PopuplarText">Popular Venue Search</h1>
     <div className="swiper" style={{height:swiperHeight,maxWidth:swiperWidth}}>
-      <h1 className="PopuplarText">Popular Venue Search</h1>
       <Swiper
         spaceBetween={0}
         slidesPerView={3}
@@ -36,7 +37,7 @@ const PopularSlider = (props) => {
         </SwiperSlide>
       ))};
       </Swiper>
-    </div>
+    </div></>
   );
 };
 
