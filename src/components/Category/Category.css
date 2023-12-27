@@ -1,7 +1,7 @@
 .Wedding_Categories{
     margin-top: 110px;
     margin-left: 5%;
-    max-width: 1200px;
+    max-width: 1215px;
     max-height: 390px;
     display: flex;
   }
@@ -22,7 +22,7 @@
   }
   
   .Six_Categories{
-    max-width: 1200px;
+    max-width: 1215px;
     max-height: 390px;
     height: auto;
     margin-left: 5%;
@@ -46,14 +46,14 @@
   }
   .Second_Category{
     background-color: rgb(244, 213, 194);
-    margin-left: 20px;
+    margin-left: 33px;
   }
   .Third_Category{
     background-color: rgb(223, 178, 173);
   }
   .Fourth_Category{
     background-color: rgb(207, 205, 184);
-    margin-left: 20px;
+    margin-left: 33px;
   }
   
   .Fifth_Category{
@@ -61,7 +61,7 @@
   }
   .Six_Category{
     background-color: rgb(229, 211, 189);
-    margin-left: 20px;
+    margin-left: 33px;
   }
   
   .Common_Category{

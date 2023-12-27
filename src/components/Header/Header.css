@@ -8,6 +8,7 @@ a{
     justify-content: space-between;
     height: 42px;
     font-family: sans-serif;
+    width: 1350px;
     font-weight: 400;
     background-color: #b4245d;
     color: white;
@@ -47,6 +48,7 @@ a{
   .Section-Navbar{
     list-style-type: none;
     display: flex;
+    width: 1350px;
     align-items: center;
     margin: 0;
     padding: 0;

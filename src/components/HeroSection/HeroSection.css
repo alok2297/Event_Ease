@@ -1,12 +1,12 @@
 .HeroDiv{
     position: relative;
     height: 500px;
-    width: 100%;
+    width: 1350px;
   }
   .HeroDiv img{
     object-fit: cover;
     height: 500px;
-    width: 100%;
+    width: 1350px;
   }
   .HeroSection-Img{
     position: relative;
@@ -18,7 +18,7 @@
     font-weight: 600;
     font-family: "proxima-nova",sans-serif;
     height: 100%;
-    width: 100%;
+    width: 1350px;
   }
   
   .img-wrapper{

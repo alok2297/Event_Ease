@@ -36,7 +36,7 @@ const handleClose = () => {
 }
 
   return (
-    <div>
+    <div style={{width:"100%"}}>
       <nav className="Main-tag">
         <div className="navbar-left">
           <h1 className="tag-line">
