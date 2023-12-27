@@ -11,7 +11,7 @@ const PopularSlider = (props) => {
       <div className="Container">
         <h1 className="PopuplarText">Popular Venue Search</h1><div className="swiper" style={{ height: swiperHeight, maxWidth: swiperWidth }}>
           <Swiper
-            spaceBetween={0}
+            spaceBetween={10}
             slidesPerView={3}
           >
             {slides.map((slide) => (
