@@ -18,7 +18,7 @@ function App() {
     <div>
       <Header getCity={getCity} />
       <HeroSection selectedCity={selectedCity}/>
-      <PopularSlider slides={slides} swiperWidth="1215px" swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px"/>
+      <PopularSlider slides={slides} swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px"/>
       <SliderTwo/>
       <Category/>
     </div>
