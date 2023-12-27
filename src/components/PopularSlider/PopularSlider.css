@@ -2,10 +2,11 @@
     font-size: 22px;
     font-weight: 600;
     font-family: proxima-nova,sans-serif;
-    max-width: 1215px;
     margin: 0 auto;
-    margin-top: 50px;
     margin-bottom: 20px;
+  }
+  .Container{
+    margin-top: 24px;
   }
   .swiper{
     display: flex;

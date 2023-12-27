@@ -1,0 +1,28 @@
+.style {
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 16px;
+    margin: 32px auto;
+}
+
+@media screen and (min-width: 640px)  {
+    .style{
+        padding: 0 32px;
+        margin: 32px auto;
+    }
+}
+
+@media screen and (min-width: 768px)  {
+    .style{
+        padding: 0 40px;
+        margin: 32px auto;
+    }
+}
+
+@media screen and (min-width: 1280px)  {
+    .style{
+        padding: 0 0;
+        margin: 32px auto;
+    }
+}
