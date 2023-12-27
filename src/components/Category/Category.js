@@ -1,7 +1,6 @@
 import './Category.css';
 import { Container } from "../Elements/Container"
-
-export const Category = () => {
+const Category = () => {
     return (
         <Container children={
             <div class="">
