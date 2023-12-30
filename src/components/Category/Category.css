@@ -1,86 +1,35 @@
-.heading {
-    max-height: 390px;
+.Wedding_Categories{
     display: flex;
-  }
-  
-  .Categories{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-  .Wedding-Categories{
-    font-family: proxima-nova,sans-serif;
+    font-family: "proxima-nova",sans-serif;
     font-weight: 600;
+}
+.Wedding_Categories span{
     font-size: 22px;
     color: #4a4a4a;
-  }
-  .All-Categories{
-    font-family: proxima-nova,sans-serif;
-    margin-left: auto;
+}
+.Wedding_Categories div{
     font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
     color: #e72e77;
-  }
-  
-  
-  .Six_Categories{
-    max-width: 1215px;
-    max-height: 390px;
-    height: auto;
-    margin-left: 5%;
-  }
-  
-  .Upper_Two{
-    margin-top: 15px;
-    display: flex;
-  }
-  .Middle_two{
-    margin-top: 15px;
-    display: flex;
-  }
-  .Last_two{
-    margin-top: 15px;
-    display: flex;
-  }
-
-  .Six_Categories{
-    max-width: 1215px;
-    max-height: 390px;
-    height: auto;
-    margin-left: 5%;
-  }
-  
-  .Upper_Two{
-    margin-top: 15px;
-    display: flex;
-  }
-  .Middle_two{
-    margin-top: 15px;
-    display: flex;
-  }
-  .Last_two{
-    margin-top: 15px;
-    display: flex;
-  }
-  
-  .First_Category{
-    background-color: rgb(216, 223, 252);
-  }
-  
+    margin-left: auto;
+    text-align: center;
+}
+.image_div{
+    margin-left: auto;
+}
+.Common_Category{
+    width: 580px;
+}
+.Upper_Two,.Middle_two,.Last_two {
+  margin-top: 15px;
+  display: flex;
+}
   .Common_Category{
     height: 120px;
+    background-color: rgb(216, 223, 252);
     margin-right: auto;
     display: flex;
   }
-  .text_div{
-    height: 120px;
-  }
-  .image_div{
-    height: 120px;
-  }
-  .first_image{
+  .image_div img{
     clip-path: ellipse(99% 140px at 100% 50%);
     object-fit: cover;
     height: 100%;
@@ -88,19 +37,20 @@
   .text_div_container{
     width: 250px;
     padding: 30px 25px;
+    font-family: proxima-nova,sans-serif;
+    color: #4a4a4a;
   }
-  
+  .Second_Category,.Fourth_Category,.Six_Category{
+    margin-left: 20px;
+  }
   .text_div_first{
     font-size: 22px;
-    font-family: proxima-nova,sans-serif;
     font-weight: 600;
     color: #4a4a4a;
   }
   .text_div_second{
     font-size: 14px;
     margin-top: 5px;
-    font-family: proxima-nova,sans-serif;
     font-weight: 400;
-    color: #4a4a4a;
   }
   

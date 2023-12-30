@@ -22,7 +22,7 @@
 
 @media screen and (min-width: 1280px)  {
     .style{
-        padding: 0 0;
+        padding: 0 80px;
         margin: 32px auto;
     }
 }

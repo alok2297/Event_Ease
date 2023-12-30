@@ -1,9 +1,6 @@
 a{
     text-decoration: none;
 }
-
-.margin-r-5{
-}
 .Upper-container{
     font-family: proxima-nova,sans-serif;
     margin-top: 50px;
@@ -34,11 +31,11 @@ p{
     overflow: hidden;
     width: 240px; /* Adjust the width as needed */
     height: 260px; /* Adjust the height as needed */
+    border-radius: 5px;
   }
   
   .container-img img {
     object-fit: cover;
-    border-radius: 5px;
     width: 100%;
     height: 100%;
     transition: transform 0.7s ease;
