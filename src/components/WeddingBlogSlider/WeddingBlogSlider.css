@@ -6,6 +6,13 @@
     color: #4a4a4a;
     padding-left: 10px;
 }
+.real-wedding{
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-family: proxima-nova, sans-serif;
+    margin: 20px 0;
+}
 .slider-component-text{
     padding-left: 10px;
     display: flex;
@@ -44,26 +51,29 @@
 }
 .btn-container {
     position: absolute;
-    top: 50%;
+    top: 40%;
     bottom: 50%;
     z-index: 10;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+.prev{
+    left: -20px;
+}
+.next{
+    right: -20px;
+}
 .prev, .next {
     background-color: white;
-    height: 30px;
-    font-size:medium;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    border-color: wheat;
     padding: 5px 0px;
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.prev {
-    padding-right: 10px;
-}
-.next {
-    padding-left: 10px;
-}
+

@@ -1,62 +1,24 @@
-a{
-    text-decoration: none;
+.wrapper-slider{
+  width: 240px;
 }
-.Upper-container{
-    font-family: proxima-nova,sans-serif;
-    margin-top: 50px;
-    height: 140px;
-    color: #4a4a4a;
-}
-.Popular_Searches{
-    font-family: proxima-nova,sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    color: #4a4a4a;
-}
-.middle-container{
-    font-family: proxima-nova,sans-serif;
-    margin-top: 20px;
-    height: 300px;
-    color: #4a4a4a;
-}
-p{
-    font-size: 15px;
-    align-content: center start;
+.wrapper-slider div{
+  width: 100%;
+  height: auto;
 }
 
-  .container-img {
-    position: relative;
-    overflow: hidden;
-    width: 240px; /* Adjust the width as needed */
-    height: 260px; /* Adjust the height as needed */
-    border-radius: 5px;
-  }
-  
-  .container-img img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.7s ease;
-  }
-  
-  .container-img:hover img {
-    transform: scale(1.3); /* Adjust the scale factor as needed for the desired zoom level */
-  }
-  
-  .container-img a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .middle-wrapper {
-    overflow-x: auto;
-    overflow-y: hidden;
-    
-  }
-  .middle-wrapper::-webkit-scrollbar { 
-    display: none;
+.wrapper-image{
+  width: 100%;
+  border-radius: 5px;
+  height: 260px;
 }
-  .each-slide {
-    flex-shrink: 1;
-    margin-right: 20px;
-  }
+.wrapper-image img{
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  height: 260px;
+}
+.weding-text{
+  font-size: medium;
+  font-family: proxima-nova, sans-serif;
+  
+}

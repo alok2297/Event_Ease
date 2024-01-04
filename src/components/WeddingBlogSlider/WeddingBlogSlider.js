@@ -22,6 +22,7 @@ const WeddingBlogSlider = () => {
     <Container
       children={
         <div className="Container">
+          <p className="real-wedding">Real Wedding Stories</p>
           <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -93,11 +94,10 @@ const WeddingBlogSlider = () => {
           </Swiper>
           <div className="btn-container">
             <button className="prev" onClick={prevHandler}>
-              <Iconify width={20} height={20} icon="mdi:chevron-left"></Iconify>
-              Prev
+              <Iconify width={40} height={40} color={"#4a4a4a"} icon="mdi:chevron-left"></Iconify>
             </button>
-            <button className="next" onClick={nextHandler}>Next
-              <Iconify width={20} height={20} icon="mdi:chevron-right"></Iconify>
+            <button className="next" onClick={nextHandler}>
+              <Iconify width={40} height={40} color={"#4a4a4a"} icon="mdi:chevron-right"></Iconify>
             </button>
           </div>
         </div>
