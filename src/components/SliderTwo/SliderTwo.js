@@ -43,7 +43,7 @@ const SliderTwo = ()=>{
          modules={[Navigation, Pagination, Scrollbar, A11y]}
          spaceBetween={10}
          slidesPerView={5}
-         speed={2000}
+         speed={1000}
          onSwiper={(swiper) => setSwiperRef(swiper)}
          breakpoints={breakPoints}
        >
