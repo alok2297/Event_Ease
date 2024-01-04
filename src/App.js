@@ -10,6 +10,7 @@ import SliderTwo from "./components/SliderTwo/SliderTwo";
 import WMGInHouse from "./components/WMG/WMGInHouse";
 import NewsLetter from "./components/NewsLetter/NewsLetter";
 import WeddingBlogSlider from "./components/WeddingBlogSlider/WeddingBlogSlider";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
@@ -26,7 +27,11 @@ function App() {
       <Category/>
       <WMGInHouse/>
       <NewsLetter/>
-      <WeddingBlogSlider/>
+      <WeddingBlogSlider slideView = "3" wedWidth = "390px"/>
+      <SliderTwo/>
+      <WeddingBlogSlider slideView = "4" wedWidth = "344px"/>
+      <WeddingBlogSlider  slideView = "3" wedWidth = "390px"/>
+      <Footer/>
     </div>
   );
 }

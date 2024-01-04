@@ -24,7 +24,6 @@
 .wed-img{
     position: relative;
     overflow: hidden;
-    height: 220px;
     border-radius: 5px;
 }
 .slider-component:hover img {

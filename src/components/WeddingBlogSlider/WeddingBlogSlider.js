@@ -8,8 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const WeddingBlogSlider = () => {
+const WeddingBlogSlider = (props) => {
   const [swiperRef, setSwiperRef] = useState(null);
+  const {slideView,wedWidth} = props;
 
   const prevHandler = () => {
     swiperRef.slidePrev();
@@ -27,14 +28,29 @@ const WeddingBlogSlider = () => {
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={slideView}
             speed={2000}
             onSwiper={(swiper) => setSwiperRef(swiper)}
           >
             <SwiperSlide>
               <div className="slider-component">
                 <div>
-                  <div className="wed-img">
+                  <div className="wed-img" style={{width:wedWidth}}>
+                    <img
+                      src="https://image.wedmegood.com/resized/450X/uploads/project/269324/1699645882_IMG_E2632.JPG?crop=0,89,1170,658"
+                      alt=""
+                    />
+                  </div>
+                  <div className="wed-text">Vedika and Rishi</div>
+                </div>
+                <span className="slider-component-text">Viral Mumbai Wedding with With Glam Outfits & Opulence</span>
+                <div className="date">15 December 2023</div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slider-component">
+                <div>
+                  <div className="wed-img" style={{width:wedWidth}}>
                     <img
                       src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
                       alt=""
@@ -49,7 +65,7 @@ const WeddingBlogSlider = () => {
             <SwiperSlide>
               <div className="slider-component">
                 <div>
-                  <div className="wed-img">
+                  <div className="wed-img" style={{width:wedWidth}}>
                     <img
                       src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
                       alt=""
@@ -64,7 +80,7 @@ const WeddingBlogSlider = () => {
             <SwiperSlide>
               <div className="slider-component">
                 <div>
-                  <div className="wed-img">
+                  <div className="wed-img" style={{width:wedWidth}}>
                     <img
                       src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
                       alt=""
@@ -79,7 +95,22 @@ const WeddingBlogSlider = () => {
             <SwiperSlide>
               <div className="slider-component">
                 <div>
-                  <div className="wed-img">
+                  <div className="wed-img" style={{width:wedWidth}}>
+                    <img
+                      src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
+                      alt=""
+                    />
+                  </div>
+                  <div className="wed-text">Vedika and Rishi</div>
+                </div>
+                <span className="slider-component-text">Viral Mumbai Wedding with With Glam Outfits & Opulence</span>
+                <div className="date">15 December 2023</div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slider-component">
+                <div>
+                  <div className="wed-img" style={{width:wedWidth}}>
                     <img
                       src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
                       alt=""
