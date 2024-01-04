@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./WeddingBlogSlider.css";
 import { Container } from "../Elements/Container";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
+import { Iconify } from "../Elements/Icon";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -29,7 +29,6 @@ const WeddingBlogSlider = () => {
             slidesPerView={3}
             speed={2000}
             onSwiper={(swiper) => setSwiperRef(swiper)}
-            onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
               <div className="slider-component">
@@ -92,8 +91,15 @@ const WeddingBlogSlider = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          <button className="prev" onClick={prevHandler}>Prev</button>
-          <button className="next" onClick={nextHandler}>Next</button>
+          <div className="btn-container">
+            <button className="prev" onClick={prevHandler}>
+              <Iconify width={20} height={20} icon="mdi:chevron-left"></Iconify>
+              Prev
+            </button>
+            <button className="next" onClick={nextHandler}>Next
+              <Iconify width={20} height={20} icon="mdi:chevron-right"></Iconify>
+            </button>
+          </div>
         </div>
       }
     />

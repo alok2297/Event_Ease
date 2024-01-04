@@ -8,6 +8,10 @@
     height: 500px;
 
   }
+  .HeroSection-div {
+    color: #ffffff;
+    font-family: sans-serif;
+  }
   .HeroSection-div img{
     position: relative;
     display: flex;
