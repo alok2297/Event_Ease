@@ -22,3 +22,25 @@
   font-family: proxima-nova, sans-serif;
   
 }
+.slider-container {
+  position: relative;
+}
+.btn-container {
+  position: absolute;
+  top: 40%;
+  bottom: 50%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  align-items: center;
+}
+.swiper-slide {
+  min-width: fit-content;
+  height: auto;
+}
