@@ -8,15 +8,10 @@ import Category from "../components/Category/Category";
 import SliderTwo from "../components/SliderTwo/SliderTwo";
 import WMGInHouse from "../components/WMG/WMGInHouse";
 
-const HomePage = () => {
-  const [selectedCity, setSelectedCity] = useState("Delhi NCR");
-  const getCity = (city) =>{
-    console.log(city , "App data");
-    setSelectedCity(city);
-  }
+const HomePage = (props) => {
   return (
     <div>
-      <HeroSection selectedCity={selectedCity}/>
+      <HeroSection selectedCity={props.city}/>
       <PopularSlider slides={slides} swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px"/>
       <SliderTwo/>
       <Category/>
