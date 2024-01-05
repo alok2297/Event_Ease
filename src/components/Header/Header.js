@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CitiesPopup from "../CitiesPopUp/CitiesPopup";
 import './Header.css';
 import Modal from "@mui/material/Modal";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const [city,setCity]=useState("Udaipur");
@@ -127,7 +128,7 @@ const handleClose = () => {
             />
           </a>
         </li>
-        <div className="loginBtn"><span>Log In</span></div>
+        <Link to='/login'><div className="loginBtn" ><span>Log In</span></div></Link>
       </ul>
     </div>
   );
