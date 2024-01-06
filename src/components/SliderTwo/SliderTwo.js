@@ -37,7 +37,7 @@ const SliderTwo = ()=>{
     },
   };
    return <Container children={
-        <><div class="real-wedding">Popular Searchers</div><div className="slider-container">
+        <><div className="real-wedding">Popular Searchers</div><div className="slider-container">
        <Swiper
          // install Swiper modules
          modules={[Navigation, Pagination, Scrollbar, A11y]}

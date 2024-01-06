@@ -3,9 +3,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import './PopularSlider.css';
 import { Container } from "../Elements/Container"
+import { useNavigate } from "react-router-dom";
+
 const PopularSlider = (props) => {
   const { slides, swiperWidth, swiperHeight, boxImgWidth, boxImgHeight } = props;
+  const navigate = useNavigate();
 
+  const handleClicK =(event) => {
+    event.preventDefault();
+    navigate("/vendor")
+  }
   return (
     <Container children={
       <div className="Container">
@@ -15,7 +22,7 @@ const PopularSlider = (props) => {
             slidesPerView={3}
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id} className="swiper">
+              <SwiperSlide key={slide.id} className="swiper" onClick={handleClicK}>
                 <div className="box-of-image">
                   <a href="$">
                     <img
@@ -25,7 +32,7 @@ const PopularSlider = (props) => {
                   </a>
                   <div className="text-main">
                     <a href="$">
-                      <div class="star-hotels">{slide.title}</div>
+                      <div className="star-hotels">{slide.title}</div>
                     </a>
                     <div className="city">
                       <p className="city-for-hotels">{Object.values(slide.city).join(' | ')}</p>

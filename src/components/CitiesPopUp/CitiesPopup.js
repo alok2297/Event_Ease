@@ -72,7 +72,7 @@ const CitiesPopup = (props) => {
           </div>
         </div>
         <div className="container">
-          <div class="child1">
+          <div className="child1">
             <div className="Top-Cities">
               <a className="HeadDing-City" href="#">
                 Top Cities
@@ -92,7 +92,7 @@ const CitiesPopup = (props) => {
               </div>
             </div>
           </div>
-          <div class="child2">
+          <div className="child2">
             <div className="Popular-Cities">
               <a className="HeadDing-City" href="#">
                 Popular Cities
@@ -112,7 +112,7 @@ const CitiesPopup = (props) => {
               </div>
             </div>
           </div>
-          <div class="child3">
+          <div className="child3">
             <div className="Other-Cities">
               <a className="HeadDing-City" href="#">
                 Other Cities
@@ -133,7 +133,7 @@ const CitiesPopup = (props) => {
               
             </div>
           </div>
-          <div class="child4">
+          <div className="child4">
             <div className="International-Cities">
               <a className="HeadDing-City" href="#">
                 International Cities

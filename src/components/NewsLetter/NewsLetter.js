@@ -46,9 +46,9 @@ const NewsLetter = () => {
                 </div>
               </div>
               <div className='wrapper-right'>
-                <div class="h-100 sc-hmyDHa dpBVyf">
+                <div className="h-100 sc-hmyDHa dpBVyf">
                   <span>
-                    <img src="https://image.wedmegood.com/resized/500X/images/banner/download_app.jpg" alt="download-app" class="w-100 h-100 img" />
+                    <img src="https://image.wedmegood.com/resized/500X/images/banner/download_app.jpg" alt="download-app" className="w-100 h-100 img" />
                   </span>
                 </div>
               </div>

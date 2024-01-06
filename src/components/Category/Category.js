@@ -5,88 +5,88 @@ import { Iconify } from "../Elements/Icon";
 const Category = () => {
     return (
         <Container children={
-            <div class="">
-                <div class="heading">
-                    <div class="Wedding-Categories">Wedding Categories</div>
-                    <div class="All-Categories">View all Categories
+            <div className="">
+                <div className="heading">
+                    <div className="Wedding-Categories">Wedding Categories</div>
+                    <div className="All-Categories">View all Categories
                         <Iconify width={20} height={20} icon="mdi:chevron-right"></Iconify>
                     </div>
                 </div>
-                <div class="Categories">
-                    <div class="First_Category Common_Category">
-                        <div class="text_div">
-                            <div class="text_div_container">
-                                <div class="text_div_first">Venues</div>
-                                <div class="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                <div className="Categories">
+                    <div className="First_Category Common_Category">
+                        <div className="text_div">
+                            <div className="text_div_container">
+                                <div className="text_div_first">Venues</div>
+                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
                             </div>
                         </div>
-                        <div class="image_div">
-                            <img class="first_image"
+                        <div className="image_div">
+                            <img className="first_image"
                                 src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
                                 alt="categoryImg" />
                         </div>
                     </div>
-                    <div class="First_Category Common_Category">
-                        <div class="text_div">
-                            <div class="text_div_container">
-                                <div class="text_div_first">Venues</div>
-                                <div class="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                    <div className="First_Category Common_Category">
+                        <div className="text_div">
+                            <div className="text_div_container">
+                                <div className="text_div_first">Venues</div>
+                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
                             </div>
                         </div>
-                        <div class="image_div">
-                            <img class="first_image"
+                        <div className="image_div">
+                            <img className="first_image"
                                 src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
                                 alt="categoryImg" />
                         </div>
                     </div>
-                    <div class="First_Category Common_Category">
-                        <div class="text_div">
-                            <div class="text_div_container">
-                                <div class="text_div_first">Venues</div>
-                                <div class="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                    <div className="First_Category Common_Category">
+                        <div className="text_div">
+                            <div className="text_div_container">
+                                <div className="text_div_first">Venues</div>
+                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
                             </div>
                         </div>
-                        <div class="image_div">
-                            <img class="first_image"
+                        <div className="image_div">
+                            <img className="first_image"
                                 src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
                                 alt="categoryImg" />
                         </div>
                     </div>
-                    <div class="First_Category Common_Category">
-                        <div class="text_div">
-                            <div class="text_div_container">
-                                <div class="text_div_first">Venues</div>
-                                <div class="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                    <div className="First_Category Common_Category">
+                        <div className="text_div">
+                            <div className="text_div_container">
+                                <div className="text_div_first">Venues</div>
+                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
                             </div>
                         </div>
-                        <div class="image_div">
-                            <img class="first_image"
+                        <div className="image_div">
+                            <img className="first_image"
                                 src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
                                 alt="categoryImg" />
                         </div>
                     </div>
-                    <div class="First_Category Common_Category">
-                        <div class="text_div">
-                            <div class="text_div_container">
-                                <div class="text_div_first">Venues</div>
-                                <div class="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                    <div className="First_Category Common_Category">
+                        <div className="text_div">
+                            <div className="text_div_container">
+                                <div className="text_div_first">Venues</div>
+                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
                             </div>
                         </div>
-                        <div class="image_div">
-                            <img class="first_image"
+                        <div className="image_div">
+                            <img className="first_image"
                                 src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
                                 alt="categoryImg" />
                         </div>
                     </div>
-                    <div class="First_Category Common_Category">
-                        <div class="text_div">
-                            <div class="text_div_container">
-                                <div class="text_div_first">Venues</div>
-                                <div class="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                    <div className="First_Category Common_Category">
+                        <div className="text_div">
+                            <div className="text_div_container">
+                                <div className="text_div_first">Venues</div>
+                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
                             </div>
                         </div>
-                        <div class="image_div">
-                            <img class="first_image"
+                        <div className="image_div">
+                            <img className="first_image"
                                 src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
                                 alt="categoryImg" />
                         </div>
