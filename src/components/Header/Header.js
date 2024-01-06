@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const [city,setCity]=useState("Udaipur");
+  const [city,setCity]=useState("Delhi NCR");
   const [rotate, setRotate] = useState(0); // usefor rotation
   const Vendors = [
     "Venues",
@@ -128,7 +128,7 @@ const handleClose = () => {
             />
           </a>
         </li>
-        <Link to='/login'><div className="loginBtn" ><span>Log In</span></div></Link>
+        <Link to='/login' style={{marginLeft:"auto", marginRight:"35px"}}><div className="loginBtn" ><span>Log In</span></div></Link>
       </ul>
     </div>
   );

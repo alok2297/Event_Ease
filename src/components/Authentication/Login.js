@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../header.css';
+
 function Login(){
     const[emailOrPhone,setEmailOrPhone]=useState("");
     const [showButton, setShowButton] = useState(false);
