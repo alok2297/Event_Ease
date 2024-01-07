@@ -1,4 +1,4 @@
-a{
+.Main-tag a{
     text-decoration: none;
     color: #fff;
   }
@@ -70,6 +70,7 @@ a{
     display: flex;
     align-items: center;
     line-height: 14px;
+    color: #ffffff;
   }
   .loginBtn {
     background-color: #b4245d;

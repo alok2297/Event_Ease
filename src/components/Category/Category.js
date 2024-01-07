@@ -2,10 +2,23 @@ import './Category.css';
 import { Container } from "../Elements/Container"
 import { Iconify } from "../Elements/Icon";
 import WeddingCategory from '../../LocalFile/WeddingCategory.json';
+import { Breadcrumbs } from "../Elements/Breadcrumbs";
+
 const Category = () => {
+    const links = [
+        {
+            path: "/",
+            name: "home"
+        },
+        {
+            path: "/vendor",
+            name: "vendor"
+        }
+    ]
     return (
         <Container children={
             <div className="">
+                <Breadcrumbs links={links}></Breadcrumbs>
                 <div className="heading">
                     <div className="Wedding-Categories">Wedding Categories</div>
                     <div className="All-Categories">View all Categories

@@ -1,0 +1,17 @@
+nav {
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style-type: none;
+    text-transform: capitalize;
+}
+nav ul li a{
+    color: #909090;
+}
+nav ul li span{
+    padding: 0 4px;
+}
