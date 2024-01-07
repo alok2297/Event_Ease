@@ -1,7 +1,7 @@
 import './Category.css';
 import { Container } from "../Elements/Container"
 import { Iconify } from "../Elements/Icon";
-
+import WeddingCategory from '../../LocalFile/WeddingCategory.json';
 const Category = () => {
     return (
         <Container children={
@@ -13,84 +13,21 @@ const Category = () => {
                     </div>
                 </div>
                 <div className="Categories">
-                    <div className="First_Category Common_Category">
+                    {WeddingCategory.map((item)=>(
+                        <div className="First_Category Common_Category" key={item.id} style={{backgroundColor:item.color}}>
                         <div className="text_div">
                             <div className="text_div_container">
-                                <div className="text_div_first">Venues</div>
-                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
+                                <div className="text_div_first">{item.title}</div>
+                                <div className="text_div_second">{item.subtitle}</div>
                             </div>
                         </div>
                         <div className="image_div">
                             <img className="first_image"
-                                src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
+                                src={item.imgUrl}
                                 alt="categoryImg" />
                         </div>
                     </div>
-                    <div className="First_Category Common_Category">
-                        <div className="text_div">
-                            <div className="text_div_container">
-                                <div className="text_div_first">Venues</div>
-                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
-                            </div>
-                        </div>
-                        <div className="image_div">
-                            <img className="first_image"
-                                src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
-                                alt="categoryImg" />
-                        </div>
-                    </div>
-                    <div className="First_Category Common_Category">
-                        <div className="text_div">
-                            <div className="text_div_container">
-                                <div className="text_div_first">Venues</div>
-                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
-                            </div>
-                        </div>
-                        <div className="image_div">
-                            <img className="first_image"
-                                src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
-                                alt="categoryImg" />
-                        </div>
-                    </div>
-                    <div className="First_Category Common_Category">
-                        <div className="text_div">
-                            <div className="text_div_container">
-                                <div className="text_div_first">Venues</div>
-                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
-                            </div>
-                        </div>
-                        <div className="image_div">
-                            <img className="first_image"
-                                src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
-                                alt="categoryImg" />
-                        </div>
-                    </div>
-                    <div className="First_Category Common_Category">
-                        <div className="text_div">
-                            <div className="text_div_container">
-                                <div className="text_div_first">Venues</div>
-                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
-                            </div>
-                        </div>
-                        <div className="image_div">
-                            <img className="first_image"
-                                src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
-                                alt="categoryImg" />
-                        </div>
-                    </div>
-                    <div className="First_Category Common_Category">
-                        <div className="text_div">
-                            <div className="text_div_container">
-                                <div className="text_div_first">Venues</div>
-                                <div className="text_div_second">Banquet Halls, Lawns/Farmhouses,R..</div>
-                            </div>
-                        </div>
-                        <div className="image_div">
-                            <img className="first_image"
-                                src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg"
-                                alt="categoryImg" />
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         }>
