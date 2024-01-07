@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import './HeroSection.css';
 function HeroSection(props) {
   return (

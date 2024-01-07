@@ -107,7 +107,7 @@ const handleClose = () => {
       </nav>
       <ul className="flex-container Section-Navbar">
         <li>
-          <a className="EventEase" href="#">
+          <a className="EventEase" href="/">
             Event Ease
           </a>
         </li>

@@ -72,7 +72,7 @@ const Venue = () => {
                         color={"#4a4a4a"}
                         icon="mdi:rupee"
                       />
-                      <p>2500</p>
+                      <div><p>2500</p></div>
                       <div><span>per plate</span></div>
                     </div>
                   </div>

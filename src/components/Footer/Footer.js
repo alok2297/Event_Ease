@@ -76,15 +76,7 @@ const Footer = () => {
             </div>
             <div className='footer' style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr"}}>
                 <div className='footer1'>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                </div>
-                <div className='footer2'>
-                   <p>Start Planning</p>
+                   <p style={{fontWeight:"600",fontSize:"15px"}}>Starting Planning</p>
                    <p>Start Planning</p>
                    <p>Start Planning</p>
                    <p>Start Planning</p>
@@ -92,15 +84,7 @@ const Footer = () => {
                    <p>Start Planning</p>
                 </div>
                 <div className='footer2'>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                </div>
-                <div className='footer2'>
-                   <p>Start Planning</p>
+                   <p style={{fontWeight:"600",fontSize:"15px"}}>Wedding Ideas</p>
                    <p>Start Planning</p>
                    <p>Start Planning</p>
                    <p>Start Planning</p>
@@ -108,7 +92,23 @@ const Footer = () => {
                    <p>Start Planning</p>
                 </div>
                 <div className='footer2'>
+                   <p style={{fontWeight:"600",fontSize:"15px"}}>Photo Gallery</p>
                    <p>Start Planning</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                </div>
+                <div className='footer2'>
+                   <p style={{fontWeight:"600",fontSize:"15px"}}>Home</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                   <p>Start Planning</p>
+                </div>
+                <div className='footer2'>
+                   <p style={{fontWeight:"600",fontSize:"15px"}}>Video Invitation Maker</p>
                    <p>Start Planning</p>
                    <p>Start Planning</p>
                    <p>Start Planning</p>
