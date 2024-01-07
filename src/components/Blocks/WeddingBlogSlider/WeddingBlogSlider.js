@@ -37,7 +37,7 @@ const WeddingBlogSlider = (props) => {
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
                     <img
-                      src="https://image.wedmegood.com/resized/450X/uploads/project/269324/1699645882_IMG_E2632.JPG?crop=0,89,1170,658"
+                      src="https://image.wedmegood.com/resized/450X/uploads/images/f9f4888059434ffdb8d71e7eeed02414realwedding/IMG-1482.JPG?crop=203,264,1619,911"
                       alt=""
                     />
                   </div>
@@ -52,7 +52,7 @@ const WeddingBlogSlider = (props) => {
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
                     <img
-                      src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
+                      src="https://image.wedmegood.com/resized/450X/uploads/images/a6110dc2258140719874a88633b963farealwedding/ISHITAMAGUN-33.JPG?crop=416,422,1619,911"
                       alt=""
                     />
                   </div>
@@ -67,7 +67,7 @@ const WeddingBlogSlider = (props) => {
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
                     <img
-                      src="https://image.wedmegood.com/resized/450X/uploads/images/c8fe80721f0e491bb7ae246f01610cearealwedding/IMG_2396.JPG?crop=238,273,1519,854"
+                      src="https://image.wedmegood.com/resized/450X/uploads/images/ed1826b25af54788933394ed219cce0erealwedding/BrideGettingReady_PAR09279.jpg?crop=407,84,1623,913"
                       alt=""
                     />
                   </div>

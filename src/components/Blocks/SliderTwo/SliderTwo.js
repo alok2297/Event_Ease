@@ -52,7 +52,19 @@ const SliderTwo = ()=>{
              <div>
                <div className="wrapper-image">
                  <img
-                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg"
+                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg"
+                   alt="" />
+               </div>
+               <div className="weding-text">Vedika and Rishi</div>
+             </div>
+           </div>
+         </SwiperSlide>
+         <SwiperSlide>
+           <div className="wrapper-slider">
+             <div>
+               <div className="wrapper-image">
+                 <img
+                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/2/mua.jpg"
                    alt="" />
                </div>
                <div className="weding-text">Vedika and Rishi</div>
@@ -76,7 +88,7 @@ const SliderTwo = ()=>{
              <div>
                <div className="wrapper-image">
                  <img
-                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg"
+                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/6/groom-wear.jpg"
                    alt="" />
                </div>
                <div className="weding-text">Vedika and Rishi</div>
@@ -88,19 +100,7 @@ const SliderTwo = ()=>{
              <div>
                <div className="wrapper-image">
                  <img
-                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg"
-                   alt="" />
-               </div>
-               <div className="weding-text">Vedika and Rishi</div>
-             </div>
-           </div>
-         </SwiperSlide>
-         <SwiperSlide>
-           <div className="wrapper-slider">
-             <div>
-               <div className="wrapper-image">
-                 <img
-                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg"
+                   src="https://image.wedmegood.com/resized/300X/uploads/banner_image/8/decorators.jpg"
                    alt="" />
                </div>
                <div className="weding-text">Vedika and Rishi</div>
