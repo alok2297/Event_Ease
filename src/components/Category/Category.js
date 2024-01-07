@@ -26,7 +26,7 @@ const Category = () => {
                     </div>
                 </div>
                 <div className="Categories">
-                    {WeddingCategory.map((item)=>(
+                    {WeddingCategory.slice(8).map((item)=>(
                         <div className="First_Category Common_Category" key={item.id} style={{backgroundColor:item.color}}>
                         <div className="text_div">
                             <div className="text_div_container">
