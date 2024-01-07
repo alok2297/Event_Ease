@@ -1,7 +1,7 @@
 import React from 'react'
-import Category from '../components/Category/Category'
-import SliderTwo from '../components/SliderTwo/SliderTwo'
-import WeddingBlogSlider from '../components/WeddingBlogSlider/WeddingBlogSlider'
+import Category from '../components/Blocks/Category/Category'
+import SliderTwo from '../components/Blocks/SliderTwo/SliderTwo'
+import WeddingBlogSlider from '../components/Blocks/WeddingBlogSlider/WeddingBlogSlider'
 
 const Vendors = () => {
   return (

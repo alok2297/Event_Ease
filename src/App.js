@@ -1,12 +1,12 @@
 import "./header.css";
-import "./components/Header/Header";
-import Header from "./components/Header/Header";
+import "./components/Blocks/Header/Header";
+import Header from "./components/Blocks/Header/Header";
 import { useState } from "react";
-import Login from "./components/Authentication/Login";
-import Footer from "./components/Footer/Footer";
+import Login from "./components/Blocks/Authentication/Login";
+import Footer from "./components/Blocks/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import Venue from './components/Venue/Venue'
+import Venue from './components/Blocks/Venue/Venue'
 import Vendors from "./Pages/Vendors";
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");

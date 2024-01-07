@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./WeddingBlogSlider.css";
-import { Container } from "../Elements/Container";
+import { Container } from "../../Elements/Container";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Iconify } from "../Elements/Icon";
+import { Iconify } from "../../Elements/Icon";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";

@@ -1,8 +1,8 @@
 import './Category.css';
-import { Container } from "../Elements/Container"
-import { Iconify } from "../Elements/Icon";
-import WeddingCategory from '../../LocalFile/WeddingCategory.json';
-import { Breadcrumbs } from "../Elements/Breadcrumbs";
+import { Container } from "../../Elements/Container"
+import { Iconify } from "../../Elements/Icon";
+import WeddingCategory from '../../../LocalFile/WeddingCategory.json';
+import { Breadcrumbs } from "../../Elements/Breadcrumbs";
 
 const Category = () => {
     const links = [

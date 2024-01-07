@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container } from '../Elements/Container';
+import { Container } from '../../Elements/Container';
 import './Footer.css';
-import {Iconify} from '../Elements/Icon'
+import {Iconify} from '../../Elements/Icon'
 const Footer = () => {
   return (
     <Container children = {
@@ -77,43 +77,46 @@ const Footer = () => {
             <div className='footer' style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr"}}>
                 <div className='footer1'>
                    <p style={{fontWeight:"600",fontSize:"15px"}}>Starting Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
+                   <p>Search By Vendors</p>
+                   <p>Search by City</p>
+                   <p>Download our App</p>
+                   <p>Top Rated Vendors</p>
+                   <p>Destination Wedding</p>
                 </div>
                 <div className='footer2'>
                    <p style={{fontWeight:"600",fontSize:"15px"}}>Wedding Ideas</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
+                   <p>Search by City</p>
+                   <p>Wedding Inspiration Gallery</p>
+                   <p>Real Wedding</p>
+                   <p>Submit Wedding</p>
                 </div>
                 <div className='footer2'>
                    <p style={{fontWeight:"600",fontSize:"15px"}}>Photo Gallery</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
+                   <p>Brdial Wear</p>
+                   <p>Wedding Jwellary</p>
+                   <p>Bridal Makeup and Hair</p>
+                   <p>Wedding Decor</p>
+                   <p>Wedding Photography</p>
+                   <p>Groom Wear</p>
+                   <p>Invitations & Favors</p>
+                   <p>Wedding Accessories</p>
+                   <p>Mehandi Design</p>
                 </div>
                 <div className='footer2'>
                    <p style={{fontWeight:"600",fontSize:"15px"}}>Home</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
+                   <p>About EventEase</p>
+                   <p>Careers</p>
+                   <p>Contact Us</p>
+                   <p>Site Map</p>
+                   <p>Terms & Policy</p>
+                   <p>Privacy & Policy</p>
+                   <p>Cancellation Policy</p>
                 </div>
                 <div className='footer2'>
                    <p style={{fontWeight:"600",fontSize:"15px"}}>Video Invitation Maker</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
-                   <p>Start Planning</p>
+                   <p>Wedding Card Design</p>
+                   <p>Save the Dates Templates</p>
+                   <p>Invitation Video Templates</p>
                 </div>
             </div>
         </div>

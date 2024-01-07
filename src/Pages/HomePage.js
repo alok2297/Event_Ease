@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import HeroSection from "../components/HeroSection/HeroSection";
-import NewsLetter from "../components/NewsLetter/NewsLetter";
-import WeddingBlogSlider from "../components/WeddingBlogSlider/WeddingBlogSlider";
-import PopularSlider from "../components/PopularSlider/PopularSlider";
+import HeroSection from "../components/Blocks/HeroSection/HeroSection";
+import NewsLetter from "../components/Blocks/NewsLetter/NewsLetter";
+import WeddingBlogSlider from "../components/Blocks/WeddingBlogSlider/WeddingBlogSlider";
+import PopularSlider from "../components/Blocks/PopularSlider/PopularSlider";
 import slides from "../LocalFile/PopularVenues.json"
-import Category from "../components/Category/Category";
-import SliderTwo from "../components/SliderTwo/SliderTwo";
-import WMGInHouse from "../components/WMG/WMGInHouse";
+import Category from "../components/Blocks/Category/Category";
+import SliderTwo from "../components/Blocks/SliderTwo/SliderTwo";
+import WMGInHouse from "../components/Blocks/WMG/WMGInHouse";
 
 const HomePage = (props) => {
   return (

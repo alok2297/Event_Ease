@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import './PopularSlider.css';
-import { Container } from "../Elements/Container"
+import { Container } from "../../Elements/Container";
 import { useNavigate } from "react-router-dom";
 
 const PopularSlider = (props) => {

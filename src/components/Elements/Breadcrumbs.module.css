@@ -1,17 +1,17 @@
-nav {
+.bread {
     padding-bottom: 16px;
     font-size: 18px;
 }
-nav ul {
+.bread ul {
     display: flex;
 }
-nav ul li {
+.bread ul li {
     list-style-type: none;
     text-transform: capitalize;
 }
-nav ul li a{
+.bread ul li a{
     color: #909090;
 }
-nav ul li span{
+.bread ul li span{
     padding: 0 4px;
 }
