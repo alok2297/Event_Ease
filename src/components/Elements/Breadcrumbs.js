@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Breadcrumbs.module.css"
+import styles from "./Breadcrumbs.module.css";
 export const Breadcrumbs = (props) => {
   return (
-    <nav className="bread">
+    <nav className={styles.bread}>
         <ul>
             {props.links.map((link, index)=>(
                 <li key={index}>

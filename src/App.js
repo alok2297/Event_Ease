@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Venue from './components/Blocks/Venue/Venue'
 import Vendors from "./Pages/Vendors";
+import Information from "./components/Blocks/Information/Information";
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
   const getCity = (city) => {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path="/vendor" element={<Vendors />} />
           <Route path="/venue" element={<Venue />} />
+          <Route path="/info" element={<Information/>}/>
         </Routes>
         <Footer />
     </div>

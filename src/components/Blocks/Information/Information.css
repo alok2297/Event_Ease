@@ -1,0 +1,162 @@
+.left-section{
+    width: 720px;
+}
+.profile-img{
+    width: 720px;
+    z-index: 0;
+}
+.profile-img img{
+    width: 100%;
+}
+.full-info-subdiv{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.full-info{
+    margin-top: -40px;
+    background-color: #fff;
+    width: 680px;
+    box-shadow: #fff;
+    border-radius: 2px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+    margin-right: 20px;
+}
+.shop-name{
+    font-size: 22px;
+    font-family: proxima-nova, sans-serif;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+.location-info{
+    padding-top: 10px;
+    font-family: proxima-nova, sans-serif;
+    color: #4a4a4a;
+    font-size: 14px;
+}
+.address{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #4a4a4a;
+    font-family: proxima-nova, sans-serif;
+}
+.rating-info{
+    width: 80px;
+    height: 40px;
+    background-color: #5ba829;
+    color: #fff;
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.pic-like-share{
+    margin-top: 20px;
+}
+.pic-like{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 15px;
+    font-family: proxima-nova,sans-serif;
+}
+.pic-like div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-items{
+    display: flex;
+    margin-top: 50px;
+}
+.nav-items a{
+    margin-left: 20px;
+    font-family: proxima-nova,sans-serif;
+    text-decoration: none;
+    color: #4a4a4a;
+}
+.demo{
+    display: flex;
+}
+.demo-text{
+    display: flex;
+    margin-left: 10px;
+}
+.demo span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Areas-info{
+    margin-top: 30px;
+}
+.Areas-info h3{
+    padding-left: 20px;
+    font-family: proxima-nova, sans-serif;
+    color: #4a4a4a;
+}
+.seating{
+    padding-top: 20px;
+    font-family: proxima-nova, sans-serif;
+    margin-left: 20px;
+    width: 680px;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    color: #4a4a4a;
+}
+.seating-txt{
+    font-size: 11px;
+}
+.demo-text p{
+    font-size: 16px;
+}
+.demo span{
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 12px;
+}
+.seating-txt div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio{
+    margin-top: 40px;
+}
+
+.pic-video{
+    display: flex;
+    margin-left: 20px;
+    font-family: proxima-nova, sans-serif;
+    gap: 40px;
+}
+.pic-video div p{
+    display: flex;
+    height: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.component{
+    margin-top: 20px;
+}
+.photos{
+    width: 720px;
+}
+.photos-grid{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.img-divison{
+    height: 160px;
+}
+.img-divison img{
+    height: 100%;
+    object-fit: cover;
+}
