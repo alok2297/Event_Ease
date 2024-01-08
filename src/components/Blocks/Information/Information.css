@@ -11,6 +11,7 @@
 .full-info-subdiv{
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-top: 20px;
 }
 .full-info{
@@ -60,6 +61,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 15px;
+    padding-bottom: 20px;
     font-family: proxima-nova,sans-serif;
 }
 .pic-like div{
@@ -70,10 +72,15 @@
 .nav-items{
     display: flex;
     margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 50px;
 }
 .nav-items a{
     margin-left: 20px;
     font-family: proxima-nova,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #4a4a4a;
 }
@@ -91,9 +98,11 @@
 }
 .Areas-info{
     margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .Areas-info h3{
     padding-left: 20px;
+    padding-top: 20px;
     font-family: proxima-nova, sans-serif;
     color: #4a4a4a;
 }
@@ -102,6 +111,7 @@
     font-family: proxima-nova, sans-serif;
     margin-left: 20px;
     width: 680px;
+    padding-bottom: 20px;
     grid-template-columns: 1fr 1fr;
     display: grid;
     color: #4a4a4a;
@@ -111,6 +121,9 @@
 }
 .demo-text p{
     font-size: 16px;
+}
+.demo{
+    column-gap: 10px;
 }
 .demo span{
     font-size: 12px;
@@ -125,10 +138,12 @@
 }
 .portfolio{
     margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .pic-video{
     display: flex;
+    padding-top: 20px;
     margin-left: 20px;
     font-family: proxima-nova, sans-serif;
     gap: 40px;
@@ -142,21 +157,4 @@
 }
 .component{
     margin-top: 20px;
-}
-.photos{
-    width: 720px;
-}
-.photos-grid{
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
-.img-divison{
-    height: 160px;
-}
-.img-divison img{
-    height: 100%;
-    object-fit: cover;
 }

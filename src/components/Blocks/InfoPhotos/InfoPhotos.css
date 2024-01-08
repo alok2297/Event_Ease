@@ -1,0 +1,17 @@
+.photos{
+    width: 720px;
+}
+.photos-grid{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.img-divison{
+    height: 160px;
+}
+.img-divison img{
+    height: 100%;
+    /* object-fit: cover; */
+}

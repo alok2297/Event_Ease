@@ -17,8 +17,8 @@ const Information = () => {
             </div>
             <div className="full-info">
               <div className="full-info-subdiv">
-                <div style={{display:"flex"}}>
-                <div className="vendorName-info">
+                <div style={{ display: "flex" }}>
+                  <div className="vendorName-info">
                     <div>
                       <p className="shop-name">Hyatt Residency House</p>
                     </div>
@@ -39,12 +39,9 @@ const Information = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="rating-info">
-                    4.5
-                  </div>
+                  <div className="rating-info">4.5</div>
                 </div>
-                  
-                
+
                 <div className="location-info" style={{ display: "flex" }}>
                   <Iconify
                     width={15}
@@ -56,130 +53,174 @@ const Information = () => {
                 </div>
 
                 <div className="pic-like-share">
-                   <div className="pic-like">
-                   <div style={{ display: "flex" }}>
-                  <Iconify
-                    width={20}
-                    height={20}
-                    color={"#4a4a4a"}
-                    icon="material-symbols-light:image"
-                  />
-                  <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>Photos</p>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <Iconify
-                    width={20}
-                    height={20}
-                    color={"#4a4a4a"}
-                    icon="icon-park-outline:like"
-                  />
-                  <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>Shortlist</p>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <Iconify
-                    width={20}
-                    height={20}
-                    color={"#4a4a4a"}
-                    icon="ic:round-share"
-                  />
-                  <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>Share</p>
-                </div>
-                   </div>
+                  <div className="pic-like">
+                    <div style={{ display: "flex" }}>
+                      <Iconify
+                        width={20}
+                        height={20}
+                        color={"#4a4a4a"}
+                        icon="material-symbols-light:image"
+                      />
+                      <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>
+                        Photos
+                      </p>
+                    </div>
+                    <div style={{ display: "flex" }}>
+                      <Iconify
+                        width={20}
+                        height={20}
+                        color={"#4a4a4a"}
+                        icon="icon-park-outline:like"
+                      />
+                      <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>
+                        Shortlist
+                      </p>
+                    </div>
+                    <div style={{ display: "flex" }}>
+                      <Iconify
+                        width={20}
+                        height={20}
+                        color={"#4a4a4a"}
+                        icon="ic:round-share"
+                      />
+                      <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>
+                        Share
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="navs">
-                <div className="nav-items">
-                  <a href="$">Banquets</a>
-                  <a href="$">Projects</a>
-                  <a href="$">About</a>
-                  <a href="$">Reviews</a>
-                </div>
+              <div className="nav-items">
+                <a href="$">Banquets</a>
+                <a href="$">Projects</a>
+                <a href="$">About</a>
+                <a href="$">Reviews</a>
               </div>
+            </div>
             <div className="Areas-info">
-              <div><h3>Areas Available (4)</h3></div>
+              <div>
+                <h3>Areas Available (4)</h3>
+              </div>
               <div className="seating">
-                <div className="demo">
-                <div className="seating-txt">
-                      <Iconify
-                        width={65}
-                        height={40}
-                        color={"#4a4a4a"}
-                        icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                      />
-                      <div><p>Outdore</p></div>
+                <div className="demo" style={{marginBottom:"10px"}}>
+                  <div className="seating-txt">
+                    <Iconify
+                      width={55}
+                      height={30}
+                      color={"#4a4a4a"}
+                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
+                    />
+                    <div>
+                      <p>Outdore</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="demo-text">
+                      <div>
+                        <p>450 Seating |&nbsp; </p>
+                      </div>
+                      <div>
+                        <p>450 Floating </p>
+                      </div>
                     </div>
                     <div>
+                      <span>Lawns</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="demo" style={{marginBottom:"10px"}}>
+                  <div className="seating-txt">
+                    <Iconify
+                     width={55}
+                      height={30}
+                      color={"#4a4a4a"}
+                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
+                    />
+                    <div>
+                      <p>Outdore</p>
+                    </div>
+                  </div>
+                  <div>
                     <div className="demo-text">
-                      <div><p>450 Seating |&nbsp; </p></div>
-                      <div><p>450 Floating </p></div>
+                      <div>
+                        <p>450 Seating |&nbsp; </p>
+                      </div>
+                      <div>
+                        <p>450 Floating </p>
+                      </div>
                     </div>
-                    <div><span>Lawns</span></div>
+                    <div>
+                      <span>Lawns</span>
                     </div>
+                  </div>
                 </div>
                 <div className="demo">
-                <div className="seating-txt">
-                      <Iconify
-                        width={65}
-                        height={40}
-                        color={"#4a4a4a"}
-                        icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                      />
-                      <div><p>Outdore</p></div>
+                  <div className="seating-txt">
+                    <Iconify
+                      width={55}
+                      height={30}
+                      color={"#4a4a4a"}
+                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
+                    />
+                    <div>
+                      <p>Outdore</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="demo-text">
+                      <div>
+                        <p>450 Seating |&nbsp; </p>
+                      </div>
+                      <div>
+                        <p>450 Floating </p>
+                      </div>
                     </div>
                     <div>
-                    <div className="demo-text">
-                      <div><p>450 Seating |&nbsp; </p></div>
-                      <div><p>450 Floating </p></div>
+                      <span>Lawns</span>
                     </div>
-                    <div><span>Lawns</span></div>
-                    </div>
+                  </div>
                 </div>
                 <div className="demo">
-                <div className="seating-txt">
-                      <Iconify
-                        width={65}
-                        height={40}
-                        color={"#4a4a4a"}
-                        icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                      />
-                      <div><p>Outdore</p></div>
+                  <div className="seating-txt">
+                    <Iconify
+                      width={55}
+                      height={30}
+                      color={"#4a4a4a"}
+                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
+                    />
+                    <div>
+                      <p>Outdore</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="demo-text">
+                      <div>
+                        <p>450 Seating |&nbsp; </p>
+                      </div>
+                      <div>
+                        <p>450 Floating </p>
+                      </div>
                     </div>
                     <div>
-                    <div className="demo-text">
-                      <div><p>450 Seating |&nbsp; </p></div>
-                      <div><p>450 Floating </p></div>
+                      <span>Lawns</span>
                     </div>
-                    <div><span>Lawns</span></div>
-                    </div>
-                </div>
-                <div className="demo">
-                <div className="seating-txt">
-                      <Iconify
-                        width={65}
-                        height={40}
-                        color={"#4a4a4a"}
-                        icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                      />
-                      <div><p>Outdore</p></div>
-                    </div>
-                    <div>
-                    <div className="demo-text">
-                      <div><p>450 Seating |&nbsp; </p></div>
-                      <div><p>450 Floating </p></div>
-                    </div>
-                    <div><span>Lawns</span></div>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="portfolio">
               <div className="pic-video">
-                <div><p>PORTFOLIO&nbsp;(40)</p></div>
-                <div><p>VIDEOS&nbsp;(40)</p></div>
+                <div>
+                  <p>PORTFOLIO&nbsp;(40)</p>
+                </div>
+                <div>
+                  <p>VIDEOS&nbsp;(40)</p>
+                </div>
               </div>
               <div className="component">
-                 <InfoPhotos/>
+                <InfoPhotos />
               </div>
             </div>
           </div>
