@@ -1,21 +1,22 @@
 import React from "react";
 import "./Information.css";
 import { Container } from "../../Elements/Container";
-import TablePagination from "@mui/material/TablePagination";
+// import TablePagination from "@mui/material/TablePagination";
 import { Iconify } from "../../Elements/Icon";
 import InfoPhotos from "../InfoPhotos/InfoPhotos";
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 const Information = () => {
-  const [page, setPage] = React.useState(2);
-  const [rowsPerPage, setRowsPerPage] = React.useState(12);
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
+  // const [rowsPerPage, setRowsPerPage] = React.useState(12);
+  const [page, setPage] = React.useState(1);
+  const handleChangePage = (event, value) => {
+    setPage(value);
   };
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 12));
-    setPage(0);
-  };
+  // const handleChangeRowsPerPage = (event) => {
+  //   setRowsPerPage(parseInt(event.target.value, 12));
+  //   setPage(0);
+  // };
   return (
     <Container
       children={
@@ -257,14 +258,19 @@ const Information = () => {
               </div>
               <div className="component">
                 <InfoPhotos />
-                <TablePagination className="pagination"
+                {/* <TablePagination className="pagination"
                   component="div"
                   count={100}
                   page={page}
                   onPageChange={handleChangePage}
                   rowsPerPage={rowsPerPage}
                   onRowsPerPageChange={handleChangeRowsPerPage}
-                />
+                /> */}
+                <div className="pagination">
+                  <Stack spacing={2}>
+                    <Pagination count={100} page={page} onChange={handleChangePage} />
+                  </Stack>
+                </div>
               </div>
             </div>
           </div>
