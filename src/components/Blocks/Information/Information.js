@@ -11,16 +11,20 @@ const Information = () => {
   const [page, setPage] = React.useState(1);
   const handleChangePage = (event, value) => {
     setPage(value);
+    console.log(value);
   };
 
-  const [pageNum,setPageNum] = useState("");
+  // State and function for getting the click it is photo or video
+  const [photo,setPhoto] = useState(1);
+  const handlePhotos=()=>{
+    setPhoto(1);
+    setVideo(0);
+  }
 
-
-  const handleClick=(e,value)=>{
-    e.preventDefault();
-    const pageNumber = value.page;
-    setPageNum(pageNumber);
-    console.log(pageNumber);
+  const [video,setVideo] = useState(0);
+  const handleVideo=()=>{
+    setVideo(1);
+    setPhoto(0);
   }
 
   return (
@@ -255,19 +259,18 @@ const Information = () => {
             </div>
             <div className="portfolio">
               <div className="pic-video">
-                <div>
+                <div onClick={handlePhotos} className={photo === 1 ? "selected" : ""}>
                   <p>PORTFOLIO&nbsp;(40)</p>
                 </div>
-                <div>
+                <div onClick={handleVideo} className={video === 1 ? "selected" : ""}>
                   <p>VIDEOS&nbsp;(40)</p>
                 </div>
               </div>
               <div className="component">
-                <InfoPhotos />
+                <InfoPhotos pageNumber={page} check={photo===1?"photo":"video"}/>
                 <div className="pagination">
                   <Stack spacing={2}>
-                    <Pagination count={100} page={page} onChange={handleChangePage} onClick={(e) => {handleClick(e, {page});
-              }}/>
+                    <Pagination count={10} page={page} onChange={handleChangePage}/>
                   </Stack>
                 </div>
               </div>

@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import PhotosInfo from "../../../LocalFile/PhotosInfo.json";
 import "./InfoPhotos.css";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -15,31 +16,77 @@ const style = {
   boxShadow: 24,
   p: 2,
 };
-const InfoPhotos = () => {
+
+const InfoPhotos = (props) => {
   const [open, setOpen] = React.useState(false);
+  const [img, selectedImg] = React.useState("");
+
+  const { pageNumber, check } = props;
+  console.log(check);
+
   const handleOpen = (e, value) => {
     e.preventDefault();
     selectedImg(value);
-    console.log(value);
     setOpen(true);
   };
+
   const handleClose = () => setOpen(false);
-  const [img, selectedImg] = React.useState("");
-  const [count, setCount] = React.useState(0);
+
+  // Calculate the start and end indices based on the pageNumber
+  const itemsPerPage = 12;
+  const startIndex = (pageNumber - 1) * itemsPerPage;
+  const endIndex = pageNumber * itemsPerPage;
+
+  // Use slice to extract the appropriate range of items
+  const displayedPhotos = PhotosInfo.slice(startIndex, endIndex);
+
   return (
-    <div className="photos">
-      <div className="photos-grid">
-        {PhotosInfo.map((item, i) => (
-          <div className="img-divison" key={i}>
-            <img
-              onClick={(e) => {
-                handleOpen(e, item.imgUrl);
-              }}
-              src={item.imgUrl}
-              alt=""
-            ></img>
+    <>
+      {check === "photo" && (
+        <div className="photos">
+          <div className="photos-grid">
+            {displayedPhotos.map((item, i) => (
+              <div className="img-divison" key={i}>
+                <img
+                  onClick={(e) => {
+                    handleOpen(e, item.imgUrl);
+                  }}
+                  src={item.imgUrl}
+                  alt=""
+                ></img>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+      )}
+      :
+      <div className="main-video-info">
+        <div>
+          <img
+            src="https://images.wedmegood.com/uploads/video_youtube_image/122295/youtube_122295_geYOhcbfvbQ.jpg"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <a href="$" className="icon">
+              <i class="fa fa-user"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images.wedmegood.com/uploads/video_youtube_image/122295/youtube_122295_geYOhcbfvbQ.jpg"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <a href="$" className="icon">
+              <i class="fa fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {
         <Modal
           style={{
             backgroundColor: "transparent",
@@ -55,8 +102,8 @@ const InfoPhotos = () => {
             </Typography>
           </Box>
         </Modal>
-      </div>
-    </div>
+      }
+    </>
   );
 };
 

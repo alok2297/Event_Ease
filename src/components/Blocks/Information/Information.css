@@ -172,3 +172,23 @@
     align-items: center;
     justify-content: center;
 }
+/* YourComponent.css */
+
+.selected {
+  position: relative;
+  color: #e72e77;
+}
+
+.selected p {
+  margin-bottom: 5px; /* Adjust the value to set the desired gap */
+}
+
+.selected::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid; /* Or specify the color and style as needed */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
