@@ -1,5 +1,6 @@
 .left-section{
     width: 720px;
+    padding-bottom: 20px;
 }
 .profile-img{
     width: 720px;
@@ -121,6 +122,8 @@
 }
 .demo-text p{
     font-size: 16px;
+    margin-top: 10px;
+    word-spacing: 7px;
 }
 .demo{
     column-gap: 10px;
@@ -157,4 +160,15 @@
 }
 .component{
     margin-top: 20px;
+}
+.seating-txt p{
+    margin-top: 2px;
+}
+
+.pagination{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

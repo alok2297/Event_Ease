@@ -1,9 +1,21 @@
 import React from "react";
 import "./Information.css";
 import { Container } from "../../Elements/Container";
+import TablePagination from "@mui/material/TablePagination";
 import { Iconify } from "../../Elements/Icon";
 import InfoPhotos from "../InfoPhotos/InfoPhotos";
 const Information = () => {
+  const [page, setPage] = React.useState(2);
+  const [rowsPerPage, setRowsPerPage] = React.useState(12);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 12));
+    setPage(0);
+  };
   return (
     <Container
       children={
@@ -104,14 +116,20 @@ const Information = () => {
                 <h3>Areas Available (4)</h3>
               </div>
               <div className="seating">
-                <div className="demo" style={{marginBottom:"10px"}}>
+                <div className="demo" style={{ marginBottom: "10px" }}>
                   <div className="seating-txt">
-                    <Iconify
-                      width={55}
-                      height={30}
-                      color={"#4a4a4a"}
-                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                    />
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src="https://images.wedmegood.com/images/outdoor.svg"
+                        alt="$"
+                      />
+                    </div>
                     <div>
                       <p>Outdore</p>
                     </div>
@@ -130,14 +148,52 @@ const Information = () => {
                     </div>
                   </div>
                 </div>
-                <div className="demo" style={{marginBottom:"10px"}}>
+                <div className="demo" style={{ marginBottom: "10px" }}>
                   <div className="seating-txt">
-                    <Iconify
-                     width={55}
-                      height={30}
-                      color={"#4a4a4a"}
-                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                    />
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src="https://images.wedmegood.com/images/indoor.svg"
+                        alt="$"
+                      />
+                    </div>
+                    <div>
+                      <p>Indoor</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="demo-text">
+                      <div>
+                        <p>450 Seating |&nbsp; </p>
+                      </div>
+                      <div>
+                        <p>450 Floating </p>
+                      </div>
+                    </div>
+                    <div>
+                      <span>Lawns</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="demo">
+                  <div className="seating-txt">
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src="https://images.wedmegood.com/images/outdoor.svg"
+                        alt="$"
+                      />
+                    </div>
                     <div>
                       <p>Outdore</p>
                     </div>
@@ -158,40 +214,20 @@ const Information = () => {
                 </div>
                 <div className="demo">
                   <div className="seating-txt">
-                    <Iconify
-                      width={55}
-                      height={30}
-                      color={"#4a4a4a"}
-                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                    />
-                    <div>
-                      <p>Outdore</p>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="demo-text">
-                      <div>
-                        <p>450 Seating |&nbsp; </p>
-                      </div>
-                      <div>
-                        <p>450 Floating </p>
-                      </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src="https://images.wedmegood.com/images/indoor.svg"
+                        alt="$"
+                      />
                     </div>
                     <div>
-                      <span>Lawns</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="demo">
-                  <div className="seating-txt">
-                    <Iconify
-                      width={55}
-                      height={30}
-                      color={"#4a4a4a"}
-                      icon="streamline:travel-places-beach-island-waves-outdoor-recreation-tree-beach-palm-wave-water"
-                    />
-                    <div>
-                      <p>Outdore</p>
+                      <p>Indoor</p>
                     </div>
                   </div>
                   <div>
@@ -221,6 +257,14 @@ const Information = () => {
               </div>
               <div className="component">
                 <InfoPhotos />
+                <TablePagination className="pagination"
+                  component="div"
+                  count={100}
+                  page={page}
+                  onPageChange={handleChangePage}
+                  rowsPerPage={rowsPerPage}
+                  onRowsPerPageChange={handleChangeRowsPerPage}
+                />
               </div>
             </div>
           </div>
