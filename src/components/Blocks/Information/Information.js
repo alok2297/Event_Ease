@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Information.css";
 import { Container } from "../../Elements/Container";
 // import TablePagination from "@mui/material/TablePagination";
@@ -13,10 +13,16 @@ const Information = () => {
     setPage(value);
   };
 
-  // const handleChangeRowsPerPage = (event) => {
-  //   setRowsPerPage(parseInt(event.target.value, 12));
-  //   setPage(0);
-  // };
+  const [pageNum,setPageNum] = useState("");
+
+
+  const handleClick=(e,value)=>{
+    e.preventDefault();
+    const pageNumber = value.page;
+    setPageNum(pageNumber);
+    console.log(pageNumber);
+  }
+
   return (
     <Container
       children={
@@ -258,17 +264,10 @@ const Information = () => {
               </div>
               <div className="component">
                 <InfoPhotos />
-                {/* <TablePagination className="pagination"
-                  component="div"
-                  count={100}
-                  page={page}
-                  onPageChange={handleChangePage}
-                  rowsPerPage={rowsPerPage}
-                  onRowsPerPageChange={handleChangeRowsPerPage}
-                /> */}
                 <div className="pagination">
                   <Stack spacing={2}>
-                    <Pagination count={100} page={page} onChange={handleChangePage} />
+                    <Pagination count={100} page={page} onChange={handleChangePage} onClick={(e) => {handleClick(e, {page});
+              }}/>
                   </Stack>
                 </div>
               </div>
