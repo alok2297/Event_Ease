@@ -57,11 +57,10 @@ const InfoPhotos = (props) => {
           </div>
         </div>
       ) : <div className="video-grid"> {displayedPhotos.map((item, i) => (
-        <div className="photo-divison" key={i}>
-          <iframe src="https://www.youtube.com/embed/-rePN9cxfaQ?si=OY8LlF2l7-DbC8PX&showinfo=0&controls=0&autohide=1"
+        <div className="video-divison" key={i}>
+          <iframe src="https://www.youtube.com/embed/-rePN9cxfaQ?si=OY8LlF2l7-DbC8PX"
             title="YouTube video player"
             frameborder="0"
-            allowfullscree
             >
           </iframe>
         </div>

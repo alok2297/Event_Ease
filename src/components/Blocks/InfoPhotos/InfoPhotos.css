@@ -30,4 +30,9 @@
     gap: 10px;
     justify-content: space-between;
 }
+.video-grid .video-divison iframe{
+    width: 100%;
+    height: 100%;
+}
+
 

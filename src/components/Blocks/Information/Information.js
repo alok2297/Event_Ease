@@ -6,7 +6,7 @@ import { Iconify } from "../../Elements/Icon";
 import InfoPhotos from "../InfoPhotos/InfoPhotos";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import PhotosInfo from "../../../LocalFile/PhotosInfo.json";
+import PhotosInfo from "../../../Data/PhotosInfo.json";
 
 const Information = () => {
   // const [rowsPerPage, setRowsPerPage] = React.useState(12);

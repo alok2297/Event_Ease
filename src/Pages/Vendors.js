@@ -2,7 +2,7 @@ import React from 'react'
 import Category from '../components/Blocks/Category/Category'
 import SliderTwo from '../components/Blocks/SliderTwo/SliderTwo'
 import WeddingBlogSlider from '../components/Blocks/WeddingBlogSlider/WeddingBlogSlider'
-import WeddingCategory from "../LocalFile/WeddingCategory.json";
+import WeddingCategory from "../Data/WeddingCategory.json";
 
 const Vendors = () => {
   return (
