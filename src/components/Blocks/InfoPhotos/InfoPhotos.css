@@ -22,3 +22,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.video-grid{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
+}
+

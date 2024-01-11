@@ -2,7 +2,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import PhotosInfo from "../../../LocalFile/PhotosInfo.json";
 import "./InfoPhotos.css";
 
 const style = {
@@ -22,7 +21,6 @@ const InfoPhotos = (props) => {
   const [img, selectedImg] = React.useState("");
 
   const { pageNumber, check } = props;
-  console.log(check);
 
   const handleOpen = (e, value) => {
     e.preventDefault();
@@ -33,16 +31,16 @@ const InfoPhotos = (props) => {
   const handleClose = () => setOpen(false);
 
   // Calculate the start and end indices based on the pageNumber
-  const itemsPerPage = 12;
+  const itemsPerPage = props.check === "photo" ? 12 : 6;
   const startIndex = (pageNumber - 1) * itemsPerPage;
   const endIndex = pageNumber * itemsPerPage;
 
   // Use slice to extract the appropriate range of items
-  const displayedPhotos = PhotosInfo.slice(startIndex, endIndex);
+  const displayedPhotos = props.photosInfo.slice(startIndex, endIndex);
 
   return (
     <>
-      {check === "photo" && (
+      {check === "photo" ? (
         <div className="photos">
           <div className="photos-grid">
             {displayedPhotos.map((item, i) => (
@@ -58,7 +56,16 @@ const InfoPhotos = (props) => {
             ))}
           </div>
         </div>
-      )}
+      ) : <div className="video-grid"> {displayedPhotos.map((item, i) => (
+        <div className="photo-divison" key={i}>
+          <iframe src="https://www.youtube.com/embed/-rePN9cxfaQ?si=OY8LlF2l7-DbC8PX&showinfo=0&controls=0&autohide=1"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscree
+            >
+          </iframe>
+        </div>
+      ))} </div>}
       {
         <Modal
           style={{

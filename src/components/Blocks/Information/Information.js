@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Information.css";
 import { Container } from "../../Elements/Container";
 // import TablePagination from "@mui/material/TablePagination";
@@ -6,22 +6,27 @@ import { Iconify } from "../../Elements/Icon";
 import InfoPhotos from "../InfoPhotos/InfoPhotos";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import PhotosInfo from "../../../LocalFile/PhotosInfo.json";
+
 const Information = () => {
   // const [rowsPerPage, setRowsPerPage] = React.useState(12);
   const [page, setPage] = React.useState(1);
+  const [video,setVideo] = useState(0);
+  const [photo,setPhoto] = useState(1);
+
   const handleChangePage = (event, value) => {
     setPage(value);
-    console.log(value);
   };
 
+const pageNumber = useRef();
+pageNumber.current = photo === 1 ?(PhotosInfo.length/12) : (PhotosInfo.length/6)
+
   // State and function for getting the click it is photo or video
-  const [photo,setPhoto] = useState(1);
   const handlePhotos=()=>{
     setPhoto(1);
     setVideo(0);
   }
 
-  const [video,setVideo] = useState(0);
   const handleVideo=()=>{
     setVideo(1);
     setPhoto(0);
@@ -260,17 +265,17 @@ const Information = () => {
             <div className="portfolio">
               <div className="pic-video">
                 <div onClick={handlePhotos} className={photo === 1 ? "selected" : ""}>
-                  <p>PORTFOLIO&nbsp;(40)</p>
+                  <p>PORTFOLIO&nbsp;({PhotosInfo.length})</p>
                 </div>
                 <div onClick={handleVideo} className={video === 1 ? "selected" : ""}>
-                  <p>VIDEOS&nbsp;(40)</p>
+                  <p>VIDEOS&nbsp;({PhotosInfo.length})</p>
                 </div>
               </div>
               <div className="component">
-                <InfoPhotos pageNumber={page} check={photo===1?"photo":"video"}/>
+                <InfoPhotos photosInfo={PhotosInfo} pageNumber={page} check={photo===1?"photo":"video"}/>
                 <div className="pagination">
                   <Stack spacing={2}>
-                    <Pagination count={10} page={page} onChange={handleChangePage}/>
+                    <Pagination count={pageNumber.current} page={page} onChange={handleChangePage}/>
                   </Stack>
                 </div>
               </div>
