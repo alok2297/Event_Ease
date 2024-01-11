@@ -1,5 +1,7 @@
 import './HeroSection.css';
+import { useSelector } from "react-redux";
 function HeroSection(props) {
+  const city = useSelector(state=>state.city);
   return (
     <div className="HeroDiv">
       <div className="HeroSection-div">
@@ -9,7 +11,7 @@ function HeroSection(props) {
         />
         <div className="absolute sc-iujRgT bWGfDV" height="50%" width="100%"></div>
         <div className="img-wrapper">
-          <h1 className="HeroSection-Img">Plan a {props.selectedCity} Wedding</h1>
+          <h1 className="HeroSection-Img">Plan a {city} Wedding</h1>
           <div className="relative" style={{ position: "relative" }}>
             <div className="Search-Vendors" style={{display:"flex"}}>
                 <div
@@ -46,7 +48,7 @@ function HeroSection(props) {
                   </span>
               </div>
               <div className="Find-Vendors">
-                <div className="Find-Vendors">Find Vendors in {props.selectedCity}</div>
+                <div className="Find-Vendors">Find Vendors in {city}</div>
                 <i style={{marginRight:"10px"}} className="fa fa-angle-down text-bold text-primary h4"></i>
               </div>
             </div>

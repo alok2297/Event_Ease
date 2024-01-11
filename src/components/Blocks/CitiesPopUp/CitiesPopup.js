@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import{ actionCreaters} from "../../../state/index";
 
 const CitiesPopup = (props) => {
   const handleCityClick = (city) => {
     props.parentCallback(city);
 }
+const dispatch = useDispatch();
+const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
+
+
 
   const TopCities = [
     { id: 0, category: "Top Cities", city: "All Cities" },
@@ -74,15 +81,15 @@ const CitiesPopup = (props) => {
         <div className="container">
           <div className="child1">
             <div className="Top-Cities">
-              <a className="HeadDing-City" href="#">
+              <a className="HeadDing-City" href="$">
                 Top Cities
               </a>
-              <div className="CityName">
+              <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {TopCities.map((item) => (
                   <li
                     className="CityName"
                     key={item.id}
-                    onClick={() => handleCityClick(item.city)}
+                    onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
                   >
@@ -94,15 +101,15 @@ const CitiesPopup = (props) => {
           </div>
           <div className="child2">
             <div className="Popular-Cities">
-              <a className="HeadDing-City" href="#">
+              <a className="HeadDing-City" href="$">
                 Popular Cities
               </a>
-              <div className="CityName">
+              <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {PopularCities.map((item) => (
                   <li
                     className="CityName"
                     key={item.id}
-                    onClick={() => handleCityClick(item.city)}
+                    onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
                   >
@@ -114,15 +121,15 @@ const CitiesPopup = (props) => {
           </div>
           <div className="child3">
             <div className="Other-Cities">
-              <a className="HeadDing-City" href="#">
+              <a className="HeadDing-City" href="$">
                 Other Cities
               </a>
-              <div className="CityName">
+              <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {OtherCity.map((item) => (
                   <li
                     className="CityName"
                     key={item.id}
-                    onClick={() => handleCityClick(item.city)}
+                    onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
                   >
@@ -135,15 +142,15 @@ const CitiesPopup = (props) => {
           </div>
           <div className="child4">
             <div className="International-Cities">
-              <a className="HeadDing-City" href="#">
+              <a className="HeadDing-City" href="$">
                 International Cities
               </a>
-              <div className="CityName">
+              <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {InternationalCity.map((item) => (
                   <li
                     className="CityName"
                     key={item.id}
-                    onClick={() => handleCityClick(item.city)}
+                    onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
                   >

@@ -59,33 +59,6 @@ const InfoPhotos = (props) => {
           </div>
         </div>
       )}
-      :
-      <div className="main-video-info">
-        <div>
-          <img
-            src="https://images.wedmegood.com/uploads/video_youtube_image/122295/youtube_122295_geYOhcbfvbQ.jpg"
-            alt="Avatar"
-            class="image"
-          />
-          <div class="overlay">
-            <a href="$" className="icon">
-              <i class="fa fa-user"></i>
-            </a>
-          </div>
-        </div>
-        <div>
-          <img
-            src="https://images.wedmegood.com/uploads/video_youtube_image/122295/youtube_122295_geYOhcbfvbQ.jpg"
-            alt="Avatar"
-            class="image"
-          />
-          <div class="overlay">
-            <a href="$" className="icon">
-              <i class="fa fa-user"></i>
-            </a>
-          </div>
-        </div>
-      </div>
       {
         <Modal
           style={{

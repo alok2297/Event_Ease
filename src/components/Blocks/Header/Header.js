@@ -4,9 +4,13 @@ import './Header.css';
 import Modal from "@mui/material/Modal";
 import { Link } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 const Header = (props) => {
-  const [city,setCity]=useState("Delhi NCR");
   const [rotate, setRotate] = useState(0); // usefor rotation
+
+  const city = useSelector(state=>state.city);
+
   const Vendors = [
     "Venues",
     "Vendors",
@@ -26,8 +30,8 @@ const Header = (props) => {
     console.log(childData);
     setOpen(false);
     setRotate(0);
-    props.getCity(childData);
-    setCity(childData);
+    // props.getCity(childData);
+    // setCity(childData);
 
 }
 const [open, setOpen] = React.useState(false);
