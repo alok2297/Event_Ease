@@ -1,8 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { useTransition, useState} from "react";
 import Modal from "@mui/material/Modal";
 import "./InfoPhotos.css";
+import Player from '../InfoVideos/InfoVideos';
 
 const style = {
   position: "absolute",
@@ -19,6 +21,15 @@ const style = {
 const InfoPhotos = (props) => {
   const [open, setOpen] = React.useState(false);
   const [img, selectedImg] = React.useState("");
+
+
+  // states for videoinfos
+  const [, startTransition] = useTransition();
+
+  // These two states handle the button press, and
+  // the loading of the YouTube iframe.
+  const [showVideo, setShowVideo] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   const { pageNumber, check } = props;
 
@@ -56,16 +67,46 @@ const InfoPhotos = (props) => {
             ))}
           </div>
         </div>
-      ) : <div className="video-grid"> {displayedPhotos.map((item, i) => (
-        <div className="photo-divison" key={i}>
-          <iframe src="https://www.youtube.com/embed/-rePN9cxfaQ?si=OY8LlF2l7-DbC8PX&showinfo=0&controls=0&autohide=1"
-            title="YouTube video player"
-            frameborder="0"
-            allowfullscree
-            >
-          </iframe>
-        </div>
-      ))} </div>}
+      ) : 
+      (
+        <div className="container">
+      {
+        displayedPhotos.map((item,i)=>(
+          <div className="videoRatio" key={i}>
+        {(!showVideo || !hasLoaded) && (
+          <button
+            className="thumbnailButton"
+            onClick={() => {
+              startTransition(() => {
+                setShowVideo(true);
+              });
+            }}
+          >
+            <div className="videoInner">
+              <img
+                alt="Fwar - Mushrooms video thumbnail"
+                src={item.videoImg}
+                className="thumbnailImage"
+                loading="lazy"
+              />
+              <img
+                alt="Play Video"
+                src="https://floodframe.com/wp-content/uploads/2018/01/play_icon.png"
+                loading="lazy"
+                className="playIcon"
+              />
+            </div>
+          </button>
+        )}
+        {showVideo && (
+          <Player videoId={item.videoUrl} setHasLoaded={setHasLoaded} />
+        )}
+      </div>
+        ))
+      }
+    </div>
+      )
+      }
       {
         <Modal
           style={{
