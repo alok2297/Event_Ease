@@ -199,11 +199,11 @@
 }
 .right-section{
     margin-left: 20px;
-    width: 444px;
 }
 .right-section-price{
     width: 380;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
 }
 .right-section-price  div p{
     text-align: start;
