@@ -2,11 +2,11 @@ import HeroSection from "../components/Blocks/HeroSection/HeroSection";
 import NewsLetter from "../components/Blocks/NewsLetter/NewsLetter";
 import WeddingBlogSlider from "../components/Blocks/WeddingBlogSlider/WeddingBlogSlider";
 import PopularSlider from "../components/Blocks/PopularSlider/PopularSlider";
-import slides from "../LocalFile/PopularVenues.json"
+import slides from "../Data/PopularVenues.json"
 import Category from "../components/Blocks/Category/Category";
 import SliderTwo from "../components/Blocks/SliderTwo/SliderTwo";
 import WMGInHouse from "../components/Blocks/WMG/WMGInHouse";
-import Categories from "../LocalFile/WeddingCategory.json";
+import Categories from "../Data/WeddingCategory.json";
 
 const HomePage = (props) => {
   return (

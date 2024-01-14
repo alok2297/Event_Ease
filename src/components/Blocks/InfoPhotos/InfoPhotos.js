@@ -1,10 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useTransition, useState} from "react";
 import Modal from "@mui/material/Modal";
 import "./InfoPhotos.css";
-import Player from '../InfoVideos/InfoVideos';
 
 const style = {
   position: "absolute",
@@ -21,15 +19,6 @@ const style = {
 const InfoPhotos = (props) => {
   const [open, setOpen] = React.useState(false);
   const [img, selectedImg] = React.useState("");
-
-
-  // states for videoinfos
-  const [, startTransition] = useTransition();
-
-  // These two states handle the button press, and
-  // the loading of the YouTube iframe.
-  const [showVideo, setShowVideo] = useState(false);
-  const [hasLoaded, setHasLoaded] = useState(false);
 
   const { pageNumber, check } = props;
 
@@ -67,46 +56,34 @@ const InfoPhotos = (props) => {
             ))}
           </div>
         </div>
-      ) : 
-      (
+      ) : (
         <div className="container">
-      {
-        displayedPhotos.map((item,i)=>(
-          <div className="videoRatio" key={i}>
-        {(!showVideo || !hasLoaded) && (
-          <button
-            className="thumbnailButton"
-            onClick={() => {
-              startTransition(() => {
-                setShowVideo(true);
-              });
-            }}
-          >
-            <div className="videoInner">
-              <img
-                alt="Fwar - Mushrooms video thumbnail"
-                src={item.videoImg}
-                className="thumbnailImage"
-                loading="lazy"
-              />
-              <img
-                alt="Play Video"
-                src="https://floodframe.com/wp-content/uploads/2018/01/play_icon.png"
-                loading="lazy"
-                className="playIcon"
-              />
+          {displayedPhotos.map((item, i) => (
+            <div className="videoRatio" key={i}>
+              <button className="thumbnailButton">
+                <div className="videoInner">
+                  <img
+                    alt="Fwar - Mushrooms video thumbnail"
+                    src={item.videoImg}
+                    onClick={(e) => {
+                      handleOpen(e, item.videoUrl);
+                    }}
+                    className="thumbnailImage"
+                  />
+                  <img
+                    alt="Play Video"
+                    onClick={(e) => {
+                      handleOpen(e, item.videoUrl);
+                    }}
+                    src="https://floodframe.com/wp-content/uploads/2018/01/play_icon.png"
+                    className="playIcon"
+                  />
+                </div>
+              </button>
             </div>
-          </button>
-        )}
-        {showVideo && (
-          <Player videoId={item.videoUrl} setHasLoaded={setHasLoaded} />
-        )}
-      </div>
-        ))
-      }
-    </div>
-      )
-      }
+          ))}
+        </div>
+      )}
       {
         <Modal
           style={{
@@ -119,7 +96,23 @@ const InfoPhotos = (props) => {
         >
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              <img style={{ height: "100%", width: "100%" }} src={img} alt="" />
+              {check === "photo" ? (
+                <div>
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={img}
+                    alt=""
+                  />
+                </div>
+              ) : (
+                <iframe
+                  title="YouTube video player"
+                  src="https://www.youtube.com/embed/IiSnlEtnQNo"
+                  style={{ height: "400px", width: "600px" }}
+                  frameborder="0"
+                  allowfullscreen="allowfullscreen"
+                ></iframe>
+              )}
             </Typography>
           </Box>
         </Modal>
