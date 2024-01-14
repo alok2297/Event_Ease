@@ -13,7 +13,7 @@ const HomePage = (props) => {
     <div>
       <HeroSection selectedCity={props.city} />
       <PopularSlider slides={slides} swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px" />
-      <SliderTwo />
+      <SliderTwo/>
       <Category show={false} category={Categories.slice(0, 6)} />
       <WMGInHouse />
       <NewsLetter />

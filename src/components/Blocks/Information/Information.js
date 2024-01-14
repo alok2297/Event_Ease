@@ -282,59 +282,6 @@ pageNumber.current = photo === 1 ?(PhotosInfo.length/12) : (PhotosInfo.length/6)
               </div>
             </div>
           </div>
-          <div className="right-section">
-            <div className="right-section-price">
-             <div><p>Starting Price</p></div>
-              <hr/>
-              <div className="prices">
-               <div style={{marginLeft:"5px"}}> <Iconify
-                  width={20}
-                    height={20}
-                    color={"#e72e77"}
-                    icon="mdi:rupee"
-                  /></div>
-                <div className="priceFood"><span>2700</span></div>
-                <div style={{marginLeft:"5px"}}><span>per plate</span></div>
-                <div style={{marginLeft:"auto", marginRight:"10px",fontSize:"15px"}}><span>Veg Price</span></div>
-              </div>
-              <hr/>
-              <div className="prices">
-              <div style={{marginLeft:"5px"}}> <Iconify
-                  width={20}
-                    height={20}
-                    color={"#e72e77"}
-                    icon="mdi:rupee"
-                  /></div>
-                <div className="priceFood"><span>2700</span></div>
-                <div style={{marginLeft:"5px"}}><span>per plate</span></div>
-                <div style={{marginLeft:"auto", marginRight:"10px",fontSize:"15px"}}><span>Veg Price</span></div>
-              </div>
-              <hr/>
-              <div className="prices">
-              <div style={{marginLeft:"5px"}}> <Iconify
-                  width={20}
-                    height={20}
-                    color={"#e72e77"}
-                    icon="mdi:rupee"
-                  /></div>
-                <div className="priceFood"><span>2700</span></div>
-                <div style={{marginLeft:"5px"}}><span>per plate</span></div>
-                <div style={{marginLeft:"auto", marginRight:"10px",fontSize:"15px"}}><span>Veg Price</span></div>
-              </div>
-              <hr/>
-              <div style={{paddingBottom:"10px"}} className="prices">
-              <div style={{marginLeft:"5px"}}> <Iconify
-                  width={20}
-                    height={20}
-                    color={"#e72e77"}
-                    icon="mdi:rupee"
-                  /></div>
-                <div className="priceFood"><span>2700</span></div>
-                <div style={{marginLeft:"5px"}}><span>per plate</span></div>
-                <div style={{marginLeft:"auto", marginRight:"10px",fontSize:"15px"}}><span>Veg Price</span></div>
-              </div>
-            </div>
-          </div>
         </div>
         </div>
       }

@@ -57,7 +57,7 @@ const InfoPhotos = (props) => {
           </div>
         </div>
       ) : (
-        <div className="container">
+        <div className="container-main">
           {displayedPhotos.map((item, i) => (
             <div className="videoRatio" key={i}>
               <button className="thumbnailButton">

@@ -218,7 +218,7 @@
 
 }
 hr {
-    border-bottom: 0.1px solid #f7f3f3;
+    border-bottom: 1px solid #d8d6d6;
     margin-top: 10px;
 }
 .prices{
@@ -236,8 +236,13 @@ hr {
 }
 
 .priceFood{
-    font-size: 22px;
+    font-size: 20px;
     font-family: proxima-nova,sans-serif;
     margin-left: 5px;
     color: #e72e77;
+}
+.dish{
+    margin-left: auto;
+    margin-right: 10px;
+    font-size:15px;
 }

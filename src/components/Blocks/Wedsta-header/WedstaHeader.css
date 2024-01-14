@@ -1,0 +1,114 @@
+.header-div-round{
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    height: 40px;
+    line-height: 6vh;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #fcf0c7;
+}
+.wedsta-main{
+    font-family: proxima-nova,sans-serif;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.main-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+    gap: 30px;
+}
+.packages{
+    position: relative;
+    margin-top: -5px;
+    background-color: #fff;
+}
+.padding-10{
+    padding: 10px;
+}
+.packages-services h3{
+    padding-bottom: 20px;
+    color: #615f61;
+}
+.services{
+    color: #a1a1a1;
+    font-size: 14px;
+}
+.artist-padding{
+    padding-top: 10px;
+}
+.packages-services p{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: #222020;
+}
+.packages-services div{
+    padding: 3px;
+}
+.packages-services span{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: #b8b3b3;
+}
+.inner-package{
+    display: flex;
+}
+.category-icon{
+    display: flex;
+}
+.package2{
+    background-color: #ffeaaf;
+}
+.package3{
+    background-color: #feb08d;
+}
+.icon-package-cost{
+    padding-left: 35px;
+    display: flex;
+}
+.icon-package-cost div{
+    color: #e72e77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.package-cost{
+    margin-left: auto;
+}
+.per-person {
+    font-size: 12px;
+    display: flex;
+    margin-left: 65px;
+    color: #4a4a4a;
+}
+
+
+
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #fff;
+    color: #e72e77;
+    border: 1px solid #e72e77;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+
+  .quantity {
+    font-size: 1.2em;
+  }
+
+  .add, .remove {
+    color: #e72e77;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 8px 5px;
+  }
