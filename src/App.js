@@ -8,8 +8,8 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Venue from './components/Blocks/Venue/Venue'
 import Vendors from "./Pages/Vendors";
-import Information from "./components/Blocks/Information/Information";
-import WedstaHeader from "./components/Blocks/Wedsta-header/WedstaHeader";
+import Information from "../src/Pages/Information";
+import Wedsta from "./Pages/Wedsta";
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
   const getCity = (city) => {
@@ -24,7 +24,7 @@ function App() {
           <Route path="/vendor" element={<Vendors />} />
           <Route path="/venue" element={<Venue />} />
           <Route path="/info" element={<Information/>}/>
-          <Route path="/wedsta" element={<WedstaHeader/>}/>
+          <Route path="/wedsta" element={<Wedsta/>}/>
         </Routes>
         <Footer />
     </div>

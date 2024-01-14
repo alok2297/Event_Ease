@@ -11,7 +11,7 @@ import Categories from "../Data/WeddingCategory.json";
 const HomePage = (props) => {
   return (
     <div>
-      <HeroSection selectedCity={props.city} />
+      <HeroSection selectedCity={props.city}/>
       <PopularSlider slides={slides} swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px" />
       <SliderTwo/>
       <Category show={false} category={Categories.slice(0, 6)} />
