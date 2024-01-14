@@ -1,0 +1,147 @@
+.form-container {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+}
+
+.form-container p {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.form-container .input-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-container div div {
+    margin-top: 20px;
+}
+
+.input-container div {}
+
+.input-container div input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #c5d2e0;
+    width: 100%;
+    padding: 5px 0;
+    height: 100%;
+}
+
+.input-container div input:hover {
+    border-bottom: 2px solid #000000;
+}
+
+.input-container div input:focus {
+    border-bottom: 2px solid #f44336;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.radio-container div {
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.radio-container div p {
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    font-weight: 600px;
+}
+
+.radio-container div div {
+    flex-direction: row;
+    gap: 4px;
+}
+
+.radio-container div div label {
+    color: #4a4a4a;
+    font-size: 12px;
+}
+
+.button-container{
+    margin-top: 20px;
+    width: 100%;
+}
+.button-container button{
+    background-color: rgb(231, 46, 119);
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 20px;
+    border: none;
+    width: 100%;
+}
+
+.label{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #909090;
+}
+
+/*Remove Arrows/Spinners in Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(231, 46, 119);
+}
+
+input[type="radio"]:checked {
+    border: 2px solid rgb(231, 46, 119);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
