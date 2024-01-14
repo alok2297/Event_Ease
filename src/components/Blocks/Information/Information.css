@@ -192,3 +192,52 @@
   bottom: 0;
   left: 0;
 }
+
+.Main-info-div{
+    display: flex;
+    font-family: proxima-nova,sans-serif;
+}
+.right-section{
+    margin-left: 20px;
+    width: 444px;
+}
+.right-section-price{
+    width: 380;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.right-section-price  div p{
+    text-align: start;
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    font-family: proxima-nova,sans-serif;
+    color: #4a4a4a;
+    align-items: center;
+
+}
+hr {
+    border-bottom: 0.1px solid #f7f3f3;
+    margin-top: 10px;
+}
+.prices{
+    margin-top: 10px;
+    display: flex;
+}
+.prices div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prices p{
+    align-items: center;
+    justify-content: center;
+}
+
+.priceFood{
+    font-size: 22px;
+    font-family: proxima-nova,sans-serif;
+    margin-left: 5px;
+    color: #e72e77;
+}
