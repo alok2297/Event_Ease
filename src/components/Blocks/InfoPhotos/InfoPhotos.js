@@ -18,13 +18,13 @@ const style = {
 
 const InfoPhotos = (props) => {
   const [open, setOpen] = React.useState(false);
-  const [img, selectedImg] = React.useState("");
+  const [media, selectedMedia] = React.useState("");
 
   const { pageNumber, check } = props;
 
   const handleOpen = (e, value) => {
     e.preventDefault();
-    selectedImg(value);
+    selectedMedia(value);
     setOpen(true);
   };
 
@@ -37,6 +37,23 @@ const InfoPhotos = (props) => {
 
   // Use slice to extract the appropriate range of items
   const displayedPhotos = props.photosInfo.slice(startIndex, endIndex);
+  const displayVideos = props.videoInfo.slice(startIndex, endIndex);
+  function getYoutubeThumbnail(url){
+    if(url){
+        let video_id, thumbnail, result;
+        if(url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/))
+        {
+          result = url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/)
+            video_id = result.pop();
+        }
+        if(video_id){
+            let quality_key = 'maxresdefault'; // Max quality
+            thumbnail = "http://img.youtube.com/vi/"+video_id+"/"+quality_key+".jpg";
+            return thumbnail;
+        }
+    }
+    return false;
+}
 
   return (
     <>
@@ -58,22 +75,22 @@ const InfoPhotos = (props) => {
         </div>
       ) : (
         <div className="container-main">
-          {displayedPhotos.map((item, i) => (
+          {displayVideos.map((item, i) => (
             <div className="videoRatio" key={i}>
               <button className="thumbnailButton">
                 <div className="videoInner">
                   <img
                     alt="Fwar - Mushrooms video thumbnail"
-                    src={item.videoImg}
+                    src={getYoutubeThumbnail(item)}
                     onClick={(e) => {
-                      handleOpen(e, item.videoUrl);
+                      handleOpen(e, item);
                     }}
                     className="thumbnailImage"
                   />
                   <img
                     alt="Play Video"
                     onClick={(e) => {
-                      handleOpen(e, item.videoUrl);
+                      handleOpen(e, item);
                     }}
                     src="https://floodframe.com/wp-content/uploads/2018/01/play_icon.png"
                     className="playIcon"
@@ -100,17 +117,15 @@ const InfoPhotos = (props) => {
                 <div>
                   <img
                     style={{ height: "100%", width: "100%" }}
-                    src={img}
+                    src={media}
                     alt=""
                   />
                 </div>
               ) : (
                 <iframe
                   title="YouTube video player"
-                  src="https://www.youtube.com/embed/IiSnlEtnQNo"
-                  style={{ height: "400px", width: "600px" }}
-                  frameborder="0"
-                  allowfullscreen="allowfullscreen"
+                  src={media}
+                  style={{ height: "400px", width: "600px", border: "none" }}
                 ></iframe>
               )}
             </Typography>

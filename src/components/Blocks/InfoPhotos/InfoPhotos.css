@@ -20,6 +20,9 @@
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
+    min-height: 620px;
+    align-content: flex-start;
+    padding: 0 10px;
   }
   
   .videoRatio {
