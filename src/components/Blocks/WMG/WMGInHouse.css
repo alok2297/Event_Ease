@@ -1,0 +1,104 @@
+.VMG_Services {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a4a4a;
+}
+
+.Pair_two_Services {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.First_Contianer_Service {
+    width: 580px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 5px 0px;
+    overflow: hidden;
+}
+.Wedsta_txt,
+.Wedsta_Second_txt {
+    font-family: proxima-nova, sans-serif;
+    color: #4a4a4a;
+}
+
+.Wedsta_txt {
+    width: 560px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Wedsta_Second_txt {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    width: 560px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.Know_more {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: proxima-nova, sans-serif;
+    color: #e72e77;
+    background-color: #fff;
+    border: 1px solid #e72e77;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.Button-Know-More {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Wedsta_container {
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 560px;
+    margin-top: 5px;
+    overflow: hidden; 
+}
+
+.First_Contianer_Service .Wedsta_container {
+    margin-top: 10px; 
+    height: 200px;
+}
+
+.Wedsta_container img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.7s ease;
+}
+
+.First_Contianer_Service:hover .Wedsta_container img {
+    transform: scale(1.3);
+}
+
+.Know_more {
+    font-family: proxima-nova, sans-serif;
+    color: #e72e77;
+    background-color: #fff;
+    border: 1px solid #e72e77;
+}
+.First_Contianer_Service:hover .Know_more {
+    background-color: #e72e77;
+    color: #fff;
+}

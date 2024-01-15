@@ -1,0 +1,65 @@
+.wrapper {
+    background-color: rgb(255, 235, 232);
+    font-family: proxima-nova, sans-serif;
+    height: 400px;
+    display: flex;
+}
+.wrapper-container{
+    display: flex;
+    margin-top: 30px;
+}
+.NewsLetter{
+    margin-top: 30px;
+    font-size: 22px;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+.NewsLetter-icons img{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+.NewsLetter-icons div{
+    font-size: 16px;
+    font-weight: 400;
+    color: #e72e77;
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    margin-right: 20px;
+}
+.NewsLetter-icons{
+    margin-top: 20px;
+    display: flex;
+}
+.wrapper-container , .wrapper-left{
+    margin-left: 100px;
+}
+.text{
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+.form-mob{
+    margin-top: 30px;
+}
+.form-mob .PhoneInputInput{
+    height: 30px;
+    outline: none;
+    border: none;
+}
+.form-mob button{
+    width: 240px;
+    margin-top: 30px;
+    border-color: #e72e77;
+    background-color: #e72e77;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    border-radius: 25px;
+}
+.wrapper-right img{
+    height: 320px;
+    margin-left: 230px;
+}

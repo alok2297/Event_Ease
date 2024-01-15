@@ -1,0 +1,17 @@
+.bread {
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+.bread ul {
+    display: flex;
+}
+.bread ul li {
+    list-style-type: none;
+    text-transform: capitalize;
+}
+.bread ul li a{
+    color: #909090;
+}
+.bread ul li span{
+    padding: 0 4px;
+}

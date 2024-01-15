@@ -1,0 +1,70 @@
+.Wedding_Categories{
+    display: flex;
+    font-family: "proxima-nova",sans-serif;
+    font-weight: 600;
+}
+.Wedding_Categories span{
+    font-size: 22px;
+    color: #4a4a4a;
+}
+.Wedding_Categories div{
+    font-size: 14px;
+    color: #e72e77;
+    margin-left: auto;
+    text-align: center;
+}
+.image_div{
+    margin-left: auto;
+}
+  .Common_Category{
+    background-color: rgb(216, 223, 252);
+    display: flex;
+    /* grid-column: span 2; */
+  }
+  .image_div img{
+    clip-path: ellipse(99% 140px at 100% 50%);
+    object-fit: cover;
+    height: 100%;
+  }
+  .text_div_container{
+    width: 250px;
+    padding: 30px 25px;
+    font-family: proxima-nova,sans-serif;
+    color: #4a4a4a;
+  }
+  .text_div_first{
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a4a4a;
+  }
+  .text_div_second{
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 400;
+  }
+  .Categories{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
+
+  }
+  .heading {
+    max-height: 390px;
+    display: flex;
+    justify-content: space-between;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a4a4a;
+  }
+  .All-Categories {
+    color: #e72e77;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+

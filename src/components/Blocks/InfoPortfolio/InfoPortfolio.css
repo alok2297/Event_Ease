@@ -1,0 +1,62 @@
+.left-section{
+    width: 720px;
+    padding-bottom: 20px;
+}
+.portfolio{
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pic-video{
+    display: flex;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-family: proxima-nova, sans-serif;
+    gap: 40px;
+}
+.pic-video div p{
+    display: flex;
+    height: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.component{
+    margin-top: 20px;
+}
+.seating-txt p{
+    margin-top: 2px;
+}
+
+.pagination{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* YourComponent.css */
+
+.selected {
+  position: relative;
+  color: #e72e77;
+}
+
+.selected p {
+  margin-bottom: 5px; /* Adjust the value to set the desired gap */
+}
+
+.selected::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid; /* Or specify the color and style as needed */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Main-info-div{
+    display: flex;
+    font-family: proxima-nova,sans-serif;
+}

@@ -1,0 +1,63 @@
+.vendor-name{
+    display: flex;
+}
+.vendor-location{
+    margin-top: 10px;
+    display: flex;
+}
+.vendor-location div{
+    display: flex;
+}
+
+.price-non span{
+    text-align: start;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.price-veg span{
+    text-align: start;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.price-non p{
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
+}
+.price-veg p{
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
+}
+.price-non div{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+.price-veg div{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+.price{
+    display: flex;
+    margin-top: 10px;
+    gap: 30px;
+}
+.Additional-info{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+.Additional-info p{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.Additional-info div{
+    background-color: rgb(238, 238, 238);
+}
+.Additional-info p{
+    padding-right: 5px;
+}

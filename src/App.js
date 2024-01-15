@@ -1,26 +1,32 @@
 import "./header.css";
-import "./components/Header/Header";
-import Header from "./components/Header/Header";
-import HeroSection from "./components/HeroSection/HeroSection";
+import "./components/Blocks/Header/Header";
+import Header from "./components/Blocks/Header/Header";
 import { useState } from "react";
-import PopularSlider from "./components/PopularSlider/PopularSlider";
-import slides from "./LocalFile/PopularVenues.json"
-import Category from "./components/Category/Category";
-import SliderTwo from "./components/SliderTwo/SliderTwo";
-
+import Login from "./components/Blocks/Authentication/Login";
+import Footer from "./components/Blocks/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import Venue from './components/Blocks/Venue/Venue'
+import Vendors from "./Pages/Vendors";
+import Information from "../src/Pages/Information";
+import Wedsta from "./Pages/Wedsta";
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
-  const getCity = (city) =>{
-    console.log(city , "App data");
+  const getCity = (city) => {
     setSelectedCity(city);
   }
   return (
     <div>
-      <Header getCity={getCity} />
-      <HeroSection selectedCity={selectedCity}/>
-      <PopularSlider slides={slides} swiperHeight="150px" boxImgWidth="180px" boxImgHeight="120px"/>
-      <SliderTwo/>
-      <Category/>
+        <Header getCity={getCity} />
+        <Routes>
+          <Route path='/' element={<HomePage city={selectedCity} />}></Route>
+          <Route path='/login' element={<Login />} />
+          <Route path="/vendor" element={<Vendors />} />
+          <Route path="/venue" element={<Venue />} />
+          <Route path="/info" element={<Information/>}/>
+          <Route path="/wedsta" element={<Wedsta/>}/>
+        </Routes>
+        <Footer />
     </div>
   );
 }

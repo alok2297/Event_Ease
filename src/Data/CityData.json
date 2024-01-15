@@ -1,0 +1,12 @@
+{
+    "Mumbai": {
+        "img": "https://image.wedmegood.com/resized/300X/uploads/option_image/62/4-star-above-hotels.png",
+        "heading": "4 Star and Above Hotels",
+        "subCities": ["Gudgaon", "Sarojani Nagar", "Delhi"]
+    },
+    "Lucknow": {
+        "img": "https://image.wedmegood.com/resized/300X/uploads/option_image/62/4-star-above-hotels.png",
+        "heading": "4 Star and Above Hotels",
+        "subCities": ["Gudgaon", "Sarojani Nagar", "Delhi"]
+    }
+}
