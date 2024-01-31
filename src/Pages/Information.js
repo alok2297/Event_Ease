@@ -1,12 +1,11 @@
 import { Container } from "../components/Elements/Container";
-// import TablePagination from "@mui/material/TablePagination";
 import InfoHeader from '../components/Blocks/InfoHeader/InfoHeader'
 import InfoPageNav from "../components/Blocks/InfoPageNav/InfoPageNav";
 import InfoAreas from "../components/Blocks/InfoAreas/InfoAreas";
 import InfoPortfolio from "../components/Blocks/InfoPortfolio/InfoPortfolio";
-
+import {CheckoutForm} from "../components/Blocks/CheckoutForm/CheckoutForm";
+import PriceInfo from "../components/Blocks/PriceInfo/PriceInfo";
 const Information = () => {
-  // const [rowsPerPage, setRowsPerPage] = React.useState(12);
 
   return (
     <Container
@@ -18,6 +17,10 @@ const Information = () => {
               <InfoPageNav/>
               <InfoAreas/>
               <InfoPortfolio/>
+            </div>
+            <div className="right-section">
+              <PriceInfo/>
+              <CheckoutForm/>
             </div>
           </div>
         </div>

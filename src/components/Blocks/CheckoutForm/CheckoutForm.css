@@ -1,6 +1,8 @@
 .form-container {
     margin-top: 20px;
     padding: 20px;
+    font-family: proxima-nova,sans-serif;
+    margin-left: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 4px;
 }
@@ -81,7 +83,6 @@
     border: none;
     width: 100%;
 }
-
 .label{
     margin-top: 10px;
     font-size: 12px;

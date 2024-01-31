@@ -3,7 +3,7 @@ import './CheckoutForm.css';
 export const CheckoutForm = (props) => {
     return (
         <div className='form-container'>
-            <p>Hi {props.title}</p>
+            <p>Hi Hyatt Residency House Lucknow {props.title}</p>
             <div className='input-container'>
                 <div>
                     <input type="text" placeholder='Full Name' required />
