@@ -9,23 +9,50 @@
     color: #4a4a4a;
     font-size: 15px;
 }
+
 .display{
     display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .display div{
     display: flex;
+    margin-left: 20px;
+    font-size: 14px;
     align-items: center;
+    font-family: proxima-nova, sans-serif;
     justify-content: center;
-    margin-right: 40px;
+}
+.room-prices div{
+    color: #4a4a4a;
 }
 .display span{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    margin-left: auto;
-    margin-right: 5px;
     color: #e72e77;
+}
+.price-for-decor span{
+    color: #4a4a4a;
+}
+.room-prices div{
+    font-size: 14px;
+}
+.room-prices{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fbfbfb;
+}
+.price-for-decor{
+    margin-top: 10px;
+    display: flex;
+}
+.price-arrow{
+    display: flex;
+    margin-left: auto !important;
+    margin-right: 20px;
 }
 hr{
     width: 100%;

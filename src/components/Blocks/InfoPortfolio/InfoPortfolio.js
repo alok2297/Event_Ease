@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
 import "./InfoPortfolio.css";
-// import TablePagination from "@mui/material/TablePagination";
 import InfoPhotos from "../../Blocks/InfoPhotos/InfoPhotos";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";

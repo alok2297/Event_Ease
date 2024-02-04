@@ -30,7 +30,7 @@ export const CheckoutForm = (props) => {
                     <div>
                         <input type="radio" name="function-type" id="pre-wedding" />
                         <label htmlFor="pre-wedding">Pre-Wedding</label>
-                        <input type="radio" name="function-type" id="wedding" />
+                        <input type="radio"  style={{marginLeft:"20px"}} name="function-type" id="wedding" />
                         <label htmlFor="pre-wedding">Wedding</label>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ export const CheckoutForm = (props) => {
                     <div>
                         <input type="radio" name="function-time" id="evening" />
                         <label htmlFor="evening">Evening</label>
-                        <input type="radio" name="function-time" id="day" />
+                        <input type="radio" style={{marginLeft:"20px"}} name="function-time" id="day" />
                         <label htmlFor="day">Day</label>
                     </div>
                 </div>
