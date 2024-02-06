@@ -10,6 +10,8 @@ import Venue from './components/Blocks/Venue/Venue'
 import Vendors from "./Pages/Vendors";
 import Information from "../src/Pages/Information";
 import Wedsta from "./Pages/Wedsta";
+import GenieService from "./Pages/GenieService";
+import RealWeddings from "./components/Blocks/RealWeddings/RealWeddings";
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
   const getCity = (city) => {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/venue" element={<Venue />} />
           <Route path="/info" element={<Information/>}/>
           <Route path="/wedsta" element={<Wedsta/>}/>
+          <Route path="/Genie" element={<GenieService/>}/>
+          <Route path="/real-wedding" element={<RealWeddings/>}/>
         </Routes>
         <Footer />
     </div>

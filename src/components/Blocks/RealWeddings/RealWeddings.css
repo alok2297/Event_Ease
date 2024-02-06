@@ -1,0 +1,31 @@
+.real-wedding{
+    width: 380px;
+}
+.wedding-story-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.wedding-main-image{
+    height: 160px;
+    width: 100%;
+}
+.wedding-main-image img{
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+}
+.lower-images{
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    object-fit: cover;
+}
+.white-more-icon, .more-photos{
+    color: wheat;
+    font-size: 12px;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

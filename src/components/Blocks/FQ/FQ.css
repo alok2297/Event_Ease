@@ -1,0 +1,20 @@
+.frequent-question-main{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 20px;
+    font-family: proxima-nova, sans-serif;
+    border-radius: 10px;
+}
+
+.fq-main div{
+    font-size: 14px;
+    font-weight: 600;
+}
+.fq-main p{
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 20px;
+    color: rgb(144, 144, 144);
+}
+.fq-main{
+    padding: 20px 10px;
+}
