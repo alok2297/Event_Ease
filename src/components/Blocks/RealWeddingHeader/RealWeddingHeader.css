@@ -1,0 +1,65 @@
+.realwedding-header{
+    width: 100%;
+    font-family: proxima-nova,sans-serif;
+    color: rgb(255, 255, 255);
+    height: 300px;
+}
+.real-weddingHeader-image{
+    position: relative;
+}
+.realwedding-header img{
+    opacity: 0.9;
+    width: 100%;
+    object-fit: cover;
+}
+.serach-icon{
+   position: absolute;
+   top: 15px;
+   left: 10px;
+}
+.search-input{
+    margin-left: 80px;
+    margin-top: 20px;
+    position: relative;
+    width: 380px;
+    padding-bottom: 20px;
+    height: 50px;
+    font-family: proxima-nova,sans-serif;
+    margin-bottom: 50px;
+}
+.box-shadow-input{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.text-bridal-groom[type=text] {
+    outline: none;
+    text-indent: 40px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    color: #999999;
+    border-radius: 2px;
+}
+.div-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: -320px;
+    height: 315px;
+    width: 100%;
+}
+.text-header{
+    position: absolute;
+    margin-top: -220px;
+}
+.text-header span, .text-header div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.text-header span{
+    font-size: 35px;
+}
+.text-header div{
+    margin-top: 10px;
+    line-height: 1.2;
+    font-size: 20px;
+}

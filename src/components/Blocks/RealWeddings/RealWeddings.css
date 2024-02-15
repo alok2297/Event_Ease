@@ -1,15 +1,18 @@
 .real-wedding{
     width: 380px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: -1px;
 }
 .wedding-story-main{
+    gap: 20px;
     display: grid;
+    margin-top: 120px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .wedding-main-image{
     height: 160px;
     width: 100%;
 }
-/* check */
 .wedding-main-image img{
     height: 160px;
     width: 100%;
@@ -23,12 +26,43 @@
     object-fit: cover;
 }
 
-
-.white-more-icon, .more-photos{
-    color: wheat;
+.more-images{
+    color: white;
     font-size: 12px;
-    margin-top: -50px;
+    flex-direction: column;
     display: flex;
     align-items: center;
+    height: 125px;
+    outline: none;
+    margin-top: -130px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
     justify-content: center;
+}
+.image-for-more{
+    position: relative;
+}
+.real-wedding span{
+    margin-top: 16px;
+}
+.location-realwedding, .real-wedding span, .location-realwedding div, .location-realwedding p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location-realwedding{
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.location-realwedding div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location-realwedding p{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }

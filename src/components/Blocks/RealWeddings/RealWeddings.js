@@ -1,38 +1,59 @@
 import React from "react";
 import "./RealWeddings.css";
+import {Iconify} from "../../Elements/Icon";
 import { Container } from "../../Elements/Container";
-const RealWeddings = () => {
+const RealWeddings = (props) => {
+  const {photosInfo, pageNumber } = props;
+  const itemsPerPage = 21;
+  const startIndex = (pageNumber - 1) * itemsPerPage;
+  const endIndex = pageNumber * itemsPerPage;
+
+  const displayedPhotos = photosInfo.slice(startIndex, endIndex);
   return (
     <Container
       children={
         <div className="Container">
           <div className="wedding-story-main">
-            <div className="real-wedding">
+            {displayedPhotos.map((item,i)=>(<div key = {i} className="real-wedding">
               <div className="wedding-main-image">
                 <img
-                  src="https://image.wedmegood.com/resized/450X/uploads/images/90619548fca54c9698dba34999e623carealwedding/D+K_Wedding-306.jpg?crop=249,397,1619,910"
+                  src={item.imgArr[0]}
                   alt=""
                 />
               </div>
               <div className="lower-images">
                 <div>
                   <img
-                    src="https://image.wedmegood.com/resized/450X/uploads/images/cfa43a8b45604bd3a8e80db456b3b7e1realwedding/D+K_Wedding-317.jpg"
+                    src={item.imgArr[1]}
                     alt=""
                   />
                 </div>
-                <div>
+                <div className="image-for-more">
                   <img
-                    src="https://image.wedmegood.com/resized/450X/uploads/images/6f9da9d6493847ad96d035f7685033cfrealwedding/D+K_Wedding-242.jpg"
+                    src={item.imgArr[2]}
                     alt=""
                   />
                   <div className="more-images">
                     <p className="white-more-icon">+</p>
-                    <p className="more-photos">80 Photos</p>
+                    <p className="more-photos">{item.imgArr.length} Photos</p>
                   </div>
                 </div>
               </div>
-            </div>
+              <span>{item.name}</span>
+              <div className="location-realwedding">
+                <div>
+                <Iconify
+                  width={20}
+                  height={18}
+                  color={"#4a4a4a"}
+                  icon="mdi:location"
+                  />
+                </div>
+                <p>{item.city}</p>
+              </div>
+            </div>))}
+          </div>
+          <div className="pagination">
           </div>
         </div>
       }
