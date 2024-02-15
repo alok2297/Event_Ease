@@ -3,12 +3,15 @@ import "./RealWeddings.css";
 import {Iconify} from "../../Elements/Icon";
 import { Container } from "../../Elements/Container";
 const RealWeddings = (props) => {
-  const {photosInfo, pageNumber } = props;
+  const {photosInfo, pageNumber,type} = props;
   const itemsPerPage = 21;
   const startIndex = (pageNumber - 1) * itemsPerPage;
   const endIndex = pageNumber * itemsPerPage;
 
-  const displayedPhotos = photosInfo.slice(startIndex, endIndex);
+  var displayedPhotos = photosInfo.slice(startIndex, endIndex);
+  if(type===1){
+    displayedPhotos=photosInfo.slice(0,3);
+  }
   return (
     <Container
       children={

@@ -13,6 +13,7 @@ import Wedsta from "./Pages/Wedsta";
 import GenieService from "./Pages/GenieService";
 import RealWedidingStroies from "./Pages/RealWedidingStroies";
 import RealWeddingDetail from "./Pages/RealWeddingDetail";
+import Photos from "./Pages/Photos";
 function App() {
   const [selectedCity, setSelectedCity] = useState("Delhi NCR");
   const getCity = (city) => {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Genie" element={<GenieService/>}/>
           <Route path="/real-wedding" element={<RealWedidingStroies/>}/>
           <Route path="/wedding-detail" element={<RealWeddingDetail/>}/>
+          <Route path="/photo" element={<Photos/>}/>
         </Routes>
         <Footer />
     </div>
