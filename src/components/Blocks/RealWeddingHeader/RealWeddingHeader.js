@@ -1,5 +1,6 @@
 import React from "react";
 import "./RealWeddingHeader.css";
+import PhotosIdea from "../PhotosIdea/PhotosIdea";
 import { Iconify } from "../../Elements/Icon";
 const RealWeddingHeader = () => {
   return (
@@ -29,6 +30,7 @@ const RealWeddingHeader = () => {
           <input className="text-bridal-groom" type="text" placeholder="Search by Bride/Groom" />
         </div>
       </div>
+      <PhotosIdea></PhotosIdea>
     </div>
   );
 };
