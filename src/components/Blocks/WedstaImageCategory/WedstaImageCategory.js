@@ -18,7 +18,7 @@ const WedstaImageCategory = (props) => {
           <div className="category-container">
             {WedstImage.map((item, i) =>
               check === item.packageInfo ? (
-                <div key={i} className="main-container">
+                <div key={i} className="wedsta-container">
                   <div className="category-image">
                     <img src={item.imgUrl} alt="" />
                   </div>
