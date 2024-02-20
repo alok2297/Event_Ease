@@ -7,11 +7,14 @@ const CitiesPopup = (props) => {
   const handleCityClick = (city) => {
     props.parentCallback(city);
 }
+  const getInput = (input) => {
+    console.log(input.target.value);
+}
 const dispatch = useDispatch();
 const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
 
-
-
+const searchInput = "";
+console.log(searchInput, "");
   const TopCities = [
     { id: 0, category: "Top Cities", city: "All Cities" },
     { id: 1, category: "Top Cities", city: "Delhi NCR" },
@@ -75,15 +78,15 @@ const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
             >
               <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
             </svg>
-            <input type="text" placeholder="Search your city..." />
+            <input type="search" placeholder="Search your city..." onChange={getInput}/>
           </div>
         </div>
         <div className="container">
           <div className="child1">
             <div className="Top-Cities">
-              <a className="HeadDing-City" href="$">
+              <span className="HeadDing-City" href="$">
                 Top Cities
-              </a>
+              </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {TopCities.map((item) => (
                   <li
@@ -101,9 +104,9 @@ const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
           </div>
           <div className="child2">
             <div className="Popular-Cities">
-              <a className="HeadDing-City" href="$">
+              <span className="HeadDing-City" href="$">
                 Popular Cities
-              </a>
+              </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {PopularCities.map((item) => (
                   <li
@@ -121,9 +124,9 @@ const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
           </div>
           <div className="child3">
             <div className="Other-Cities">
-              <a className="HeadDing-City" href="$">
+              <span className="HeadDing-City" href="$">
                 Other Cities
-              </a>
+              </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {OtherCity.map((item) => (
                   <li
@@ -142,9 +145,9 @@ const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
           </div>
           <div className="child4">
             <div className="International-Cities">
-              <a className="HeadDing-City" href="$">
+              <span className="HeadDing-City" href="$">
                 International Cities
-              </a>
+              </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
                 {InternationalCity.map((item) => (
                   <li

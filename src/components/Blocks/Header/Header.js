@@ -21,7 +21,6 @@ const Header = (props) => {
   ];
 
   const handleClick = () => {
-    console.log(true);
     setRotate(rotate===0?1:0);
     setOpen(true);
   };

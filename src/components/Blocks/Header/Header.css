@@ -24,6 +24,7 @@
     margin-left: 50px;
     display: flex;
     border-radius: 2px;
+    cursor: pointer;
   }
   .wedding-city{
     align-items: center;

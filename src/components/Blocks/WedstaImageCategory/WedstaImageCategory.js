@@ -4,7 +4,6 @@ import "./WedstaImageCategory.css";
 import WedstImage from "../../../Data/WedstaImages.json"
 const WedstaImageCategory = (props) => {
   const { pageNumber, check } = props;
-  console.log(check);
   const itemsPerPage = 8;
   const startIndex = (pageNumber - 1) * itemsPerPage;
   const endIndex = pageNumber * itemsPerPage;
@@ -12,7 +11,7 @@ const WedstaImageCategory = (props) => {
   const displayedPhotos = props.photosInfo.slice(startIndex, endIndex);
 
   return (
-    <Container
+    <div
       children={
         <div className="Container">
           <div className="category-container">
