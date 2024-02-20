@@ -391,7 +391,7 @@ const GenieService = () => {
             >
               Frequently Asked Questions
             </h3>
-
+   
             <FQ data = {GenieFQ}/>
         </div>
       }
