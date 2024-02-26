@@ -1,70 +1,64 @@
-import React from "react";
+import React, {useState}from "react";
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import{ actionCreaters} from "../../../state/index";
 
 const CitiesPopup = (props) => {
+  const Cities = [
+    { category: "TC", city: "All Cities" },
+    { category: "TC", city: "Delhi NCR" },
+    { category: "TC", city: "Mumbai" },
+    { category: "TC", city: "Bangalore" },
+    { category: "TC", city: "Hyderabad" },
+    { category: "TC", city: "Chennai" },
+    { category: "TC", city: "Pune" },
+    { category: "TC", city: "Kolkata" },
+    { category: "TC", city: "Lucknow" },
+    { category: "TC", city: "Jaipur" },
+    { category: "PC", city: "Gurugram" },
+    { category: "PC", city: "Goa" },
+    { category: "PC", city: "Udaipur" },
+    { category: "PC", city: "Chandigarh" },
+    { category: "PC", city: "Ahmedabad" },
+    { category: "PC", city: "Chennai" },
+    { category: "PC", city: "Indore" },
+    { category: "PC", city: "Agra" },
+    { category: "PC", city: "Kanpur" },
+    { category: "PC", city: "Kochi" },
+    { category: "OC", city: "Nagpur" },
+    { category: "OC", city: "Dehradun" },
+    { category: "OC", city: "Thane" },
+    { category: "OC", city: "Surat" },
+    { category: "OC", city: "Vadodara" },
+    { category: "OC", city: "Visakhapatnam" },
+    { category: "OC", city: "Raipur" },
+    { category: "OC", city: "Coimbatore" },
+    { category: "OC", city: "Jalandhar" },
+    { category: "OC", city: "Ranchi" },
+    { category: "IC", city: "Chicago" },
+    { category: "IC", city: "New York" },
+    { category: "IC", city: "New Jersey" },
+    { category: "IC", city: "Houston" },
+    { category: "IC", city: "Washington" },
+    { category: "IC", city: "Arizona" },
+    { category: "IC", city: "Dubai" },
+    { category: "IC", city: "Thailand" },
+    { category: "IC", city: "USA" },
+    { category: "IC", city: "Canada" },
+  ];
+  let [filteredCities,setCities] = useState(Cities)
   const handleCityClick = (city) => {
     props.parentCallback(city);
 }
   const getInput = (input) => {
-    console.log(input.target.value);
+    const searchInput = input.toLowerCase()
+    filteredCities = Cities.filter((item)=>{
+      return item.city.toLowerCase().includes(searchInput)
+    })
+    setCities(filteredCities)
 }
 const dispatch = useDispatch();
 const {clickedCity} = bindActionCreators(actionCreaters,dispatch);
-
-const searchInput = "";
-console.log(searchInput, "");
-  const TopCities = [
-    { id: 0, category: "Top Cities", city: "All Cities" },
-    { id: 1, category: "Top Cities", city: "Delhi NCR" },
-    { id: 2, category: "Top Cities", city: "Mumbai" },
-    { id: 3, category: "Top Cities", city: "Bangalore" },
-    { id: 4, category: "Top Cities", city: "Hyderabad" },
-    { id: 5, category: "Top Cities", city: "Chennai" },
-    { id: 6, category: "Top Cities", city: "Pune" },
-    { id: 7, category: "Top Cities", city: "Kolkata" },
-    { id: 8, category: "Top Cities", city: "Lucknow" },
-    { id: 9, category: "Top Cities", city: "Jaipur" },
-  ];
-  const PopularCities = [
-    { id: 10, category: "Popular Cities", city: "Gurugram" },
-    { id: 11, category: "Popular Cities", city: "Goa" },
-    { id: 12, category: "Popular Cities", city: "Udaipur" },
-    { id: 13, category: "Popular Cities", city: "Chandigarh" },
-    { id: 14, category: "Popular Cities", city: "Ahmedabad" },
-    { id: 15, category: "Popular Cities", city: "Chennai" },
-    { id: 16, category: "Popular Cities", city: "Indore" },
-    { id: 17, category: "Popular Cities", city: "Agra" },
-    { id: 18, category: "Popular Cities", city: "Kanpur" },
-    { id: 19, category: "Popular Cities", city: "Kochi" },
-  ];
-
-  const OtherCity = [
-    { id: 20, category: "Other Cities", city: "Nagpur" },
-    { id: 21, category: "Other Cities", city: "Dehradun" },
-    { id: 22, category: "Other Cities", city: "Thane" },
-    { id: 23, category: "Other Cities", city: "Surat" },
-    { id: 24, category: "Other Cities", city: "Vadodara" },
-    { id: 25, category: "Other Cities", city: "Visakhapatnam" },
-    { id: 26, category: "Other Cities", city: "Raipur" },
-    { id: 27, category: "Other Cities", city: "Coimbatore" },
-    { id: 28, category: "Other Cities", city: "Jalandhar" },
-    { id: 29, category: "Other Cities", city: "Ranchi" },
-  ];
-
-  const InternationalCity = [
-    { id: 30, category: "International Cities", city: "Chicago" },
-    { id: 31, category: "International Cities", city: "New York" },
-    { id: 32, category: "International Cities", city: "New Jersey" },
-    { id: 33, category: "International Cities", city: "Houston" },
-    { id: 34, category: "International Cities", city: "Washington" },
-    { id: 35, category: "International Cities", city: "Arizona" },
-    { id: 36, category: "International Cities", city: "Dubai" },
-    { id: 37, category: "International Cities", city: "Thailand" },
-    { id: 38, category: "International Cities", city: "USA" },
-    { id: 39, category: "International Cities", city: "Canada" },
-  ];
 
   return (
     <div className="popup-container">
@@ -78,7 +72,7 @@ console.log(searchInput, "");
             >
               <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
             </svg>
-            <input type="search" placeholder="Search your city..." onChange={getInput}/>
+            <input className="search-city" type="search" placeholder="Search your city..." onChange={e=> getInput(e.target.value)}/>
           </div>
         </div>
         <div className="container">
@@ -88,10 +82,10 @@ console.log(searchInput, "");
                 Top Cities
               </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
-                {TopCities.map((item) => (
+                {filteredCities.filter((city)=> city.category === "TC").map((item, id) => (
                   <li
                     className="CityName"
-                    key={item.id}
+                    key={id}
                     onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
@@ -108,10 +102,10 @@ console.log(searchInput, "");
                 Popular Cities
               </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
-                {PopularCities.map((item) => (
+                {filteredCities.filter((city)=> city.category === "PC").map((item, id) => (
                   <li
                     className="CityName"
-                    key={item.id}
+                    key={id}
                     onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
@@ -128,10 +122,10 @@ console.log(searchInput, "");
                 Other Cities
               </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
-                {OtherCity.map((item) => (
+                {filteredCities.filter((city)=> city.category === "OC").map((item, id) => (
                   <li
                     className="CityName"
-                    key={item.id}
+                    key={id}
                     onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"
@@ -149,10 +143,10 @@ console.log(searchInput, "");
                 International Cities
               </span>
               <div className="CityName" onClick={()=>handleCityClick("DUM")}>
-                {InternationalCity.map((item) => (
+                {filteredCities.filter((city)=> city.category === "IC").map((item, id) => (
                   <li
                     className="CityName"
-                    key={item.id}
+                    key={id}
                     onClick={() => {clickedCity(item.city)}}
                     name={item.name}
                     href="$"

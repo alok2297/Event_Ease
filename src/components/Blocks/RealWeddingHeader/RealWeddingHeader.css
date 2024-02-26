@@ -5,48 +5,55 @@
 }
 .real-weddingHeader-image{
     position: relative;
+    height: 300px;
+    overflow: hidden;
 }
 .realwedding-header img{
     opacity: 0.9;
     width: 100%;
     object-fit: cover;
+    min-height: 100%;
 }
 .serach-icon{
    position: absolute;
-   top: 15px;
+   top: 38%;
+   bottom: 50%;
    left: 10px;
 }
 .search-input{
-    margin-left: 80px;
-    margin-top: 20px;
     position: relative;
-    width: 380px;
-    padding-bottom: 20px;
-    height: 50px;
     font-family: proxima-nova,sans-serif;
     margin-bottom: 50px;
+    padding: 15px 0px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .box-shadow-input{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.text-bridal-groom[type=text] {
-    outline: none;
-    text-indent: 40px;
-    font-size: 14px;
+
+.text-bridal-groom{
     border: 1px solid #999999;
-    color: #999999;
-    border-radius: 2px;
+    height: 50px;
+    width: 300px;
+    padding-left: 30px;
 }
 .div-background{
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    margin-top: -320px;
-    height: 315px;
+    height: 100%;
     width: 100%;
+    top: 0;
+    bottom: 0;
+    height: 300px;
 }
 .text-header{
     position: absolute;
-    margin-top: -220px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: max-content;
+    padding: 0 10%;
 }
 .text-header span, .text-header div{
     display: flex;
@@ -58,7 +65,24 @@
     font-size: 35px;
 }
 .text-header div{
-    margin-top: 10px;
+    /* margin-top: 10px; */
     line-height: 1.2;
     font-size: 20px;
+}
+@media screen and (min-width: 640px)  {
+    .box-shadow-input{
+        padding: 0 32px;
+    }
+}
+
+@media screen and (min-width: 768px)  {
+    .box-shadow-input{
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1280px)  {
+    .box-shadow-input{
+        padding: 0 80px;
+    }
 }

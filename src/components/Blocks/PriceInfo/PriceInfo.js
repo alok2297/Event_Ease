@@ -71,7 +71,6 @@ const PriceInfo = () => {
           </div>
         </div>):null}
 
-        <hr />
         <div className="Price-info">
           <div>
             <Iconify
@@ -80,11 +79,10 @@ const PriceInfo = () => {
               color={"#e72e77"}
               icon="mdi:rupee"
             />
-          </div>
           <span>1299</span>
+          </div>
           <p>per plate (taxes extra)</p>
         </div>
-        <hr />
         <div className="Price-info">
           <div>
             <Iconify
@@ -93,8 +91,8 @@ const PriceInfo = () => {
               color={"#e72e77"}
               icon="mdi:rupee"
             />
-          </div>
           <span>1299</span>
+          </div>
           <p>per plate (taxes extra)</p>
         </div>
       </div>

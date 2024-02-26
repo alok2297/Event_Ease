@@ -4,12 +4,14 @@ import PhotosIdea from "../PhotosIdea/PhotosIdea";
 import {Container} from "../../Elements/Container";
 import { Iconify } from "../../Elements/Icon";
 const RealWeddingHeader = () => {
+  const getInput = (input) => {
+    const searchInput = input.toLowerCase()
+}
   return (
     <div className="realwedding-header">
       <div className="real-weddingHeader-image">
         <img src="https://images.wedmegood.com/images/rw-banner.png" alt="" />
-      </div>
-      <div className="div-background"></div>
+        <div className="div-background"></div>
       <div className="text-header">
         <span>Real Weddings on Event Ease | Photos and Trending Ideas</span>
         <div>
@@ -17,6 +19,7 @@ const RealWeddingHeader = () => {
           Know latest wedding trends, outfit ideas, vendors chosen by real
           brides & grooms in different cities and culture.
         </div>
+      </div>
       </div>
       <div className="box-shadow-input">
         <div className="search-input">
@@ -28,7 +31,7 @@ const RealWeddingHeader = () => {
               icon="material-symbols:search"
             />
           </div>
-          <input className="text-bridal-groom" type="text" placeholder="Search by Bride/Groom" />
+          <input className="text-bridal-groom" type="search" placeholder="Search by Bride/Groom" onChange={e=> getInput(e.target.value)}/>
         </div>
       </div>
       <Container children = {

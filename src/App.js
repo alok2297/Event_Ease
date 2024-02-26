@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Venue from './components/Blocks/Venue/Venue'
 import Vendors from "./Pages/Vendors";
+import DynamicComponent from "./Pages/DynamicComponent";
 import Information from "../src/Pages/Information";
 import Wedsta from "./Pages/Wedsta";
 import GenieService from "./Pages/GenieService";

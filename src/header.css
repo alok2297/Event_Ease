@@ -362,10 +362,10 @@ border: none;
 }
 
 /* Style for the input */
-input[type="text"] {
+.search-city {
   border: none;
   outline: none;
-  height: 100%;
+  height: 50px;
   width: 100%;
   /* Add your input styles here */
 }
@@ -425,7 +425,14 @@ input[type="text"] {
   height: 50px;
 }
 
-
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
 /* Swiper */
 /* .PopuplarText{
   font-size: 22px;
