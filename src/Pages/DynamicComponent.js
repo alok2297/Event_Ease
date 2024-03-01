@@ -1,9 +1,30 @@
 import React, { Suspense, lazy } from "react";
 const GenieService = lazy(() => import('./GenieService'));
 const Information = lazy(() => import('./Information'));
+const Footer = lazy(() => import('../components/Blocks/Footer/Footer'));
+const Header = lazy(() => import('../components/Blocks/Header/Header'));
+const VenueSection = lazy(() => import('../components/Blocks/Venue/Venue'));
+const Login = lazy(() => import('../components/Blocks/Authentication/Login'));
+const Home = lazy(() => import('../Pages/HomePage'));
+const Vendors = lazy(() => import('../Pages/Vendors'));
+const Wedsta = lazy(() => import('../Pages/Wedsta'));
+const RealWedidingStroies = lazy(() => import('../Pages/RealWedidingStroies'));
+const RealWeddingDetail = lazy(() => import('../Pages/RealWeddingDetail'));
+const Photos = lazy(() => import('../Pages/Photos'));
+
 const Components = {
     GenieService: GenieService,
-    Information: Information
+    Information: Information,
+    VenueSection: VenueSection,
+    Footer: Footer,
+    Header: Header,
+    Login: Login,
+    Home: Home,
+    Vendors: Vendors,
+    Wedsta: Wedsta,
+    RealWedidingStroies: RealWedidingStroies,
+    RealWeddingDetail: RealWeddingDetail,
+    Photos: Photos,
 };
 
 const creatingComponents = (component, attributes) => {
@@ -13,11 +34,7 @@ const creatingComponents = (component, attributes) => {
         return <DynamicComponent {...attributes} />
     }
     //   component doesn't exist yet
-    return React.createElement(
-        () => {
-            <div>The component {component} has not been created yet.</div>
-        }
-    );
+    return <div style={{color: 'red', padding: '10px 20px'}}>The component ''---"{component}"--- does not exist.</div>
 }
 
 const DynamicComponent = ({ component, attributes }) => {
