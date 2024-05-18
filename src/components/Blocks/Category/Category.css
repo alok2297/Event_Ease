@@ -45,7 +45,7 @@
   .Categories{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     justify-content: space-between;
 
@@ -67,4 +67,9 @@
     cursor: pointer;
   }
   
+  @media screen and (min-width:640px) {
+    .Categories{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 

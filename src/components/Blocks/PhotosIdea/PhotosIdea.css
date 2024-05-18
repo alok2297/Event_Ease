@@ -1,0 +1,46 @@
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.photos-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.photos-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.photos-container div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.title{
+    color: #4A4A4A;
+    font-size: 16px;
+}
+.location{
+    color: #E72E77;
+    font-size: 14px;
+}
+.description{
+    color: #707070;
+    font-size: 12px;
+}
+
+@media screen and (min-width:640px) {
+    .main-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .main-container{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}

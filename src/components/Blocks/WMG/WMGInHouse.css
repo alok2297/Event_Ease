@@ -8,7 +8,7 @@
 .Pair_two_Services {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 .First_Contianer_Service {
     width: 580px;
@@ -101,4 +101,10 @@
 .First_Contianer_Service:hover .Know_more {
     background-color: #e72e77;
     color: #fff;
+}
+
+@media screen and (min-width:640px) {
+    .Pair_two_Services{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

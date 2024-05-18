@@ -1,6 +1,8 @@
 .form-container {
     margin-top: 20px;
     padding: 20px;
+    font-family: proxima-nova,sans-serif;
+    margin-left: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 4px;
 }
@@ -20,19 +22,18 @@
     margin-top: 20px;
 }
 
-.input-container div {}
 
 .input-container div input {
     outline: none;
     border: none;
-    border-bottom: 2px solid #c5d2e0;
+    border-bottom: 1px solid #c5d2e0;
     width: 100%;
     padding: 5px 0;
     height: 100%;
 }
 
 .input-container div input:hover {
-    border-bottom: 2px solid #000000;
+    border-bottom: 1px solid #000000;
 }
 
 .input-container div input:focus {
@@ -81,7 +82,6 @@
     border: none;
     width: 100%;
 }
-
 .label{
     margin-top: 10px;
     font-size: 12px;

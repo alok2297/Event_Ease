@@ -361,10 +361,10 @@ border: none;
 }
 
 /* Style for the input */
-input[type="text"] {
+.search-city {
   border: none;
   outline: none;
-  height: 100%;
+  height: 50px;
   width: 100%;
   /* Add your input styles here */
 }
@@ -392,6 +392,7 @@ input[type="text"] {
   font-family: "proxima-nova",sans-serif;
   font-size: 16px;
   font-weight: 600;
+  cursor: default;
 }
 .CityName{
   color: #4a4a4a;
@@ -399,6 +400,7 @@ input[type="text"] {
   font-family: "proxima-nova",sans-serif;
   font-size: 14px;
   padding: 2px 0px;
+  cursor: pointer;
 }
 .Search-Vendors{
   margin-top: 20px;
@@ -422,7 +424,14 @@ input[type="text"] {
   height: 50px;
 }
 
-
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
 /* Swiper */
 /* .PopuplarText{
   font-size: 22px;

@@ -1,17 +1,17 @@
-.HeroDiv{
+.HeroDivWedsta{
     position: relative;
     width: 100%;
     height: 400px;
   }
-  .HeroDiv img{
+  .HeroDivWedsta img{
     object-fit: cover;
     height: 400px;
   }
-  .HeroSection-div {
+  .HeroDivWedstaSection-div {
     color: #ffffff;
     font-family: sans-serif;
   }
-  .HeroSection-div img{
+  .HeroDivWedstaSection-div img{
     position: relative;
     display: flex;
     color: #fff;
@@ -22,11 +22,11 @@
     overflow: hidden;
     width: 100%;
   }
-  .HeroSection-Img{
-    font-size: 48px;
+  .HeroDivWedstaSection-Img{
+    font-size: 48px !important;
   }
-  .HeroSection-Img span{
-    font-size: 48px;
+  .HeroDivWedstaSection-Img span{
+    font-size: 48px !important;
     color: #e72e77;
   }
 
@@ -44,7 +44,9 @@
 }
 .wedsta-main{
     font-family: proxima-nova,sans-serif;
+    padding-bottom: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
 }
 .main-card-container{
     display: grid;
@@ -117,13 +119,10 @@
     margin-left: 65px;
     color: #4a4a4a;
 }
-
-
-
-
 .cart-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 40px;
     background-color: #fff;
     color: #e72e77;
@@ -142,5 +141,35 @@
     cursor: pointer;
     padding: 5px 10px;
     margin: 8px 5px;
+  }
+
+  .bottom-sheet{
+    padding: 15px 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:#ffffff;
+    border-top: 1px solid rgb(215, 215, 215);
+    z-index: 50;
+    left: 0;
+    right: 0;
+  }
+  .bottom-sheet div{
+    margin-left: auto;
+    width: 100%;
+  }
+  .bottom-sheet div button{
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 15px 20px;
+    background-color: #e72e77;
+    border-radius: 8px;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
   }
 

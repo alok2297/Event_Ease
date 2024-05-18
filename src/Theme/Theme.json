@@ -1,0 +1,126 @@
+{
+    "header":{
+        "child": [
+            {
+                "component": "Header",
+                "attributes":{
+                    "props": ""
+                }
+            }
+        ]
+    },
+    "footer":{
+        "child": [
+            {
+                "component": "Footer",
+                "attributes":{
+                    "props": ""
+                }
+            }
+        ]
+    },
+    "pages": {
+        "/info": {
+            "title": "Info",
+            "component": "Information",
+            "child": [
+              {
+                "component": "Information",
+                "attributes": {}
+              }
+            ]
+          },
+        "/login": {
+            "title": "Login",
+            "component": "Login",
+            "handler": "Login",
+            "layout": "noFooter",
+            "child": [
+              {
+                "component": "Login",
+                "attributes": {}
+              }
+            ]
+          },
+        "/venue": {
+            "title": "Venue",
+            "component": "VenueSection",
+            "child": [
+              {
+                "component": "VenueSection",
+                "attributes": {}
+              }
+            ]
+          },
+        "/genie": {
+            "title": "Genie",
+            "component": "GenieService",
+            "child": [
+              {
+                "component": "GenieService",
+                "attributes": {}
+              }
+            ]
+          },
+        "/vendor": {
+            "title": "Vendors",
+            "component": "Vendors",
+            "child": [
+              {
+                "component": "Vendors",
+                "attributes": {}
+              }
+            ]
+          },
+        "/wedsta": {
+            "title": "Wedsta",
+            "component": "Wedsta",
+            "child": [
+              {
+                "component": "Wedsta",
+                "attributes": {}
+              }
+            ]
+          },
+        "/real-wedding": {
+            "title": "RealWedidingStroies",
+            "component": "RealWedidingStroies",
+            "child": [
+              {
+                "component": "RealWedidingStroies",
+                "attributes": {}
+              }
+            ]
+          },
+        "/wedding-detail": {
+            "title": "RealWeddingDetail",
+            "component": "RealWeddingDetail",
+            "child": [
+              {
+                "component": "RealWeddingDetail",
+                "attributes": {}
+              }
+            ]
+          },
+        "/photo": {
+            "title": "Photos",
+            "component": "Photos",
+            "child": [
+              {
+                "component": "Photos",
+                "attributes": {}
+              }
+            ]
+          },
+        "/": {
+            "title": "Home",
+            "handler": "Home",
+            "child": [
+              {
+                "component": "Home",
+                "attributes": {}
+              }
+            ]
+          }
+    }
+}
