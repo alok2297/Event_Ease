@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login(){
     const[emailOrPhone,setEmailOrPhone]=useState("");
@@ -47,6 +48,10 @@ function Login(){
                 <img id="gmail-login-redirect" src="https://images.wedmegood.com/react-frontend-v4/static/media/gicon.34be4ec1.svg" alt=""/>
                 <p className="google-login">Google</p>
               </div>
+            </div>
+            <div className="vendor-login">
+              <span>Are you a vendor?</span>
+              <Link to="/vendor-login">Business Sign In</Link>
             </div>
           </form>
         </div>

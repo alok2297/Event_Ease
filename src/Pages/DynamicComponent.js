@@ -5,6 +5,7 @@ const Footer = lazy(() => import('../components/Blocks/Footer/Footer'));
 const Header = lazy(() => import('../components/Blocks/Header/Header'));
 const VenueSection = lazy(() => import('../components/Blocks/Venue/Venue'));
 const Login = lazy(() => import('../components/Blocks/Authentication/Login'));
+const VendorLogin = lazy(() => import('../components/Blocks/Authentication/VendorLogin'));
 const Home = lazy(() => import('../Pages/HomePage'));
 const Vendors = lazy(() => import('../Pages/Vendors'));
 const Wedsta = lazy(() => import('../Pages/Wedsta'));
@@ -19,6 +20,7 @@ const Components = {
     Footer: Footer,
     Header: Header,
     Login: Login,
+    VendorLogin: VendorLogin,
     Home: Home,
     Vendors: Vendors,
     Wedsta: Wedsta,

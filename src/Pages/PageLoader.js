@@ -18,7 +18,7 @@ export const PageLoader = () => {
                 ))}
 
             </header>
-            <div className="">
+            <div className="content">
                 {pageStructure?.structure?.body?.map((item, id) => (
                     <DynamicComponent key={id} component={item?.component} attributes={item?.attributes} />
                 ))}

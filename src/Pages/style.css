@@ -3,6 +3,87 @@
     min-height: 100vh;
     flex-direction: column;
 }
-.page-container div{
+.page-container content{
     flex: 1 1 0%;
 }
+
+
+.form-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .form-container p {
+    margin-bottom: 20px;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container input,
+  .form-container select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .sign-in-links {
+    margin-top: 20px;
+  }
+
+  .sign-in-link {
+    margin-top: 20px;
+  }
+  
+  .sign-in-links a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .sign-in-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .customer-signin {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4081;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .customer-signin:hover {
+    background-color: #c60055;
+    text-decoration: none;
+  }
+  

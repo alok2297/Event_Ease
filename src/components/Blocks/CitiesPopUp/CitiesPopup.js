@@ -2,50 +2,10 @@ import React, {useState}from "react";
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import{ actionCreaters} from "../../../state/index";
+import cities from "../../../Data/Cities.json"
 
 const CitiesPopup = (props) => {
-  const Cities = [
-    { category: "TC", city: "All Cities" },
-    { category: "TC", city: "Delhi NCR" },
-    { category: "TC", city: "Mumbai" },
-    { category: "TC", city: "Bangalore" },
-    { category: "TC", city: "Hyderabad" },
-    { category: "TC", city: "Chennai" },
-    { category: "TC", city: "Pune" },
-    { category: "TC", city: "Kolkata" },
-    { category: "TC", city: "Lucknow" },
-    { category: "TC", city: "Jaipur" },
-    { category: "PC", city: "Gurugram" },
-    { category: "PC", city: "Goa" },
-    { category: "PC", city: "Udaipur" },
-    { category: "PC", city: "Chandigarh" },
-    { category: "PC", city: "Ahmedabad" },
-    { category: "PC", city: "Chennai" },
-    { category: "PC", city: "Indore" },
-    { category: "PC", city: "Agra" },
-    { category: "PC", city: "Kanpur" },
-    { category: "PC", city: "Kochi" },
-    { category: "OC", city: "Nagpur" },
-    { category: "OC", city: "Dehradun" },
-    { category: "OC", city: "Thane" },
-    { category: "OC", city: "Surat" },
-    { category: "OC", city: "Vadodara" },
-    { category: "OC", city: "Visakhapatnam" },
-    { category: "OC", city: "Raipur" },
-    { category: "OC", city: "Coimbatore" },
-    { category: "OC", city: "Jalandhar" },
-    { category: "OC", city: "Ranchi" },
-    { category: "IC", city: "Chicago" },
-    { category: "IC", city: "New York" },
-    { category: "IC", city: "New Jersey" },
-    { category: "IC", city: "Houston" },
-    { category: "IC", city: "Washington" },
-    { category: "IC", city: "Arizona" },
-    { category: "IC", city: "Dubai" },
-    { category: "IC", city: "Thailand" },
-    { category: "IC", city: "USA" },
-    { category: "IC", city: "Canada" },
-  ];
+  const Cities = cities
   let [filteredCities,setCities] = useState(Cities)
   const handleCityClick = (city) => {
     props.parentCallback(city);

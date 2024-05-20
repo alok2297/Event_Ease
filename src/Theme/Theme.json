@@ -42,6 +42,18 @@
               }
             ]
           },
+        "/vendor-login": {
+            "title": "VendorLogin",
+            "component": "VendorLogin",
+            "handler": "VendorLogin",
+            "layout": "noFooter",
+            "child": [
+              {
+                "component": "VendorLogin",
+                "attributes": {}
+              }
+            ]
+          },
         "/venue": {
             "title": "Venue",
             "component": "VenueSection",

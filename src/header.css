@@ -96,6 +96,10 @@
   min-width: 400px;
   height: 600px;
 }
+.headline-image-vendor{
+  width: 40%;
+  background: url(https://images.wedmegood.com/images/vendor-auth.png) 100% center / cover no-repeat;
+}
 
 .pic-and-login {
 width: 1000px;
@@ -412,7 +416,7 @@ border: none;
 
 .Find-Vendors{
   background-color: #fff;
-  width: 750px;
+  width: 100%;
   color: #e72e77;
   font-family: "proxima-nova",sans-serif;
   display: flex;
@@ -422,6 +426,29 @@ border: none;
   padding-left: 13px;
   font-weight: 600;
   height: 50px;
+}
+
+.relative {
+  max-width: 750px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.vendor-login{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vendor-login span{
+  margin-right: 10px;
+}
+.vendor-login a{
+  background-color: #e72e77;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
 }
 
 /* clears the ‘X’ from Internet Explorer */
