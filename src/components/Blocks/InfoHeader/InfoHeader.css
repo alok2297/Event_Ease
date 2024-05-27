@@ -1,5 +1,5 @@
 .profile-img{
-    width: 720px;
+    /* width: 720px; */
     z-index: 0;
 }
 .profile-img img{
@@ -14,7 +14,7 @@
 .full-info{
     margin-top: -40px;
     background-color: #fff;
-    width: 680px;
+    /* width: 680px; */
     box-shadow: #fff;
     border-radius: 2px;
     margin-left: 20px;

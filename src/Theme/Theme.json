@@ -20,7 +20,7 @@
         ]
     },
     "pages": {
-        "/info": {
+        "/wedding-venues": {
             "title": "Info",
             "component": "Information",
             "child": [

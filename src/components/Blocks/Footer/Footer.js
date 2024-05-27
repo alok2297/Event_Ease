@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                </div>
             </div>
-            <div className='footer' style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr"}}>
+            <div className='footer'>
                 <div className='footer1'>
                    <p style={{fontWeight:"600",fontSize:"15px"}}>Starting Planning</p>
                    <p>Search By Vendors</p>

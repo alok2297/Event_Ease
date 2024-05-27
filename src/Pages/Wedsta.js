@@ -6,6 +6,7 @@ import '../components/Blocks/Wedsta-header/WedstaHeader.css';
 import WedstaImages from "../Data/WedstaImages.json";
 import WedstaImageCategory from '../components/Blocks/WedstaImageCategory/WedstaImageCategory';
 import { Container } from "../../src/components/Elements/Container";
+import "../components/Blocks/InfoPortfolio/InfoPortfolio.css";
 
 const Wedsta = () => {
   const [page, setPage] = useState(1);

@@ -6,6 +6,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Iconify } from "../../Elements/Icon";
 import { Container } from "../../Elements/Container";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -15,14 +16,20 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
 const Venue = () => {
+  const navigate = useNavigate();
+
+  const handleClick = ()=>{
+    navigate("/wedding-venues")
+  }
   return (
     <Container
       children={
         <div className="Container">
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -97,7 +104,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -172,7 +179,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -247,7 +254,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -322,7 +329,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -397,7 +404,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -472,7 +479,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -547,7 +554,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -622,7 +629,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img
@@ -697,7 +704,7 @@ const Venue = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4} onClick={handleClick}>
                 <Item>
                   <div className="img-container">
                     <img

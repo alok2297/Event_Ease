@@ -1,6 +1,6 @@
 import './SliderTwo.css';
 import {Container} from "../../Elements/Container"
-
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Iconify } from "../../Elements/Icon";
@@ -10,9 +10,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const SliderTwo = ()=>{
+const SliderTwo = () =>{
   const [swiperRef, setSwiperRef] = useState(null);
-
+  const navigate = useNavigate();
   const prevHandler = () => {
     swiperRef.slidePrev();
   };
@@ -20,6 +20,12 @@ const SliderTwo = ()=>{
   const nextHandler = () => {
     swiperRef.slideNext();
   };
+
+  const handleClick =(event) => {
+    event.preventDefault();
+    navigate("/venue")
+  }
+
   const breakPoints = {
     default: {
       slidesPerView: 4,
@@ -36,7 +42,8 @@ const SliderTwo = ()=>{
       slidesPerView: 8,
     },
   };
-   return <Container children={
+
+   return (<Container children={
         <><div className="real-wedding">Popular Searchers</div><div className="slider-container">
        <Swiper
          // install Swiper modules
@@ -47,7 +54,7 @@ const SliderTwo = ()=>{
          onSwiper={(swiper) => setSwiperRef(swiper)}
          breakpoints={breakPoints}
        >
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -59,7 +66,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -71,7 +78,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -83,7 +90,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -95,7 +102,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -107,7 +114,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -119,7 +126,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -131,7 +138,7 @@ const SliderTwo = ()=>{
              </div>
            </div>
          </SwiperSlide>
-         <SwiperSlide>
+         <SwiperSlide onClick={handleClick}>
            <div className="wrapper-slider">
              <div>
                <div className="wrapper-image">
@@ -153,6 +160,6 @@ const SliderTwo = ()=>{
          </button>
        </div>
      </div></>
-   }></Container>
+   }></Container>)
 }
 export default SliderTwo;

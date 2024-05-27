@@ -4,6 +4,8 @@ import { Iconify } from "../components/Elements/Icon";
 import FQ from "../components/Blocks/FQ/FQ";
 import NewsLetter from "../components/Blocks/NewsLetter/NewsLetter"
 import GenieFQ from "../Data/GenieFQ.json";
+import "../components/Blocks/Wedsta-header/WedstaHeader.css";
+
 const GenieService = () => {
   return (
     <><Container

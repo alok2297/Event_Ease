@@ -2,6 +2,7 @@ import './Category.css';
 import { Container } from "../../Elements/Container"
 import { Iconify } from "../../Elements/Icon";
 import { Breadcrumbs } from "../../Elements/Breadcrumbs";
+import { useNavigate } from "react-router-dom";
 
 const Category = (props) => {
     const links = [
@@ -14,6 +15,13 @@ const Category = (props) => {
             name: "vendor"
         }
     ]
+
+    const navigate = useNavigate();
+
+    const handleClick = ()=>{
+      navigate("/venue")
+    }
+
     return (
         <Container children={
             <div className="">
@@ -26,7 +34,7 @@ const Category = (props) => {
                 </div>
                 <div className="Categories">
                     {props.category.map((item, index) => (
-                        <div className="First_Category Common_Category" key={index + props.id} style={{ backgroundColor: item.color }}>
+                        <div className="First_Category Common_Category" key={index + props.id} style={{ backgroundColor: item.color }} onClick={handleClick}>
                             <div className="text_div">
                                 <div className="text_div_container">
                                     <div className="text_div_first">{item.title}</div>

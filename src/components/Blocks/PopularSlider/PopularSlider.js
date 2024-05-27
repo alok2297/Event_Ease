@@ -11,7 +11,7 @@ const PopularSlider = (props) => {
 
   const handleClicK =(event) => {
     event.preventDefault();
-    navigate("/vendor")
+    navigate("/venue")
   }
   return (
     <Container children={

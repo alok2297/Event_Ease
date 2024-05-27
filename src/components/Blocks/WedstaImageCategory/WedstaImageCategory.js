@@ -2,6 +2,8 @@ import React from "react";
 import { Container } from "../../Elements/Container";
 import "./WedstaImageCategory.css";
 import WedstImage from "../../../Data/WedstaImages.json"
+import { useNavigate } from "react-router-dom";
+
 const WedstaImageCategory = (props) => {
   const { pageNumber, check } = props;
   const itemsPerPage = 8;
@@ -9,6 +11,11 @@ const WedstaImageCategory = (props) => {
   const endIndex = pageNumber * itemsPerPage;
 
   const displayedPhotos = props.photosInfo.slice(startIndex, endIndex);
+  const navigate = useNavigate();
+
+  const handleClick = ()=>{
+    navigate("/wedsta")
+  }
 
   return (
     <div
@@ -17,7 +24,7 @@ const WedstaImageCategory = (props) => {
           <div className="category-container">
             {WedstImage.map((item, i) =>
               check === item.packageInfo ? (
-                <div key={i} className="wedsta-container">
+                <div key={i} className="wedsta-container" onClick={handleClick}>
                   <div className="category-image">
                     <img src={item.imgUrl} alt="" />
                   </div>
