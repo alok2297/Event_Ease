@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
+
 const WeddingBlogSlider = (props) => {
   const [swiperRef, setSwiperRef] = useState(null);
   const {slideView,wedWidth} = props;
@@ -19,6 +21,13 @@ const WeddingBlogSlider = (props) => {
   const nextHandler = () => {
     swiperRef.slideNext();
   };
+
+  const navigate = useNavigate();
+
+  const handleClick = ()=>{
+    navigate("/wedding-detail")
+  }
+
   return (
     <Container
       children={
@@ -32,7 +41,7 @@ const WeddingBlogSlider = (props) => {
             speed={2000}
             onSwiper={(swiper) => setSwiperRef(swiper)}
           >
-            <SwiperSlide>
+            <SwiperSlide onClick={handleClick}>
               <div className="slider-component">
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
@@ -47,7 +56,7 @@ const WeddingBlogSlider = (props) => {
                 <div className="date">15 December 2023</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide onClick={handleClick}>
               <div className="slider-component">
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
@@ -62,7 +71,7 @@ const WeddingBlogSlider = (props) => {
                 <div className="date">15 December 2023</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide onClick={handleClick}>
               <div className="slider-component">
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
@@ -77,7 +86,7 @@ const WeddingBlogSlider = (props) => {
                 <div className="date">15 December 2023</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide onClick={handleClick}>
               <div className="slider-component">
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
@@ -92,7 +101,7 @@ const WeddingBlogSlider = (props) => {
                 <div className="date">15 December 2023</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide onClick={handleClick}>
               <div className="slider-component">
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>
@@ -107,7 +116,7 @@ const WeddingBlogSlider = (props) => {
                 <div className="date">15 December 2023</div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide onClick={handleClick}>
               <div className="slider-component">
                 <div>
                   <div className="wed-img" style={{width:wedWidth}}>

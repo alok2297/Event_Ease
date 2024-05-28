@@ -144,7 +144,7 @@
   }
 
   .bottom-sheet{
-    padding: 15px 60px;
+    padding: 15px 0px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -156,7 +156,8 @@
   }
   .bottom-sheet div{
     margin-left: auto;
-    width: 100%;
+    /* width: 100%; */
+    margin-right: 20px;
   }
   .bottom-sheet div button{
     cursor: pointer;

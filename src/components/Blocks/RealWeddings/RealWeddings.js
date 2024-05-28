@@ -3,7 +3,7 @@ import "./RealWeddings.css";
 import {Iconify} from "../../Elements/Icon";
 import { Container } from "../../Elements/Container";
 const RealWeddings = (props) => {
-  const {photosInfo, pageNumber,type} = props;
+  const {photosInfo, pageNumber,type, title} = props;
   const itemsPerPage = 21;
   const startIndex = (pageNumber - 1) * itemsPerPage;
   const endIndex = pageNumber * itemsPerPage;
@@ -15,7 +15,8 @@ const RealWeddings = (props) => {
   return (
     <Container
       children={
-        <div className="Container">
+        <div className="main-cntr-wed">
+          <h1>{title}</h1>
           <div className="wedding-story-main">
             {displayedPhotos.map((item,i)=>(<div key = {i} className="real-wedding">
               <div className="wedding-main-image">

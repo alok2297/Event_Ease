@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NavForPic.css";
+import "../InfoPortfolio/InfoPortfolio.css"
 import { Container } from "../../Elements/Container";
 import WedstaImageCategory from "../WedstaImageCategory/WedstaImageCategory";
 import WedstaImages from "../../../Data/WedstaImages.json";
@@ -54,12 +55,15 @@ const NavForPic = () => {
           </div>
           <div className='paginationWedst'>
       </div>
-        </div>
-      }
-    /><WedstaImageCategory
+      <WedstaImageCategory
           photosInfo={WedstaImages}
           check = {silver === 1 ? "silver" : "gold"}
-        /></>
+        />
+        </div>
+        
+      }
+      
+    /></>
   );
 };
 

@@ -12,12 +12,22 @@ const Header = (props) => {
   const city = useSelector(state=>state.city);
 
   const Vendors = [
-    "Venues",
-    "Vendors",
-    "Photos",
-    "Real Wedding",
-    "Blog",
-    "Shop",
+    {
+      name: "Venues",
+      link: "/venue"
+    },
+    {
+      name: "Vendors",
+      link: "/vendors"
+    },
+    {
+      name: "Photos",
+      link: "/photos"
+    },
+    {
+      name: "Real Wedding",
+      link: "/real-wedding"
+    },
   ];
 
   const handleClick = () => {
@@ -76,14 +86,14 @@ const handleClose = () => {
         ></i>
         </div>
         <div className="navbar-right">
-          <a className="button-header" href="#">
+          {/* <a className="button-header" href="#">
             <img
               src="https://image.wedmegood.com/resized/20X/images/icons/download_app_new.png"
               alt="download-app"
               className="icon"
             />
             <span className="link-App-download">Download App</span>
-          </a>
+          </a> */}
           <a className="button-header" href="#">
             <img
               src="https://image.wedmegood.com/resized/20X/images/icons/write_a_review_new.png"
@@ -116,12 +126,12 @@ const handleClose = () => {
         </li>
         {Vendors.map((item, index) => (
           <li key={index}>
-            <a className="navbar-brand" name={item}>
-              {item}
+            <a className="navbar-brand" name={item.name} href={item?.link}>
+              {item.name}
             </a>
           </li>
         ))}
-        <li>
+        {/* <li>
           <a className="navbar-brand" href="#">
             E-Invites
             <img
@@ -130,7 +140,7 @@ const handleClose = () => {
               alt=""
             />
           </a>
-        </li>
+        </li> */}
         <Link to='/login' style={{marginLeft:"auto", marginRight:"35px"}}><div className="loginBtn" ><span>Log In</span></div></Link>
       </ul>
     </div>

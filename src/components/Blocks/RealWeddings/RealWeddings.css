@@ -1,12 +1,15 @@
+.main-cntr-wed{
+    margin-top: 120px;
+}
 .real-wedding{
-    width: 380px;
+    /* width: 380px; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin-top: -1px;
 }
 .wedding-story-main{
     gap: 20px;
     display: grid;
-    margin-top: 120px;
+    margin-top: 20px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .wedding-main-image{

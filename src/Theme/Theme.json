@@ -74,7 +74,7 @@
               }
             ]
           },
-        "/vendor": {
+        "/vendors": {
             "title": "Vendors",
             "component": "Vendors",
             "child": [
@@ -114,7 +114,7 @@
               }
             ]
           },
-        "/photo": {
+        "/photos": {
             "title": "Photos",
             "component": "Photos",
             "child": [

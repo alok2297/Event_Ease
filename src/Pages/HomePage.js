@@ -16,11 +16,11 @@ const HomePage = (props) => {
       <SliderTwo/>
       <Category show={false} category={Categories.slice(0, 6)} />
       <WMGInHouse />
-      <NewsLetter />
+      {/* <NewsLetter /> */}
       <WeddingBlogSlider slideView="3" wedWidth="390px" />
-      <SliderTwo />
-      <WeddingBlogSlider slideView="4" wedWidth="344px" />
-      <WeddingBlogSlider slideView="3" wedWidth="390px" />
+      {/* <SliderTwo /> */}
+      {/* <WeddingBlogSlider slideView="4" wedWidth="344px" /> */}
+      {/* <WeddingBlogSlider slideView="3" wedWidth="390px" /> */}
     </div>
   )
 }

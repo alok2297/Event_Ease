@@ -1,13 +1,21 @@
 import React from 'react'
 import Datas from "../../../Data/PhotoIdeas.json"
 import "./PhotosIdea.css"
+import { useNavigate } from "react-router-dom";
+
 const PhotosIdea = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = ()=>{
+    navigate("/wedding-detail")
+  }
 
   const dynamicGrid =(items) => {
     return(
       <div className='photos-wrapper'>
       {items.map((data, i) => (
-        <div className='photos-container' key={i}>
+        <div className='photos-container' key={i} onClick={handleClick}>
           <div style={{ height: data.height }}>
             <img src={data.image} alt={data.title} />
           </div>

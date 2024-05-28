@@ -16,7 +16,7 @@ function HeroSection(props) {
         <div className="img-wrapper">
           <h1 className="HeroSection-Img">Plan a {city} Wedding</h1>
           <div className="relative" style={{ position: "relative" }}>
-            <div className="Search-Vendors" style={{display:"flex"}}>
+            {/* <div className="Search-Vendors" style={{display:"flex"}}>
                 <div
                   className="Icon-Search Vendors"
                   style={{ width: "50px" }}
@@ -54,7 +54,7 @@ function HeroSection(props) {
                 <div className="Find-Vendors">Find Vendors in {city}</div>
                 <i style={{marginRight:"10px"}} className="fa fa-angle-down text-bold text-primary h4"></i>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

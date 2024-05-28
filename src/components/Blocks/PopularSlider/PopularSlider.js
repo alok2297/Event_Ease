@@ -13,10 +13,37 @@ const PopularSlider = (props) => {
     event.preventDefault();
     navigate("/venue")
   }
+
+  const testAPI = async (event) => {
+    // event.preventDefault();
+
+    const response = await fetch(`http://localhost:4000/api/auth/register`, {
+      method: 'post',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+      email: "sarfaraj@gmail.com",
+      password: "1234"
+    })
+    });
+    console.log(response);
+    // const data = await response.json()
+    // if(data && data?.url){
+    //   window.open(data.url, "_blank")
+    // }
+    // else{
+    //   console.error(response)
+    // }
+  }
   return (
     <Container children={
       <div className="Container">
         <h1 className="PopuplarText">Popular Venue Search</h1><div className="swiper" style={{ height: swiperHeight, maxWidth: swiperWidth }}>
+        
+        {/* <span onClick={testAPI}>
+        Click to test
+        </span> */}
           <Swiper
             spaceBetween={10}
             slidesPerView={3}

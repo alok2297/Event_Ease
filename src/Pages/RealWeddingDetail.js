@@ -13,13 +13,11 @@ const RealWeddingDetail = () => {
       <RealWeddingDetailsHead/>
       <NavForPic/>
       <TagVendor/>
-      <h1 style={{margin:"20px 80px 0px 80px", fontFamily:"proxima-nova, sans-serif", fontSize:"24px", color:"#4a4a4a"}}>Similar {city} Weddings</h1>
       <div style={{display:"flex", marginTop:"-80px"}}>
-        <RealWeddings photosInfo = {WeddingStories} numberSlice={3} type={1}/>
+        <RealWeddings photosInfo = {WeddingStories} numberSlice={3} type={1} title={`Similar ${city} Weddings`}/>
       </div>
-      <h1 style={{margin:"20px 80px 0px 80px", fontFamily:"proxima-nova, sans-serif", fontSize:"24px",color:"#4a4a4a"}}>Similar Weddings</h1>
       <div style={{display:"flex", marginTop:"-80px"}}>
-        <RealWeddings photosInfo = {WeddingStories} numberSlice={3} type={1}/>
+        <RealWeddings photosInfo = {WeddingStories} numberSlice={3} type={1} title={`Similar Weddings`}/>
       </div>
     </div>
   )
