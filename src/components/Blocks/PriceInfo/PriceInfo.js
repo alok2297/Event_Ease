@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./PriceInfo.css";
 import { Iconify } from "../../Elements/Icon";
-const PriceInfo = () => {
+const PriceInfo = (props) => {
+  const {vegP, nonVegP, roomP, decorP} = props;
   const [rotate, setRotate] = useState(0); // usefor rotation
 
   const handleClick = () => {
@@ -52,7 +53,7 @@ const PriceInfo = () => {
                 icon="mdi:rupee"
               />
             </div>
-            <span>8,500 per room</span>
+            <span>{roomP} per room</span>
             </div>
           </div>
           <div>
@@ -66,7 +67,7 @@ const PriceInfo = () => {
                 icon="mdi:rupee"
               />
             </div>
-            <span>8,500 per room</span>
+            <span>{decorP}</span>
             </div>
           </div>
         </div>):null}
@@ -79,9 +80,10 @@ const PriceInfo = () => {
               color={"#e72e77"}
               icon="mdi:rupee"
             />
-          <span>1299</span>
+            <span>{vegP}</span>
+            <p>per plate (taxes extra)</p>
           </div>
-          <p>per plate (taxes extra)</p>
+          <p>Veg Price</p>
         </div>
         <div className="Price-info">
           <div>
@@ -91,9 +93,10 @@ const PriceInfo = () => {
               color={"#e72e77"}
               icon="mdi:rupee"
             />
-          <span>1299</span>
+            <span>{nonVegP}</span>
+            <p>per plate (taxes extra)</p>
           </div>
-          <p>per plate (taxes extra)</p>
+          <p>Non Veg Price</p>
         </div>
       </div>
     </div>

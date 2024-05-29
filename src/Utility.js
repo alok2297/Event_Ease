@@ -39,3 +39,8 @@ export function getRandomColor() {
     "%)"
   );
 }
+
+export function getNumbersFromString (str) {
+  const matches = str?.match(/\d+/g);
+  return matches ? matches?.join('') : '';
+};

@@ -1,7 +1,8 @@
 import React from "react";
 import { Iconify } from "../../Elements/Icon";
 import "./InfoHeader.css";
-const InfoHeader = () => {
+const InfoHeader = (props) => {
+  const {name, address, city, contact, rating} = props?.hotelInfo;
   return (
     <div>
       <div className="profile-img">
@@ -15,7 +16,7 @@ const InfoHeader = () => {
           <div style={{ display: "flex" }}>
             <div className="vendorName-info">
               <div>
-                <p className="shop-name">Hyatt Residency House</p>
+                <p className="shop-name">{name}</p>
               </div>
               <div className="location-info" style={{ display: "flex" }}>
                 <Iconify
@@ -24,17 +25,14 @@ const InfoHeader = () => {
                   color={"#4a4a4a"}
                   icon="mdi:location"
                 />
-                <p>Gomti Nagar, Lucknow</p>
-                <span>(View on Map)</span>
+                <p>{city}</p>
+                {/* <span>(View on Map)</span> */}
               </div>
               <div className="address" style={{ paddingLeft: "15px" }}>
-                <span>
-                  Hyatt Regency Lucknow, Regency Road, behind Chandra Eye
-                  Hospital, Vibhuti K...
-                </span>
+                <p>{address}</p>
               </div>
             </div>
-            <div className="rating-info">4.5</div>
+            <div className="rating-info">{rating}</div>
           </div>
 
           <div className="location-info" style={{ display: "flex" }}>
@@ -42,9 +40,12 @@ const InfoHeader = () => {
               width={15}
               height={15}
               color={"#5ba829"}
-              icon="mdi:location"
+              icon="mdi:contact"
             />
-            <p style={{ marginLeft: "3px", color: "#5ba829" }}>Contact</p>
+            <div>
+              <p style={{ marginLeft: "3px", color: "#5ba829" }}>Contact</p>
+              <p>{contact}</p>
+            </div>
           </div>
 
           <div className="pic-like-share">
