@@ -4,8 +4,8 @@ import './Header.css';
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
-
 import { useSelector } from "react-redux";
+
 const style ={
   outline: 'none',
 }

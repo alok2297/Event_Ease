@@ -1,5 +1,5 @@
 .photos{
-    width: 720px;
+    /* width: 720px; */
 }
 .photos-grid{
     padding-left: 10px;
@@ -43,7 +43,6 @@
   }
   
   .thumbnailButton {
-    @extend .videoInner;
     background-color: transparent;
     border: 0;
     cursor: pointer;
@@ -64,4 +63,11 @@
     top: calc(50% - 17px);
     transition: all 0.3s ease-in-out;
     width: 40px;
+  }
+  .close-btn{
+    cursor: pointer;
+    margin-right: auto;
+    display: flex;
+    justify-content: end;
+    padding: 4px 0;
   }

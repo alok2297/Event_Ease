@@ -19,6 +19,7 @@
   .Common_Category{
     background-color: rgb(216, 223, 252);
     display: flex;
+    cursor: pointer;
     /* grid-column: span 2; */
   }
   .image_div img{

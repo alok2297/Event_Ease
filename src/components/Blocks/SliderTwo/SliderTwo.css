@@ -1,5 +1,6 @@
 .wrapper-slider{
   width: 240px;
+  cursor: pointer;
 }
 .wrapper-slider div{
   width: 100%;

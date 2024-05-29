@@ -22,8 +22,8 @@ const WMGInHouse = () => {
                     </div>
                     <div className="Wedsta_txt">Wedsta</div>
                     <div className="Wedsta_Second_txt">WMG At Home, Family Makeup Services</div>
-                    <div className="Button-Know-More" onClick={() => {handleClick("wedsta")}}>
-                        <div className="Know_more">Know More</div>
+                    <div className="Button-Know-More">
+                        <div className="Know_more" onClick={() => {handleClick("wedsta")}}>Know More</div>
                     </div>
                 </div>
                 <div className="First_Contianer_Service Know-More-Two" style={{marginLeft:"auto"}}>
@@ -33,8 +33,8 @@ const WMGInHouse = () => {
                     </div>
                     <div className="Wedsta_txt">Genie Services</div>
                     <div className="Wedsta_Second_txt">Plan your Dream Wedding in your Budget</div>
-                    <div className="Button-Know-More" onClick={() => {handleClick("genie")}}>
-                        <div className="Know_more">Know More</div>
+                    <div className="Button-Know-More">
+                        <div className="Know_more" onClick={() => {handleClick("genie")}}>Know More</div>
                     </div>
                 </div>
             </div>
@@ -45,8 +45,8 @@ const WMGInHouse = () => {
                     </div>
                     <div className="Wedsta_txt">Venue Booking</div>
                     <div className="Wedsta_Second_txt">Best Service Guaranteed</div>
-                    <div className="Button-Know-More" onClick={() => {handleClick("genie")}}>
-                        <div className="Know_more">Know More</div>
+                    <div className="Button-Know-More">
+                        <div className="Know_more" onClick={() => {handleClick("genie")}}>Know More</div>
                     </div>
                 </div>
         </div>

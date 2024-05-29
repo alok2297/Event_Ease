@@ -38,6 +38,7 @@
 }
 .slider-component{
     background-color: #fff;
+    cursor: pointer;
 }
 .date{
     display: flex;

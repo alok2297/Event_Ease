@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import { Iconify } from "../../Elements/Icon";
 import "./InfoPhotos.css";
 
 const style = {
@@ -13,8 +14,8 @@ const style = {
   bgcolor: "background.paper",
   border: "1px solid #fff",
   boxShadow: 24,
-  p: 2,
   outline: 'none',
+  padding: "0 10px"
 };
 
 const InfoPhotos = (props) => {
@@ -113,6 +114,9 @@ const InfoPhotos = (props) => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
+            <div className="close-btn" onClick={handleClose}>
+              <Iconify width={24} height={24} icon="mdi:close"></Iconify>
+            </div>
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {check === "photo" ? (
                 <div>
