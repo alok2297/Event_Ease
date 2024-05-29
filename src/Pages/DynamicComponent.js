@@ -12,6 +12,7 @@ const Wedsta = lazy(() => import('../Pages/Wedsta'));
 const RealWedidingStroies = lazy(() => import('../Pages/RealWedidingStroies'));
 const RealWeddingDetail = lazy(() => import('../Pages/RealWeddingDetail'));
 const Photos = lazy(() => import('../Pages/Photos'));
+const PageNotFound = lazy(() => import('../components/Blocks/PageNotFound/PageNotFound'));
 
 const Components = {
     GenieService: GenieService,
@@ -27,6 +28,7 @@ const Components = {
     RealWedidingStroies: RealWedidingStroies,
     RealWeddingDetail: RealWeddingDetail,
     Photos: Photos,
+    PageNotFound: PageNotFound,
 };
 
 const creatingComponents = (component, attributes) => {

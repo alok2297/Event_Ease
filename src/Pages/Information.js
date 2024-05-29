@@ -5,8 +5,10 @@ import InfoAreas from "../components/Blocks/InfoAreas/InfoAreas";
 import InfoPortfolio from "../components/Blocks/InfoPortfolio/InfoPortfolio";
 import {CheckoutForm} from "../components/Blocks/CheckoutForm/CheckoutForm";
 import PriceInfo from "../components/Blocks/PriceInfo/PriceInfo";
-const Information = () => {
+import { useParams } from 'react-router-dom';
 
+const Information = () => {
+  const {id} =  useParams() 
   return (
     <Container
       children={

@@ -7,7 +7,8 @@ export const PageLoader = () => {
     const [pageStructure, setPage] = useState()
     const location = useLocation();
     const { pathname } = location;
-    const page = getPage(pathname)
+    const component = pathname.split('/');
+    const page = getPage(`/${component[1]}`)
 
     useEffect(() => setPage(page), [pathname]);
     return (

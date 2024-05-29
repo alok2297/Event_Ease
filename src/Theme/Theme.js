@@ -11,54 +11,56 @@ const setTheme = () => {
   })
 }
 setTheme()
+
 export const getPageForRoute = (name) => {
-    if (!routes[name]) return null;
-    return pages[routes[name].path] || null;
-  }
+  const obj = Object.keys(routes || {})
+  const ele = name === "/" ? "/" : obj.find(path => path.includes(name));
+  if (!routes?.[ele]) return null;
+  return pages[routes?.[ele]?.path] || null;
+}
 
 export const getRoutes = () => {
-  console.log(routes);
-    if (!routes) return null;
-    return routes || null;
-  }
+  if (!routes) return null;
+  return routes || null;
+}
 
 export const getPage = (name) => {
-    let page = getPageForRoute(name);
-    if (page) {
-      // create a copy
-      page = { ...page };
-      let { header, footer } = CurrentTheme;
+  let page = getPageForRoute(name);
+  if (page) {
+    // create a copy
+    page = { ...page };
+    let { header, footer } = CurrentTheme;
 
-      if (page.layout === "full") {
-        page.structure = {
-          body: page.child,
-        };
-      }
-      else if (page.layout === "noHeader") {
-        page.structure = {
-          body: page.child,
-          footer: footer.child,
-        };
-      }
-      else if (page.layout === "noFooter") {
-        page.structure = {
-          header: header.child,
-          body: page.child,
-        };
-      }
-       else {
-        header = header || {};
-
-        footer = footer || {};
-
-        page.structure = {
-          header: header.child,
-          body: page.child,
-          footer: footer.child,
-        };
-      }
-      delete page.child;
-      return page;
+    if (page.layout === "full") {
+      page.structure = {
+        body: page.child,
+      };
     }
-    return null;
+    else if (page.layout === "noHeader") {
+      page.structure = {
+        body: page.child,
+        footer: footer.child,
+      };
+    }
+    else if (page.layout === "noFooter") {
+      page.structure = {
+        header: header.child,
+        body: page.child,
+      };
+    }
+      else {
+      header = header || {};
+
+      footer = footer || {};
+
+      page.structure = {
+        header: header.child,
+        body: page.child,
+        footer: footer.child,
+      };
+    }
+    delete page.child;
+    return page;
   }
+  return null;
+}
