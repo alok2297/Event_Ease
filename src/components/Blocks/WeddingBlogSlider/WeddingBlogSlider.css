@@ -78,4 +78,11 @@
     align-items: center;
     cursor: pointer;
 }
+.real-wedding-stories{
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-family: proxima-nova, sans-serif;
+    margin: 20px 0;
+}
 

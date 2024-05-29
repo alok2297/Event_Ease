@@ -14,6 +14,7 @@ const style = {
   border: "1px solid #fff",
   boxShadow: 24,
   p: 2,
+  outline: 'none',
 };
 
 const InfoPhotos = (props) => {

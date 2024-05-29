@@ -49,3 +49,10 @@
   min-width: fit-content;
   height: auto;
 }
+.real-wedding-popular{
+  font-size: 22px;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-family: proxima-nova, sans-serif;
+  margin: 20px 0;
+}

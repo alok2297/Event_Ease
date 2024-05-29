@@ -32,7 +32,7 @@ const WeddingBlogSlider = (props) => {
     <Container
       children={
         <div className="Container">
-          <p className="real-wedding">Real Wedding Stories</p>
+          <p className="real-wedding-stories">Real Wedding Stories</p>
           <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}

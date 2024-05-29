@@ -46,7 +46,7 @@ const data = [
 const Venue = () => {
   const navigate = useNavigate();
 
-  const handleClick = (item)=>{
+  const handleClick = (item) => {
     navigate(`/wedding-venues/${slugify(item.name)}-${item.id}`)
   }
   return (
@@ -55,10 +55,10 @@ const Venue = () => {
         <div className="Container">
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-                  {
-                    data.map((item)=>(
-                    <Grid item xs={4} onClick={()=>handleClick(item)}>
-                      <Item>
+              {
+                data.map((item, id) => (
+                  <Grid key={id} item xs={4} onClick={() => handleClick(item)}>
+                    <Item>
                       <div className="img-container">
                         <img
                           src={item.img}
@@ -98,43 +98,43 @@ const Venue = () => {
                         </div>
                       </div>
                       <div className="price">
-                      <div className="price-veg">
-                        <div style={{display:"flex", textAlign:"start"}}><span>Veg</span></div>
-                        <div style={{ marginLeft: "auto", display:"flex"}}>
-                          <Iconify
-                            width={20}
-                            height={20}
-                            color={"#4a4a4a"}
-                            icon="mdi:rupee"
-                          />
-                          <div><p>{item.price.veg}</p></div>
-                          <div><span>per plate</span></div>
+                        <div className="price-veg">
+                          <div style={{ display: "flex", textAlign: "start" }}><span>Veg</span></div>
+                          <div style={{ marginLeft: "auto", display: "flex" }}>
+                            <Iconify
+                              width={20}
+                              height={20}
+                              color={"#4a4a4a"}
+                              icon="mdi:rupee"
+                            />
+                            <div><p>{item.price.veg}</p></div>
+                            <div><span>per plate</span></div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="price-non">
-                        <div style={{display:"flex", textAlign:"start"}}><span>Non-Veg</span></div>
-                        <div style={{ marginLeft: "auto", display:"flex"}}>
-                          <Iconify
-                            width={20}
-                            height={20}
-                            color={"#4a4a4a"}
-                            icon="mdi:rupee"
-                          />
-                          <p>{item.price.non_veg}</p>
-                          <div><span>per plate</span></div>
+                        <div className="price-non">
+                          <div style={{ display: "flex", textAlign: "start" }}><span>Non-Veg</span></div>
+                          <div style={{ marginLeft: "auto", display: "flex" }}>
+                            <Iconify
+                              width={20}
+                              height={20}
+                              color={"#4a4a4a"}
+                              icon="mdi:rupee"
+                            />
+                            <p>{item.price.non_veg}</p>
+                            <div><span>per plate</span></div>
+                          </div>
                         </div>
-                      </div>
                       </div>
                       <div className="Additional-info">
-                            <div><p>90-400 pax</p></div>
-                            <div><p>205 Rooms</p></div>
-                            <p style={{textDecoration:"underline"}}>+8 more</p>
+                        <div><p>90-400 pax</p></div>
+                        <div><p>205 Rooms</p></div>
+                        <p style={{ textDecoration: "underline" }}>+8 more</p>
                       </div>
-                      
+
                     </Item>
-              </Grid>
-                    ))
-                  }
+                  </Grid>
+                ))
+              }
             </Grid>
           </Box>
         </div>

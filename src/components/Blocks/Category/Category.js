@@ -34,7 +34,7 @@ const Category = (props) => {
                 </div>
                 <div className="Categories">
                     {props.category.map((item, index) => (
-                        <div className="First_Category Common_Category" key={index + props.id} style={{ backgroundColor: item.color }} onClick={handleClick}>
+                        <div className="First_Category Common_Category" key={index} style={{ backgroundColor: item.color }} onClick={handleClick}>
                             <div className="text_div">
                                 <div className="text_div_container">
                                     <div className="text_div_first">{item.title}</div>

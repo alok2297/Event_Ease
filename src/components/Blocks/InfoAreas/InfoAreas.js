@@ -9,47 +9,47 @@ const InfoAreas = ({areas}) => {
         </div>
         <div className="seating">
         {
-          areas.map((item)=>(
-            <div className="demo" style={{ marginBottom: "10px" }}>
-            <div className="seating-txt">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                {
-                  item.type === "indoor" ? 
+          areas.map((item, id)=>(
+            <div key={id} className="demo" style={{ marginBottom: "10px" }}>
+              <div className="seating-txt">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {
+                    item.type === "indoor" ? 
+                    <img
+                    src="https://images.wedmegood.com/images/outdoor.svg"
+                    alt="$"
+                  />
+                  :  
                   <img
-                  src="https://images.wedmegood.com/images/outdoor.svg"
-                  alt="$"
-                />
-                :  
-                <img
-                  src="https://images.wedmegood.com/images/indoor.svg"
-                  alt="$"
-                />
-                }
+                    src="https://images.wedmegood.com/images/indoor.svg"
+                    alt="$"
+                  />
+                  }
+                </div>
+                <div>
+                  <p>{item.type}</p>
+                </div>
               </div>
               <div>
-                <p>{item.type}</p>
+                <div className="demo-text">
+                  <div>
+                    <p>{item.seating} Seating |&nbsp; </p>
+                  </div>
+                  <div>
+                    <p>{item.floating} Floating </p>
+                  </div>
+                </div>
+                <div className="demo-location">
+                  <p>{item.location}</p>
+                </div>
               </div>
             </div>
-            <div>
-              <div className="demo-text">
-                <div>
-                  <p>{item.seating} Seating |&nbsp; </p>
-                </div>
-                <div>
-                  <p>{item.floating} Floating </p>
-                </div>
-              </div>
-              <div className="demo-location">
-                <p>{item.location}</p>
-              </div>
-            </div>
-          </div>
           ))
         }
         </div>

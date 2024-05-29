@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import CitiesPopup from "../CitiesPopUp/CitiesPopup";
 import './Header.css';
 import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
+const style ={
+  outline: 'none',
+}
 
 const Header = (props) => {
   const [rotate, setRotate] = useState(0); // usefor rotation
@@ -109,13 +113,17 @@ const handleClose = () => {
             marginLeft: " auto",
             marginRight: "auto",
             backgroundColor: "transparent",
+            border: "none",
+            outline: 'none',
           }}
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <CitiesPopup parentCallback={handleCallback} />
+          <Box sx={style}>
+            <CitiesPopup parentCallback={handleCallback} />
+          </Box>
         </Modal>
       </nav>
       <ul className="flex-container Section-Navbar">
