@@ -2,6 +2,7 @@ import DynamicComponent from "./DynamicComponent";
 import { useLocation } from 'react-router-dom';
 import { getPage } from "../Theme/Theme"
 import { useState, useEffect } from "react";
+import {ScrollToTop} from "../Utility"
 import "./style.css"
 export const PageLoader = () => {
     const [pageStructure, setPage] = useState()
@@ -13,6 +14,7 @@ export const PageLoader = () => {
     useEffect(() => setPage(page), [pathname]);
     return (
         <div className="page-container">
+            <ScrollToTop/>
             <header>
                 {pageStructure?.structure?.header?.map((item, id) => (
                     <DynamicComponent key={id} component={item?.component} attributes={item?.attributes} />
