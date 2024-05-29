@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Login(){
     const[emailOrPhone,setEmailOrPhone]=useState("");
@@ -9,6 +9,8 @@ function Login(){
         setEmailOrPhone(event.target.value);
         setShowButton(event.target.value !== "");
     };
+    const location = useLocation();
+    const { pathname } = location;
 
     const handlePassword=(event)=>{
       SetName(event.target.value);
@@ -31,9 +33,28 @@ function Login(){
                 <img src="Pictures/user.png" alt="" className="icon"/>
                 <input id="email-phone-id" placeholder="Enter Password" name="name" value={name} onChange={handlePassword}/>
               </div>
+              {
+                pathname === "/signup" && 
+                <div className="input-mail-id">
+                  <img src="Pictures/user.png" alt="" className="icon"/>
+                  <input id="email-phone-id" placeholder="Enter Password" name="name" value={name} onChange={handlePassword}/>
+                </div>
+              }
               <button className="ContinueBtn" style={{ display: showButton ? "block" : "none" }}>Continue</button>
             </div>
-            <div id ="hide1" className="OR">
+            {
+              pathname === "/login" ?
+              <div className="customer-signup">
+                <span>Don't have an account?</span>
+                <Link to="/signup">SignUp</Link>
+              </div>
+              : 
+              <div className="customer-signup">
+                <span>Already have an account?</span>
+                <Link to="/login">Login</Link>
+              </div>
+            }
+            {/* <div id ="hide1" className="OR">
               <hr style={{width:"47%", alignSelf:"center"}} />
               <p className="or-heading">OR</p>
               <hr style={{width: "47%", alignSelf:"center"}}/>
@@ -48,7 +69,7 @@ function Login(){
                 <img id="gmail-login-redirect" src="https://images.wedmegood.com/react-frontend-v4/static/media/gicon.34be4ec1.svg" alt=""/>
                 <p className="google-login">Google</p>
               </div>
-            </div>
+            </div> */}
             <div className="vendor-login">
               <span>Are you a vendor?</span>
               <Link to="/vendor-login">Business Sign In</Link>

@@ -1,138 +1,162 @@
 {
-    "header":{
-        "child": [
-            {
-                "component": "Header",
-                "attributes":{
-                    "props": ""
-                }
-            }
-        ]
+  "header": {
+    "child": [
+      {
+        "component": "Header",
+        "attributes": {
+          "props": ""
+        }
+      }
+    ]
+  },
+  "footer": {
+    "child": [
+      {
+        "component": "Footer",
+        "attributes": {
+          "props": ""
+        }
+      }
+    ]
+  },
+  "pages": {
+    "/wedding-venues/:id": {
+      "title": "Info",
+      "component": "Information",
+      "child": [
+        {
+          "component": "Information",
+          "attributes": {}
+        }
+      ]
     },
-    "footer":{
-        "child": [
-            {
-                "component": "Footer",
-                "attributes":{
-                    "props": ""
-                }
-            }
-        ]
+    "/login": {
+      "title": "Login",
+      "component": "Login",
+      "handler": "Login",
+      "layout": "noFooter",
+      "child": [
+        {
+          "component": "Login",
+          "attributes": {}
+        }
+      ]
     },
-    "pages": {
-        "/wedding-venues/:id": {
-            "title": "Info",
-            "component": "Information",
-            "child": [
-              {
-                "component": "Information",
-                "attributes": {}
-              }
-            ]
-          },
-        "/login": {
-            "title": "Login",
-            "component": "Login",
-            "handler": "Login",
-            "layout": "noFooter",
-            "child": [
-              {
-                "component": "Login",
-                "attributes": {}
-              }
-            ]
-          },
-        "/vendor-login": {
-            "title": "VendorLogin",
-            "component": "VendorLogin",
-            "handler": "VendorLogin",
-            "layout": "noFooter",
-            "child": [
-              {
-                "component": "VendorLogin",
-                "attributes": {}
-              }
-            ]
-          },
-        "/venue": {
-            "title": "Venue",
-            "component": "VenueSection",
-            "child": [
-              {
-                "component": "VenueSection",
-                "attributes": {}
-              }
-            ]
-          },
-        "/genie": {
-            "title": "Genie",
-            "component": "GenieService",
-            "child": [
-              {
-                "component": "GenieService",
-                "attributes": {}
-              }
-            ]
-          },
-        "/vendors": {
-            "title": "Vendors",
-            "component": "Vendors",
-            "child": [
-              {
-                "component": "Vendors",
-                "attributes": {}
-              }
-            ]
-          },
-        "/wedsta": {
-            "title": "Wedsta",
-            "component": "Wedsta",
-            "child": [
-              {
-                "component": "Wedsta",
-                "attributes": {}
-              }
-            ]
-          },
-        "/real-wedding": {
-            "title": "RealWedidingStroies",
-            "component": "RealWedidingStroies",
-            "child": [
-              {
-                "component": "RealWedidingStroies",
-                "attributes": {}
-              }
-            ]
-          },
-        "/wedding-detail": {
-            "title": "RealWeddingDetail",
-            "component": "RealWeddingDetail",
-            "child": [
-              {
-                "component": "RealWeddingDetail",
-                "attributes": {}
-              }
-            ]
-          },
-        "/photos": {
-            "title": "Photos",
-            "component": "Photos",
-            "child": [
-              {
-                "component": "Photos",
-                "attributes": {}
-              }
-            ]
-          },
-        "/": {
-            "title": "Home",
-            "handler": "Home",
-            "child": [
-              {
-                "component": "Home",
-                "attributes": {}
-              }
-            ]
-          }
+    "/signup": {
+      "title": "Signup",
+      "component": "Login",
+      "handler": "Login",
+      "layout": "noFooter",
+      "child": [
+        {
+          "component": "Login",
+          "attributes": {}
+        }
+      ]
+    },
+    "/vendor-login": {
+      "title": "VendorLogin",
+      "component": "VendorLogin",
+      "handler": "VendorLogin",
+      "layout": "noFooter",
+      "child": [
+        {
+          "component": "VendorLogin",
+          "attributes": {}
+        }
+      ]
+    },
+    "/vendor-signup": {
+      "title": "VendorSignup",
+      "component": "VendorLogin",
+      "handler": "VendorLogin",
+      "layout": "noFooter",
+      "child": [
+        {
+          "component": "VendorLogin",
+          "attributes": {}
+        }
+      ]
+    },
+    "/venues": {
+      "title": "Venue",
+      "component": "VenueSection",
+      "child": [
+        {
+          "component": "VenueSection",
+          "attributes": {}
+        }
+      ]
+    },
+    "/genie": {
+      "title": "Genie",
+      "component": "GenieService",
+      "child": [
+        {
+          "component": "GenieService",
+          "attributes": {}
+        }
+      ]
+    },
+    "/vendors": {
+      "title": "Vendors",
+      "component": "Vendors",
+      "child": [
+        {
+          "component": "Vendors",
+          "attributes": {}
+        }
+      ]
+    },
+    "/wedsta": {
+      "title": "Wedsta",
+      "component": "Wedsta",
+      "child": [
+        {
+          "component": "Wedsta",
+          "attributes": {}
+        }
+      ]
+    },
+    "/real-wedding": {
+      "title": "RealWedidingStroies",
+      "component": "RealWedidingStroies",
+      "child": [
+        {
+          "component": "RealWedidingStroies",
+          "attributes": {}
+        }
+      ]
+    },
+    "/wedding-detail": {
+      "title": "RealWeddingDetail",
+      "component": "RealWeddingDetail",
+      "child": [
+        {
+          "component": "RealWeddingDetail",
+          "attributes": {}
+        }
+      ]
+    },
+    "/photos": {
+      "title": "Photos",
+      "component": "Photos",
+      "child": [
+        {
+          "component": "Photos",
+          "attributes": {}
+        }
+      ]
+    },
+    "/": {
+      "title": "Home",
+      "handler": "Home",
+      "child": [
+        {
+          "component": "Home",
+          "attributes": {}
+        }
+      ]
     }
+  }
 }

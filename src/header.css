@@ -45,18 +45,10 @@
   height: 20px;
 }
 
-/* .navbar-nav{
-  color: #b4245d;
-} */
-/* .Section-Navbar{
+.Section-Navbar li a{
   list-style-type: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #e72e77;
-} */
+  text-decoration: none;
+}
 
 .flex-container{
   color: white;
@@ -448,6 +440,17 @@ border: none;
   border-radius: 4px;
   color: white;
   text-decoration: none;
+}
+
+.customer-signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customer-signup a{
+  text-decoration: none;
+  margin-left: 4px;
+  color: #e72e77;
 }
 
 /* clears the ‘X’ from Internet Explorer */

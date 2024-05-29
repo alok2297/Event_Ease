@@ -11,15 +11,15 @@ const Category = (props) => {
             name: "home"
         },
         {
-            path: "/vendor",
-            name: "vendor"
+            path: "/vendors",
+            name: "vendors"
         }
     ]
 
     const navigate = useNavigate();
 
     const handleClick = (item) => {
-        navigate("/venue")
+        navigate("/venues")
     }
 
     const viewAll = () => {
@@ -28,17 +28,21 @@ const Category = (props) => {
 
     return (
         <Container children={
-            <div className="">
+            <div className="wedding-categories-cntr">
                 {props.show && <Breadcrumbs links={links}></Breadcrumbs>}
-                <div className="heading" onClick={viewAll}>
+                <div className="heading">
                     <div className="Wedding-Categories">Wedding Categories</div>
-                    <div className="All-Categories">View all Categories
-                        <Iconify width={20} height={20} icon="mdi:chevron-right"></Iconify>
-                    </div>
+                    {
+                        !props.show &&
+                        <div className="All-Categories" onClick={viewAll}>
+                            <span>View all Categories</span>
+                            <Iconify width={20} height={20} icon="mdi:chevron-right"></Iconify>
+                        </div>
+                    }
                 </div>
                 <div className="Categories">
                     {props.category.map((item, index) => (
-                        <div className="First_Category Common_Category" key={index} style={{ backgroundColor: item.color }} onClick={() => {handleClick(item)}}>
+                        <div className="First_Category Common_Category" key={index} style={{ backgroundColor: item.color }} onClick={() => { handleClick(item) }}>
                             <div className="text_div">
                                 <div className="text_div_container">
                                     <div className="text_div_first">{item.title}</div>

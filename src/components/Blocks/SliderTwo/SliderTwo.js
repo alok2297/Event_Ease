@@ -23,7 +23,7 @@ const SliderTwo = () => {
 
   const handleClick = (event, item) => {
     event.preventDefault();
-    navigate("/venue")
+    navigate("/venues")
   }
 
   const breakPoints = {

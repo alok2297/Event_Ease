@@ -11,7 +11,7 @@ const PopularSlider = (props) => {
 
   const handleClicK =(event) => {
     event.preventDefault();
-    navigate("/venue")
+    navigate("/venues")
   }
 
   const testAPI = async (event) => {

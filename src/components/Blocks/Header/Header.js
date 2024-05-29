@@ -18,7 +18,7 @@ const Header = (props) => {
   const Vendors = [
     {
       name: "Venues",
-      link: "/venue"
+      link: "/venues"
     },
     {
       name: "Vendors",
