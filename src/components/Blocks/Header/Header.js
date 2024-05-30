@@ -1,19 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import CitiesPopup from "../CitiesPopUp/CitiesPopup";
 import './Header.css';
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { Iconify } from "components/Elements/Icon";
+import { AuthContext } from "../Authentication/AuthContext";
 const style ={
   outline: 'none',
 }
 
 const Header = (props) => {
+const { authState, logout } = useContext(AuthContext);
+
   const [rotate, setRotate] = useState(0); // usefor rotation
 
   const city = useSelector(state=>state.city);
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const openMenu = Boolean(anchorEl);
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   const Vendors = [
     {
@@ -149,7 +164,43 @@ const handleClose = () => {
             />
           </a>
         </li> */}
+
+        {
+          authState.token ? 
+          <div style={{marginLeft:"auto", marginRight:"35px"}}>
+          <Button
+            id="demo-positioned-button"
+            aria-controls={openMenu ? 'demo-positioned-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={openMenu ? 'true' : undefined}
+            onClick={handleMenu}
+            style={{color:"white"}}
+          >
+            <Iconify width={24} height={24} icon="mdi:user"></Iconify>
+            <Iconify width={24} height={24} icon="mdi:chevron-down"></Iconify>
+          </Button>
+          <Menu
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={openMenu}
+            onClose={handleMenuClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+          >
+            <MenuItem onClick={logout}>Logout</MenuItem>
+          </Menu>
+        </div>
+        : 
         <Link to='/login' style={{marginLeft:"auto", marginRight:"35px"}}><div className="loginBtn" ><span>Log In</span></div></Link>
+        }
+
       </ul>
     </div>
   );
