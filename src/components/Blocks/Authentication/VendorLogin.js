@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Cities from "../../../Data/Cities.json"
 import VendorTypes from "../../../Data/VendorTypes.json"
+import { AuthContext } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-
+  const navigate = useNavigate();
+  const { vendorLogin, vendorRegister } = useContext(AuthContext);
   const location = useLocation();
   const { pathname } = location;
   const [formData, setFormData] = useState({
@@ -12,18 +15,66 @@ function Login() {
     city: '',
     vendorType: '',
     email: '',
-    phone: '',
-    password: ''
+    phoneNumber: '',
+    password: '',
+    confirmPassword: '',
   });
+
+  const [errorMessage, setErrorMessage] = useState("");
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateEmail(formData.email)) {
+      setErrorMessage("Invalid email format");
+      return;
+    }
+  
+    if (pathname === "/vendor-signup" && formData.password !== formData.confirmPassword) {
+      setErrorMessage("Passwords do not match");
+      return;
+    }
+    
+    setErrorMessage("");
+    
+    if (pathname === "/vendor-signup") {
+      try {
+        const res = await vendorRegister(formData);
+        const data = await res?.json();
+        if (data?.message) {
+          setErrorMessage(data.message);
+        }
+        if (res.ok) {
+          navigate("/");
+        }
+      } catch (e) {
+        console.error('Registration error:', e);
+      }
+    } else {
+      try {
+        const res = await vendorLogin(formData);
+        if (res.ok) {
+          navigate("/");
+        } else {
+          const data = await res.json();
+          setErrorMessage(data.message);
+        }
+      } catch (e) {
+        console.error('Login error:', e);
+      }
+    }
+  };
+  
 
   return (
     <div className="main-block-login">
@@ -71,9 +122,9 @@ function Login() {
                     </select>
                     <input
                       type="text"
-                      name="phone"
+                      name="phoneNumber"
                       placeholder="+91"
-                      value={formData.phone}
+                      value={formData.phoneNumber}
                       onChange={handleChange}
                       required
                     />
@@ -88,13 +139,25 @@ function Login() {
                   required
                 />
                 <input
-                  type="password"
+                  type="text"
                   name="password"
                   placeholder="Password*"
                   value={formData.password}
                   onChange={handleChange}
                   required
                 />
+                {
+                  pathname === "/vendor-signup" && 
+                  <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Conform Password*"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  required
+                />
+                }
+                {errorMessage && <div className="error-message">{errorMessage}</div>}
                 <button type="submit" onClick={handleSubmit}>Continue</button>
                 <div className="sign-in-link">
                   {
@@ -102,7 +165,7 @@ function Login() {
                     <p>Already have an Account? <a href="/vendor-login">Login</a></p>
                     : <p>Don't have an Account? <a href="/vendor-signup">Signup</a></p>
                   }
-                  <span style={{ "margin-right": "4px" }}>Are you a customer?</span>
+                  <span style={{ marginRight: "4px" }}>Are you a customer?</span>
                   <Link className="customer-signin" to="/login">
                     Customer Sign In
                   </Link>
