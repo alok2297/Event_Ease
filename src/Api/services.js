@@ -41,3 +41,13 @@ export const registeVendor = async (email, password, brandName, city, vendorType
   });
   return response;
 };
+
+// export const uploader = async (images) => {
+//   const formData = new FormData();
+//   formData.append('file', images);
+//   const response = await fetch('http://localhost:4000/api/vendors/uploader', {
+//     method: 'POST',
+//     body: formData
+//   });
+//   return response;
+// };

@@ -3,10 +3,9 @@
   padding: 0;
 }
 
-/* a{
+a{
   text-decoration: none;
-  color: #fff;
-} */
+}
 
 /* .Main-tag{
   display: flex;
@@ -95,14 +94,19 @@
   margin-top: 10px;
 }
 
-@media screen and (min-width:768px) {
-  .headline-image{
-      display: block;
-  }
-}
 .headline-image-vendor{
   width: 40%;
   background: url(https://images.wedmegood.com/images/vendor-auth.png) 100% center / cover no-repeat;
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .headline-image{
+    display: block;
+  }
+  .headline-image-vendor{
+    display: block;
+  }
 }
 
 .pic-and-login {

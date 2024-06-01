@@ -148,6 +148,16 @@
         }
       ]
     },
+    "/dashboard": {
+      "title": "Dashboard",
+      "component": "Dashboard",
+      "child": [
+        {
+          "component": "Dashboard",
+          "attributes": {}
+        }
+      ]
+    },
     "/": {
       "title": "Home",
       "handler": "Home",

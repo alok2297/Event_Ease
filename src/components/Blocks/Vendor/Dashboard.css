@@ -1,0 +1,152 @@
+.vendor-dashboard{
+  display: flex;
+  column-gap: 40px;
+  align-items: start;
+  justify-content: start;
+}
+.sidebar-cntr{
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+.component-renderer{
+  padding: 15px;
+  width: 100%;
+  min-height: max-content;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(87,71,87,0.49);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(87,71,87,0.49);
+  box-shadow: 0px 0px 8px 0px rgba(87,71,87,0.49);
+  display: flex;
+  justify-content: center;
+}
+.content-heading{
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-align: center;
+}
+
+/* Information page */
+.personal-info-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  width: 250px;
+}
+
+.form-group input,
+.form-group select {
+  width: calc(100% - 1rem);
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-number-input {
+  display: flex;
+  align-items: center;
+}
+
+.contact-number-input .country-code {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.add-more {
+  background-color: transparent;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.make-primary {
+  background-color: #e91e63;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Project Page */
+.project-cntr{
+  display: flex;
+  flex-direction: column;
+}
+.uploaded-img{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.img-cntr{
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  row-gap: 20px;
+  border: 1px dashed var(--primary);
+  border-radius: 4px;
+  padding: 30px;
+  width: max-content;
+  align-items: center;
+}
+
+.img-cntr div{
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: white;
+}
+
+.img-cntr div input{
+  display: none;
+}
+
+.uploaded-img button{
+  /* width: min-content; */
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+}
+
+input[type="file"] {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+img {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.input-field{
+  width: 500px !important;
+}
+
+.upload-btn{
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  margin-top: 20px;
+}
+

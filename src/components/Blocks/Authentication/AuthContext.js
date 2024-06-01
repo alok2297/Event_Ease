@@ -9,15 +9,19 @@ const AuthProvider = ({ children }) => {
     role: localStorage.getItem('role')
   });
 
+  const [userAuthType, setAuthType] = useState()
+
   useEffect(() => {
-    if (authState.token && authState.user) {
+    if (authState.token && authState.user && authState.role) {
       localStorage.setItem('token', authState.token);
       localStorage.setItem('user', JSON.stringify(authState.user));
       localStorage.setItem('role', JSON.stringify(authState.role));
+      setAuthType(authState.role)
     } else {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
       localStorage.removeItem('role');
+      setAuthType(null)
     }
   }, [authState]);
 
@@ -93,7 +97,7 @@ const vendorRegister = async ({email, password, brandName, city, vendorType, pho
   };
 
   return (
-    <AuthContext.Provider value={{ authState, login, logout, register, vendorLogin, vendorRegister }}>
+    <AuthContext.Provider value={{ authState, login, logout, register, vendorLogin, vendorRegister, userAuthType }}>
       {children}
     </AuthContext.Provider>
   );

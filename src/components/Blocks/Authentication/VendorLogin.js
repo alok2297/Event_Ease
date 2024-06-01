@@ -55,7 +55,7 @@ function Login() {
           setErrorMessage(data.message);
         }
         if (res.ok) {
-          navigate("/");
+          navigate("/dashboard");
         }
       } catch (e) {
         console.error('Registration error:', e);
@@ -64,7 +64,7 @@ function Login() {
       try {
         const res = await vendorLogin(formData);
         if (res.ok) {
-          navigate("/");
+          navigate("/dashboard");
         } else {
           const data = await res.json();
           setErrorMessage(data.message);

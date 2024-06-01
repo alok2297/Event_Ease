@@ -1,0 +1,33 @@
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  /* padding: 10px; */
+  height: 450px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 16px 10px;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+}
+
+.sidebar ul .active {
+  background-color: #edeaea;
+  color: var(--primary);
+}
+
+.sidebar ul li:hover {
+  color: var(--primary);
+  background-color: #edeaea;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
