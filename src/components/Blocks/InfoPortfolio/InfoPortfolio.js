@@ -21,11 +21,13 @@ const InfoPortfolio = () => {
     console.log(pageNumber.current,Math.ceil(pageNumber.current));
   // State and function for getting the click it is photo or video
   const handlePhotos = () => {
+    setPage(1);
     setPhoto(1);
     setVideo(0);
   };
 
   const handleVideo = () => {
+    setPage(1);
     setVideo(1);
     setPhoto(0);
   };
