@@ -138,10 +138,6 @@ img {
   padding: 5px;
 }
 
-.input-field{
-  width: 500px !important;
-}
-
 .upload-btn{
   border-radius: 4px;
   background-color: var(--primary);

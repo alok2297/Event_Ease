@@ -10,8 +10,7 @@ import { getNumbersFromString } from "Utility";
 
 const Information = () => {
   const {id} =  useParams()
-  console.log(getNumbersFromString(id));
-
+  
   const hotels = [
     {
       name: "Hyatt Residency House",

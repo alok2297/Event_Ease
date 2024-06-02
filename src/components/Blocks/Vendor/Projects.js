@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Iconify } from "../../Elements/Icon";
-import { TextField } from '@mui/material';
+import { TextField, Button, Grid } from '@mui/material';
+
 
 export const Projects = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -28,7 +29,7 @@ export const Projects = () => {
   const handleChange = (e) => {
     setImages(e.target.value);
   };
-  
+
   const uploadImages = () => {
     console.log(images);
   };
@@ -43,7 +44,7 @@ export const Projects = () => {
             <button onClick={uploadHandler}>Upload</button>
           </div>
           :
-          <React.Fragment>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             <label className='img-cntr'>
               <Iconify
                 width={45}
@@ -58,18 +59,24 @@ export const Projects = () => {
                 <input name='uploader' type="file" onChange={fileChangedHandler} />
               </div>
             </label>
-            <TextField
-              required
-              fullWidth
-              label="Paste Your Link Hare"
-              variant="outlined"
-              name="name"
-              className='input-field'
-              onChange={handleChange}
-              style={{width: "100%"}}
-            />
-            <button className='upload-btn' onClick={uploadImages}>Upload</button>
-          </React.Fragment>
+            <Grid container spacing={3}>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  label="Paste Your Link Hare"
+                  variant="outlined"
+                  name="name"
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Button type="submit" variant="contained" color="primary" style={{ backgroundColor: '#e72e77' }} onClick={uploadImages}>
+                  Upload
+                </Button>
+              </Grid>
+            </Grid>
+          </div>
       }
     </div>
   );

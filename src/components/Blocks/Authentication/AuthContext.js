@@ -5,7 +5,7 @@ const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [authState, setAuthState] = useState({
     token: localStorage.getItem('token'),
-    user: JSON.parse(localStorage.getItem('user')),
+    user: localStorage.getItem('user'),
     role: localStorage.getItem('role')
   });
 
@@ -14,8 +14,8 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (authState.token && authState.user && authState.role) {
       localStorage.setItem('token', authState.token);
-      localStorage.setItem('user', JSON.stringify(authState.user));
-      localStorage.setItem('role', JSON.stringify(authState.role));
+      localStorage.setItem('user', authState.user);
+      localStorage.setItem('role', authState.role);
       setAuthType(authState.role)
     } else {
       localStorage.removeItem('token');

@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { TextField, MenuItem, Select, FormControl, InputLabel, Button, Grid } from '@mui/material';
+import cities from "../../../Data/Cities.json"
 
 export const Banquets = () => {
   const [banquet, setBanquet] = useState('');
   const [album, setAlbum] = useState('');
+  const [city, setCity] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     fixedCapacity: '',
@@ -11,6 +13,7 @@ export const Banquets = () => {
     roomPrice: '',
     decorPrice: '',
     rooms: '',
+    address: '',
   });
 
   const handleBanquetChange = (event) => {
@@ -19,6 +22,10 @@ export const Banquets = () => {
 
   const handleAlbumChange = (event) => {
     setAlbum(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
   };
 
   const handleChange = (e) => {
@@ -30,12 +37,13 @@ export const Banquets = () => {
       ...formData,
       banquet,
       album,
+      city,
     }
     console.log(data);
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '400px', margin: '0 auto' }}>
+    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
       <h1 className='content-heading'>
         Add New Banquet
       </h1>
@@ -48,6 +56,33 @@ export const Banquets = () => {
               label="Name"
               variant="outlined"
               name="name"
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <FormControl variant="outlined" fullWidth required>
+              <InputLabel>Select City</InputLabel>
+              <Select
+                value={city}
+                onChange={handleCityChange}
+                label="Select Banquet"
+              >
+                <MenuItem disabled>Select City</MenuItem>
+                {
+                  cities.map((item, id) => (
+                    <MenuItem key={id} value={item.city}>{item.city}</MenuItem>
+                  ))
+                }
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              required
+              fullWidth
+              label="Address"
+              variant="outlined"
+              name="address"
               onChange={handleChange}
             />
           </Grid>

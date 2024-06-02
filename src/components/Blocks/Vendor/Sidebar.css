@@ -17,14 +17,18 @@
   font-size: 20px;
 }
 
-.sidebar ul .active {
-  background-color: #edeaea;
-  color: var(--primary);
-}
-
 .sidebar ul li:hover {
   color: var(--primary);
-  background-color: #edeaea;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sidebar ul .active {
+  background-color: var(--primary);;
+  color: white;
+}
+.sidebar ul .active:hover{
+  background-color: var(--primary);;
+  color: white;
 }
 
 .main-content {

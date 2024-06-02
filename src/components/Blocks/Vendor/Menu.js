@@ -18,6 +18,7 @@ export const Menu = () => {
 
   return (
     <div>
+      <h1 className='content-heading'>Menu</h1>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <TextField

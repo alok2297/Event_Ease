@@ -204,7 +204,7 @@ const Header = (props) => {
               >
                 <MenuItem onClick={logout}>Logout</MenuItem>
                 {
-                  JSON.parse(localStorage.getItem('role')) === "Vendor" &&
+                  (localStorage.getItem('role')) === "Vendor" &&
                   <MenuItem>
                     <Link to='/dashboard' style={{ color: "inherit" }}>Dashboard</Link>
                   </MenuItem>

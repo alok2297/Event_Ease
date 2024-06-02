@@ -3,13 +3,14 @@ import { TextField, Button, Grid } from '@mui/material';
 
 const Information = () => {
   const [formData, setFormData] = useState({
-    loginEmail: '',
     brandName: '',
     contactPersonName: '',
     additionalEmail: '',
     contactNumber: '',
     contactType: 'Mobile'
   });
+
+  const loginEmail = localStorage.getItem('user')
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,9 +35,9 @@ const Information = () => {
               fullWidth
               id="loginEmail"
               name="loginEmail"
-              label="Login email ID"
+              label="Email"
               placeholder="e.g.john@doe.com"
-              value={formData.loginEmail}
+              value={loginEmail}
               onChange={handleChange}
               disabled
               variant="outlined"

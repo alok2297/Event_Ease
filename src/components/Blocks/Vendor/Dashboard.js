@@ -31,9 +31,9 @@ const Dashboard = () => {
         return <Information />;
     }
   };
-
+  
   useEffect(() => {
-    if (!userAuthType || userAuthType !== 'Vendor') {
+    if ((localStorage.getItem('role')) !== "Vendor") {
       navigate('/vendor-login');
     }
   }, [userAuthType, navigate]);
