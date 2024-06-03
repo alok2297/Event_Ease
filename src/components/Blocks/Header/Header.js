@@ -24,7 +24,6 @@ const Header = (props) => {
 
   const [rotate, setRotate] = useState(0); // usefor rotation
   const [rotateUser, setRotateUser] = useState(0); // usefor rotation
-  console.log();
   const city = useSelector(state => state.city);
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -63,7 +62,6 @@ const Header = (props) => {
   };
 
   const handleCallback = (childData) => {
-    console.log(childData);
     setOpen(false);
     setRotate(0);
     // props.getCity(childData);

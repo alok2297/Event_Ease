@@ -18,7 +18,7 @@ const InfoPortfolio = () => {
   const pageNumber = useRef();
   pageNumber.current =
     photo === 1 ? PhotosInfo.length / 12 : VideoInfo.length / 6;
-    console.log(pageNumber.current,Math.ceil(pageNumber.current));
+    
   // State and function for getting the click it is photo or video
   const handlePhotos = () => {
     setPage(1);

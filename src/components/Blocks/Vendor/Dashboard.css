@@ -77,7 +77,7 @@
   cursor: pointer;
 }
 
-/* Project Page */
+/* Photo Page */
 .project-cntr{
   display: flex;
   flex-direction: column;
@@ -149,5 +149,49 @@ img {
 .input[type=number]:invalid {
   border: 2px solid red;
   outline: none;
+}
+
+.nav-tab{
+  margin-bottom: 24px;
+  display: flex;
+  column-gap: 6px;
+}
+
+.nav-tab span{
+  padding: 6px 12px;
+  border: 1px solid #EBECEE;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-tab .active{
+  padding: 6px 12px;
+  border: 1px solid #e91e63;
+  background-color: #F7F9FB;
+  border-radius: 4px;
+}
+
+.added-list{
+  width: 100%;
+  max-width: 100%;
+}
+
+.added-list li{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 6px;
+  padding-bottom: 12px;
+}
+
+.added-list li div{
+  cursor: pointer;
+}
+
+.added-list li p{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  text-wrap: wrap;
 }
 

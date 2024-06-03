@@ -15,7 +15,6 @@ export const Menu = () => {
 
   const handleSave = () => {
     setMenuPrices({...formData})
-    console.log(formData);
   };
 
   useEffect(() => {
