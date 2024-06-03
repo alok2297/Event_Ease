@@ -146,3 +146,8 @@ img {
   margin-top: 20px;
 }
 
+.input[type=number]:invalid {
+  border: 2px solid red;
+  outline: none;
+}
+

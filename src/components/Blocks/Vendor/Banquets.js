@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, MenuItem, Select, FormControl, InputLabel, Button, Grid } from '@mui/material';
 import cities from "../../../Data/Cities.json"
+import { setBanquet, getBanquet } from 'Api/services';
 
 export const Banquets = () => {
-  const [banquet, setBanquet] = useState('');
-  const [album, setAlbum] = useState('');
-  const [city, setCity] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     fixedCapacity: '',
@@ -14,32 +12,29 @@ export const Banquets = () => {
     decorPrice: '',
     rooms: '',
     address: '',
+    banquet: '',
+    album: '',
+    city: '',
   });
 
-  const handleBanquetChange = (event) => {
-    setBanquet(event.target.value);
-  };
-
-  const handleAlbumChange = (event) => {
-    setAlbum(event.target.value);
-  };
-
-  const handleCityChange = (event) => {
-    setCity(event.target.value);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getBanquet();
+        setFormData({...data});
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [])
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSave = () => {
-    const data = {
-      ...formData,
-      banquet,
-      album,
-      city,
-    }
-    console.log(data);
+  const handleSave = async () => {
+    await setBanquet({...formData})
   };
 
   return (
@@ -56,6 +51,7 @@ export const Banquets = () => {
               label="Name"
               variant="outlined"
               name="name"
+              value={formData.name}
               onChange={handleChange}
             />
           </Grid>
@@ -63,8 +59,9 @@ export const Banquets = () => {
             <FormControl variant="outlined" fullWidth required>
               <InputLabel>Select City</InputLabel>
               <Select
-                value={city}
-                onChange={handleCityChange}
+                value={formData.city}
+                name="city"
+                onChange={handleChange}
                 label="Select Banquet"
               >
                 <MenuItem disabled>Select City</MenuItem>
@@ -83,6 +80,7 @@ export const Banquets = () => {
               label="Address"
               variant="outlined"
               name="address"
+              value={formData.address}
               onChange={handleChange}
             />
           </Grid>
@@ -94,6 +92,7 @@ export const Banquets = () => {
               variant="outlined"
               type="number"
               name="fixedCapacity"
+              value={formData.fixedCapacity}
               onChange={handleChange}
             />
           </Grid>
@@ -105,6 +104,7 @@ export const Banquets = () => {
               variant="outlined"
               type="number"
               name="floatingCapacity"
+              value={formData.floatingCapacity}
               onChange={handleChange}
             />
           </Grid>
@@ -116,6 +116,7 @@ export const Banquets = () => {
               variant="outlined"
               type="number"
               name="rooms"
+              value={formData.rooms}
               onChange={handleChange}
             />
           </Grid>
@@ -123,8 +124,9 @@ export const Banquets = () => {
             <FormControl variant="outlined" fullWidth required>
               <InputLabel>Select Banquet</InputLabel>
               <Select
-                value={banquet}
-                onChange={handleBanquetChange}
+                name="banquet"
+                value={formData.banquet}
+                onChange={handleChange}
                 label="Select Banquet"
               >
                 <MenuItem disabled>Select Banquet</MenuItem>
@@ -137,8 +139,9 @@ export const Banquets = () => {
             <FormControl variant="outlined" fullWidth>
               <InputLabel>Select Album</InputLabel>
               <Select
-                value={album}
-                onChange={handleAlbumChange}
+                value={formData.album}
+                name="album"
+                onChange={handleChange}
                 label="Select Album"
               >
                 <MenuItem disabled>Select Album</MenuItem>
@@ -154,6 +157,7 @@ export const Banquets = () => {
               variant="outlined"
               type="number"
               name="roomPrice"
+              value={formData.roomPrice}
               onChange={handleChange}
             />
           </Grid>
@@ -165,6 +169,7 @@ export const Banquets = () => {
               variant="outlined"
               type="number"
               name="decorPrice"
+              value={formData.decorPrice}
               onChange={handleChange}
             />
           </Grid>

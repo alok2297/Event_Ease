@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Grid } from '@mui/material';
+import { setVendorInfo, getVendorInfo } from 'Api/services';
 
 const Information = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,6 @@ const Information = () => {
     contactPersonName: '',
     additionalEmail: '',
     contactNumber: '',
-    contactType: 'Mobile'
   });
 
   const loginEmail = localStorage.getItem('user')
@@ -20,9 +20,22 @@ const Information = () => {
     });
   };
 
-  const handleSubmit = () => {
-    console.log(formData);
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setVendorInfo({email:loginEmail,...formData})
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getVendorInfo(loginEmail);
+        setFormData({...data});
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [])
 
   return (
     <div className="personal-info-form">

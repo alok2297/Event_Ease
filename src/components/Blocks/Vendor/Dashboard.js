@@ -4,7 +4,7 @@ import { Container } from 'components/Elements/Container'
 import { AuthContext } from '../Authentication/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import Information from './Info'
-import { Projects } from './Projects'
+import { Photos } from './Photos'
 import { Menu } from './Menu'
 import { Banquets } from './Banquets'
 import { Bookings } from './Bookings'
@@ -20,7 +20,7 @@ const Dashboard = () => {
       case 'information':
         return <Information />;
       case 'projects':
-        return <Projects />;
+        return <Photos />;
       case 'menu':
         return <Menu />;
       case 'banquets':
