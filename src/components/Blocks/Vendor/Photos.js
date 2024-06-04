@@ -103,7 +103,6 @@ export const Photos = () => {
                 <Grid container spacing={3}>
                   <Grid item xs={12}>
                     <TextField
-                      style={{ width: "550px" }}
                       required
                       fullWidth
                       label="Paste Your Link Hare"
@@ -124,7 +123,7 @@ export const Photos = () => {
                   <div style={{ maxWidth: "100%" }}>
                     {
                       !!albumList?.length &&
-                      <Grid item>
+                      <div style={{ marginBottom: "24px" }}>
                         <ul className='added-list'>
                           {
                             albumList.map((item, index) => (
@@ -149,12 +148,11 @@ export const Photos = () => {
                             Upload
                           </Button>
                         </Grid>
-                      </Grid>
+                      </div>
                     }
                     <Grid container spacing={3}>
                       <Grid item xs={12} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                         <TextField
-                          style={{ width: "500px", marginTop: "24px" }}
                           required
                           fullWidth
                           label="Paste Your Link Hare"

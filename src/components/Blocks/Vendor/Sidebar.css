@@ -1,19 +1,20 @@
 .sidebar {
-  width: 200px;
+  width: 100%;
   background-color: #f4f4f4;
-  height: 450px;
+  height: 32px;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  display: flex;
 }
 
 .sidebar ul li {
-  padding: 16px 10px;
+  padding: 8px 6px;
   cursor: pointer;
   color: #333;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .sidebar ul li:hover {
@@ -33,4 +34,22 @@
 .main-content {
   flex: 1;
   padding: 20px;
+}
+
+@media screen and (min-width:768px) {
+  .sidebar ul{
+    display: block;
+  }
+
+  .sidebar {
+    width: 200px;
+    height: 450px;
+  }
+
+  .sidebar ul li {
+    padding: 16px 10px;
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+  }
 }

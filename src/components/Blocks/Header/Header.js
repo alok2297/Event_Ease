@@ -119,14 +119,14 @@ const Header = (props) => {
             />
             <span className="link-App-download">Download App</span>
           </a> */}
-          <a className="button-header" href="#">
+          {/* <a className="button-header" href="#">
             <img
               src="https://image.wedmegood.com/resized/20X/images/icons/write_a_review_new.png"
               alt="write-review"
               className="icon"
             />
             <span className="link-App-review">Write a Review</span>
-          </a>
+          </a> */}
         </div>
         <Modal
           style={{
