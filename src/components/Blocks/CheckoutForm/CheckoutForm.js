@@ -69,10 +69,10 @@ export const CheckoutForm = (props) => {
                 <div>
                     <input
                         type="email"
-                        name="email"
+                        name="userEmail"
                         placeholder='Email Address'
                         required
-                        value={formData.email}
+                        value={formData.userEmail}
                         onChange={handleChange}
                     />
                 </div>
