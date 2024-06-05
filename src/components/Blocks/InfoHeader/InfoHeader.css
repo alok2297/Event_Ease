@@ -6,10 +6,8 @@
     width: 100%;
 }
 .full-info-subdiv{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding-top: 20px;
 }
 .full-info{
     margin-top: -40px;

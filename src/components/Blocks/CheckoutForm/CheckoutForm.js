@@ -3,10 +3,11 @@ import './CheckoutForm.css';
 import { booking } from 'Api/services';
 
 export const CheckoutForm = (props) => {
+    const data = props.data
     const [formData, setFormData] = useState({
         fullName: '',
         contactNumber: '',
-        email: '',
+        userEmail: '',
         functionDate: '',
         numberOfGuests: '',
         numberOfRooms: '',
@@ -34,7 +35,7 @@ export const CheckoutForm = (props) => {
 
     const handleSubmit = async (e) => {
         try {
-            const response = await booking(formData)
+            const response = await booking({...formData, email: data.email})
             if (response.ok) {
                 setMessage("Your request is submitted!!")
             }
@@ -44,7 +45,7 @@ export const CheckoutForm = (props) => {
     };
     return (
         <div className='form-container'>
-            <p>Hi {props.name}</p>
+            <p>Hi {data.name}</p>
             <div className='input-container'>
                 <div>
                     <input

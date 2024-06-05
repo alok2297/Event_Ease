@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Container } from "../components/Elements/Container";
 import InfoHeader from '../components/Blocks/InfoHeader/InfoHeader'
 import InfoPageNav from "../components/Blocks/InfoPageNav/InfoPageNav";
@@ -6,10 +7,24 @@ import InfoPortfolio from "../components/Blocks/InfoPortfolio/InfoPortfolio";
 import {CheckoutForm} from "../components/Blocks/CheckoutForm/CheckoutForm";
 import PriceInfo from "../components/Blocks/PriceInfo/PriceInfo";
 import { useParams } from 'react-router-dom';
-import { getNumbersFromString } from "Utility";
+import { getVenue } from "Api/services";
 
 const Information = () => {
   const {id} =  useParams()
+  const [data, setData] = useState("");
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getVenue(id);
+        setData(data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [])
   
   const hotels = [
     {
@@ -46,14 +61,14 @@ const Information = () => {
         <div className="Container">
           <div className="Main-info-div">
             <div className="left-section">
-              <InfoHeader hotelInfo={hotels[0]}/>
+              <InfoHeader hotelInfo={data}/>
               {/* <InfoPageNav/> */}
               <InfoAreas areas={areasAvailable}/>
               <InfoPortfolio/>
             </div>
             <div className="right-section">
-              <PriceInfo vegP={2000} nonVegP={2500} roomP={8000} decorP={25000}/>
-              <CheckoutForm name={hotels[0].name}/>
+              <PriceInfo data={data}/>
+              <CheckoutForm data={data}/>
             </div>
           </div>
         </div>

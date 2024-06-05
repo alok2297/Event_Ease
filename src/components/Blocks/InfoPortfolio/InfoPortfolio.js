@@ -39,9 +39,9 @@ const InfoPortfolio = () => {
           <div onClick={handlePhotos} className={photo === 1 ? "selected" : ""}>
             <p>PORTFOLIO&nbsp;({PhotosInfo.length})</p>
           </div>
-          <div onClick={handleVideo} className={video === 1 ? "selected" : ""}>
+          {/* <div onClick={handleVideo} className={video === 1 ? "selected" : ""}>
             <p>VIDEOS&nbsp;({VideoInfo.length})</p>
-          </div>
+          </div> */}
         </div>
         <div className="component">
           <InfoPhotos

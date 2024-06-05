@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Venue.css";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -8,6 +8,7 @@ import { Iconify } from "../../Elements/Icon";
 import { Container } from "../../Elements/Container";
 import { useNavigate } from "react-router-dom";
 import { slugify } from "../../../Utility"
+import { getVenues } from "Api/services";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -17,38 +18,29 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const data = [
-  {
-    "name": "Radisson Blu",
-    "rating": "4.5",
-    "address": "Gomtinagar, Lucknow",
-    "price": {
-      veg: 2000,
-      "non_veg": 2500
-    },
-    "img": "https://image.wedmegood.com/resized/450X/uploads/member/4073472/1676911076_IMG_20230201_WA0008.jpg?crop=8,5,1238,697",
-    "id": "10001"
-  },
-  {
-    "name": "Ramada International",
-    "rating": "4.2",
-    "address": "Junabganj, Lucknow",
-    "price": {
-      veg: 2100,
-      "non_veg": 2700
-    },
-    "img": "https://image.wedmegood.com/resized/450X/uploads/member/4073472/1676911076_IMG_20230201_WA0008.jpg?crop=8,5,1238,697",
-    "id": "10002"
-  }
-]
-
 
 const Venue = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState("");
+
 
   const handleClick = (item) => {
-    navigate(`/wedding-venues/${slugify(item.name)}-${item.id}`)
+    navigate(`/wedding-venues/${item.slug}`)
   }
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getVenues();
+        setData(data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [])
+
   return (
     <Container
       children={
@@ -56,12 +48,12 @@ const Venue = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
               {
-                data.map((item, id) => (
+                data && data?.map((item, id) => (
                   <Grid key={id} item xs={4} onClick={() => handleClick(item)}>
                     <Item>
                       <div className="img-container">
                         <img
-                          src={item.img}
+                          src={item?.cover}
                           alt="#"
                         />
                       </div>
@@ -107,7 +99,7 @@ const Venue = () => {
                               color={"#4a4a4a"}
                               icon="mdi:rupee"
                             />
-                            <div><p>{item.price.veg}</p></div>
+                            <div><p>{item.vegPrice}</p></div>
                             <div><span>per plate</span></div>
                           </div>
                         </div>
@@ -120,7 +112,7 @@ const Venue = () => {
                               color={"#4a4a4a"}
                               icon="mdi:rupee"
                             />
-                            <p>{item.price.non_veg}</p>
+                            <p>{item.nonVegPrice}</p>
                             <div><span>per plate</span></div>
                           </div>
                         </div>

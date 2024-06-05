@@ -54,14 +54,14 @@ export const registeVendor = async (email, password, brandName, city, vendorType
 //   return response;
 // };
 
-export const booking = async ({email, fullName, contactNumber, functionDate, numberOfGuests, numberOfRooms, functionType, functionTime}) => {
+export const booking = async ({email, userEmail, fullName, contactNumber, functionDate, numberOfGuests, numberOfRooms, functionType, functionTime}) => {
   try {
     const response = await fetch('http://localhost:4000/api/vendors/booking', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, fullName, contactNumber, functionDate, numberOfGuests, numberOfRooms, functionType, functionTime }),
+      body: JSON.stringify({ email, userEmail, fullName, contactNumber, functionDate, numberOfGuests, numberOfRooms, functionType, functionTime }),
     });
 
     const data = await response.json()
@@ -249,7 +249,6 @@ export const getBanquet = async () => {
   }
 };
 
-
 export const getPhotos = async () => {
   try {
     const response = await fetch(`http://localhost:4000/api/vendors/get-photos`, {
@@ -258,6 +257,49 @@ export const getPhotos = async () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
+
+export const getVenues = async () => {
+  try {
+    const response = await fetch(`http://localhost:4000/api/vendors/get-venues`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
+
+export const getVenue = async (slug) => {
+  try {
+    const response = await fetch(`http://localhost:4000/api/vendors/get-venue`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ slug }),
     });
 
     if (!response.ok) {

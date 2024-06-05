@@ -2,12 +2,14 @@ import React from "react";
 import { Iconify } from "../../Elements/Icon";
 import "./InfoHeader.css";
 const InfoHeader = (props) => {
-  const {name, address, city, contact, rating} = props?.hotelInfo;
+  const {name, address, city, cover} = props?.hotelInfo;
+  const rating = 4.5
+  const contact = 9876543210
   return (
     <div>
       <div className="profile-img">
         <img
-          src="https://image.wedmegood.com/resized/1000X/uploads/member/911781/1700895862_IMG_20230819_WA0043.jpg?crop=0,154,1600,900"
+          src={cover}
           alt=""
         />
       </div>
@@ -48,7 +50,7 @@ const InfoHeader = (props) => {
             </div>
           </div>
 
-          <div className="pic-like-share">
+          {/* <div className="pic-like-share">
             <div className="pic-like">
               <div style={{ display: "flex" }}>
                 <Iconify
@@ -78,7 +80,7 @@ const InfoHeader = (props) => {
                 <p style={{ marginLeft: "3px", color: "#4a4a4a" }}>Share</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
