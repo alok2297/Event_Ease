@@ -4,14 +4,15 @@ import "swiper/css";
 import './PopularSlider.css';
 import { Container } from "../../Elements/Container";
 import { useNavigate } from "react-router-dom";
+import { slugify } from "Utility";
 
 const PopularSlider = (props) => {
   const { slides, swiperWidth, swiperHeight, boxImgWidth, boxImgHeight } = props;
   const navigate = useNavigate();
 
-  const handleClicK =(event) => {
+  const handleClicK =(event, item) => {
     event.preventDefault();
-    navigate("/venues")
+    navigate(`/venues/${slugify(item)}`)
   }
 
   return (
@@ -23,7 +24,7 @@ const PopularSlider = (props) => {
             slidesPerView={3}
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id} className="swiper" onClick={handleClicK}>
+              <SwiperSlide key={slide.id} className="swiper" onClick={(e) => {handleClicK(e,slide.title)}}>
                 <div className="box-of-image">
                   <a href="$">
                     <img
@@ -36,7 +37,7 @@ const PopularSlider = (props) => {
                       <div className="star-hotels">{slide.title}</div>
                     </a>
                     <div className="city">
-                      <p className="city-for-hotels">{Object.values(slide.city).join(' | ')}</p>
+                      {/* <p className="city-for-hotels">{Object.values(slide.city).join(' | ')}</p> */}
                       <p className="city-for-hotels">All Localities</p>
                     </div>
                   </div>

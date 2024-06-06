@@ -82,7 +82,7 @@ const Header = (props) => {
             India's Favorite Event Organizing Platform
           </h1>
         </div>
-        <div
+        {/* <div
           className="header-cities"
           onClick={handleClick}
           style={{ height: "30px", width: "200px", backgroundColor: "white" }}
@@ -109,7 +109,7 @@ const Header = (props) => {
               transform: `rotate(${rotate * 180}deg)`,
             }}
           ></i>
-        </div>
+        </div> */}
         <div className="navbar-right">
           {/* <a className="button-header" href="#">
             <img

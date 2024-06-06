@@ -4,84 +4,56 @@
         "title":"Venues",
         "subtitle":"Banquet Halls, Lawns / FarmHouses, R..",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg",
-        "color":"#D8DFFC"
+        "color":"#D8DFFC",
+        "slug": "venues"
     },
     {
         "id":"02",
         "title":"Photographers",
         "subtitle":"Photographer",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/2/photographers.jpg",
-        "color":"#F4D5C2"
-    },
-    {
-        "id":"03",
-        "title":"Makeup",
-        "subtitle":"Bridal Makeup, family",
-        "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/3/makeup.jpg",
-        "color":"#DFB2AD"
+        "color":"#F4D5C2",
+        "slug": "Photographers"
     },
     {
         "id":"04",
         "title":"Pre-Wedding Shoot",
-        "subtitle":"Pre-Wedding Photographers",
+        "subtitle":"Pre Wedding Shoot Locations",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/1/venues.jpg",
-        "color":"#D8DFFC"
-    },
-    {
-        "id":"05",
-        "title":"Planning & Decor",
-        "subtitle":"Wedding Planers, Decorators, Small Farm...",
-        "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/7/planning-decor.jpg",
-        "color":"#F6B896"
+        "color":"#D8DFFC",
+        "slug":"Pre Wedding Shoot Locations"
     },
     {
         "id":"06",
         "title":"Bridal Wear",
         "subtitle":"Bridal Lehengas, Kanjeevaram / Silk Sare...",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/4/bridal-wear.jpg",
-        "color":"#CFCDB8"
+        "color":"#CFCDB8",
+        "slug":"Bridal Wear"
     },
     {
         "id":"07",
         "title":"Groom Wear",
         "subtitle":"Sherwani, Wedding Suits, Tuxes",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/5/groom-wear.jpg",
-        "color":"#DCF7F7"
+        "color":"#DCF7F7",
+        "slug":"Groom Wear"
     },
     {
         "id":"08",
         "title":"Mehandi",
         "subtitle":"Mehandi Artist",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/6/mehendi-artists.jpg",
-        "color":"#E5D3BD"
+        "color":"#E5D3BD",
+        "slug":"Mehendi Artist"
     },
     {
         "id":"09",
         "title":"Jewellary & Accesaries",
         "subtitle":"Jewellary, Flower Jewellary, Bridal New...",
         "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/11/jewellaries-accessories.jpg",
-        "color":" #F4EBBD"
-    },
-    {
-        "id":"10",
-        "title":"Invite & Gifts",
-        "subtitle":"Invitation, Flowers, Troussea Poker",
-        "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/9/invites-gifts.jpg",
-        "color":"#F2D8D4"
-    },
-    {
-        "id":"11",
-        "title":"Music & Dance",
-        "subtitle":"Djs, Sangeet Choreographer, Wedding...",
-        "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/10/music-dance.jpg",
-        "color":" #EFBF9B"
-    },
-    {
-        "id":"12",
-        "title":"Food",
-        "subtitle":"Catering Services, Cake, Chaat & Food...",
-        "imgUrl":"https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/8/food.jpg",
-        "color":"#D4BBD0"
+        "color":" #F4EBBD",
+        "slug":"Jewellery"
     },
     {
         "id":"13",

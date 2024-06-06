@@ -1,147 +1,767 @@
 [
   {
+    "email": "info@bridalcouture.com",
+    "address": "Marine Drive, Mumbai",
+    "album": "",
+    "city": "Mumbai",
+    "name": "Bridal Couture",
+    "slug": "bridal-couture-mumbai",
+    "type": "Bridal Wear",
+    "pricing": 25000
+  },
+  {
+    "email": "contact@bridesdresses.com",
+    "address": "Connaught Place, Delhi",
+    "album": "",
+    "city": "Delhi",
+    "name": "Brides Dresses",
+    "slug": "brides-dresses-delhi",
+    "type": "Bridal Wear",
+    "pricing": 30000
+  },
+  {
+    "email": "info@luxjewels.com",
+    "address": "Park Street, Kolkata",
+    "album": "",
+    "city": "Kolkata",
+    "name": "Lux Jewels",
+    "slug": "lux-jewels-kolkata",
+    "type": "Jewellery",
+    "pricing": 40000
+  },
+  {
+    "email": "contact@royalgems.com",
+    "address": "Banjara Hills, Hyderabad",
+    "album": "",
+    "city": "Hyderabad",
+    "name": "Royal Gems",
+    "slug": "royal-gems-hyderabad",
+    "type": "Jewellery",
+    "pricing": 35000
+  },
+  {
+    "email": "info@groomworld.com",
+    "address": "MG Road, Bangalore",
+    "album": "",
+    "city": "Bangalore",
+    "name": "Groom World",
+    "slug": "groom-world-bangalore",
+    "type": "Groom Wear",
+    "pricing": 20000
+  },
+  {
+    "email": "contact@groomsattire.com",
+    "address": "T Nagar, Chennai",
+    "album": "",
+    "city": "Chennai",
+    "name": "Groom's Attire",
+    "slug": "grooms-attire-chennai",
+    "type": "Groom Wear",
+    "pricing": 22000
+  },
+  {
+    "email": "info@weddingpandits.com",
+    "address": "Sector 29, Gurugram",
+    "album": "",
+    "city": "Gurugram",
+    "name": "Wedding Pandits",
+    "slug": "wedding-pandits-gurugram",
+    "type": "Wedding Pandits",
+    "pricing": 15000
+  },
+  {
+    "email": "contact@holyrituals.com",
+    "address": "Koregaon Park, Pune",
+    "album": "",
+    "city": "Pune",
+    "name": "Holy Rituals",
+    "slug": "holy-rituals-pune",
+    "type": "Wedding Pandits",
+    "pricing": 16000
+  },
+  {
+    "email": "info@elitebartenders.com",
+    "address": "Marine Drive, Mumbai",
+    "album": "",
+    "city": "Mumbai",
+    "name": "Elite Bartenders",
+    "slug": "elite-bartenders-mumbai",
+    "type": "Bartenders",
+    "pricing": 18000
+  },
+  {
+    "email": "contact@barpro.com",
+    "address": "MI Road, Jaipur",
+    "album": "",
+    "city": "Jaipur",
+    "name": "BarPro",
+    "slug": "barpro-jaipur",
+    "type": "Bartenders",
+    "pricing": 17000
+  },
+  {
+    "email": "info@photoshootlocations.com",
+    "address": "Lake Pichola, Udaipur",
+    "album": "",
+    "city": "Udaipur",
+    "name": "Photoshoot Locations",
+    "slug": "photoshoot-locations-udaipur",
+    "type": "Pre Wedding Shoot Locations",
+    "pricing": 20000
+  },
+  {
+    "email": "contact@preweddingspots.com",
+    "address": "Baga Beach, Goa",
+    "album": "",
+    "city": "Goa",
+    "name": "Pre Wedding Spots",
+    "slug": "pre-wedding-spots-goa",
+    "type": "Pre Wedding Shoot Locations",
+    "pricing": 22000
+  },
+  {
+    "email": "info@beautyandwellness.com",
+    "address": "Park Street, Kolkata",
+    "album": "",
+    "city": "Kolkata",
+    "name": "Beauty and Wellness",
+    "slug": "beauty-and-wellness-kolkata",
+    "type": "Beauty and Wellness",
+    "pricing": 15000
+  },
+  {
+    "email": "contact@glowandshine.com",
+    "address": "Connaught Place, Delhi",
+    "album": "",
+    "city": "Delhi",
+    "name": "Glow and Shine",
+    "slug": "glow-and-shine-delhi",
+    "type": "Beauty and Wellness",
+    "pricing": 18000
+  },
+  {
+    "email": "info@weddingphotographers.com",
+    "address": "MG Road, Bangalore",
+    "album": "",
+    "city": "Bangalore",
+    "name": "Wedding Photographers",
+    "slug": "wedding-photographers-bangalore",
+    "type": "Photographers",
+    "pricing": 25000
+  },
+  {
+    "email": "contact@capturemoments.com",
+    "address": "T Nagar, Chennai",
+    "album": "",
+    "city": "Chennai",
+    "name": "Capture Moments",
+    "slug": "capture-moments-chennai",
+    "type": "Photographers",
+    "pricing": 27000
+  },
+  {
+    "email": "info@bridalmakeup.com",
+    "address": "Saket, Delhi",
+    "album": "",
+    "city": "Delhi",
+    "name": "Bridal Makeup",
+    "slug": "bridal-makeup-delhi",
+    "type": "Bridal Makeup",
+    "pricing": 12000
+  },
+  {
+    "email": "contact@makeupartists.com",
+    "address": "Banjara Hills, Hyderabad",
+    "album": "",
+    "city": "Hyderabad",
+    "name": "Makeup Artists",
+    "slug": "makeup-artists-hyderabad",
+    "type": "Bridal Makeup",
+    "pricing": 14000
+  },
+  {
+    "email": "info@decorelegance.com",
+    "address": "Sector 29, Gurugram",
+    "album": "",
+    "city": "Gurugram",
+    "name": "Decor Elegance",
+    "slug": "decor-elegance-gurugram",
+    "type": "Decorators",
+    "pricing": 20000
+  },
+  {
+    "email": "contact@decorpros.com",
+    "address": "Koregaon Park, Pune",
+    "album": "",
+    "city": "Pune",
+    "name": "Decor Pros",
+    "slug": "decor-pros-pune",
+    "type": "Decorators",
+    "pricing": 22000
+  },
+  {
+    "email": "info@mehendiart.com",
+    "address": "Park Street, Kolkata",
+    "album": "",
+    "city": "Kolkata",
+    "name": "Mehendi Art",
+    "slug": "mehendi-art-kolkata",
+    "type": "Mehendi Artist",
+    "pricing": 8000
+  },
+  {
+    "email": "contact@hennaartists.com",
+    "address": "MI Road, Jaipur",
+    "album": "",
+    "city": "Jaipur",
+    "name": "Henna Artists",
+    "slug": "henna-artists-jaipur",
+    "type": "Mehendi Artist",
+    "pricing": 9000
+  },
+  {
+    "email": "info@cateringdelights.com",
+    "address": "Lake Pichola, Udaipur",
+    "album": "",
+    "city": "Udaipur",
+    "name": "Catering Delights",
+    "slug": "catering-delights-udaipur",
+    "type": "Catering types",
+    "pricing": 25000
+  },
+  {
+    "email": "contact@eventscatering.com",
+    "address": "Baga Beach, Goa",
+    "album": "",
+    "city": "Goa",
+    "name": "Events Catering",
+    "slug": "events-catering-goa",
+    "type": "Catering types",
+    "pricing": 27000
+  },
+  {
+    "email": "info@wedentertainment.com",
+    "address": "Marine Drive, Mumbai",
+    "album": "",
+    "city": "Mumbai",
+    "name": "Wed Entertainment",
+    "slug": "wed-entertainment-mumbai",
+    "type": "Wedding Entertainment",
+    "pricing": 30000
+  },
+  {
+    "email": "contact@eventfun.com",
+    "address": "Connaught Place, Delhi",
+    "album": "",
+    "city": "Delhi",
+    "name": "Event Fun",
+    "slug": "event-fun-delhi",
+    "type": "Wedding Entertainment",
+    "pricing": 32000
+  },
+  {
+    "email": "info@sangeetchoreo.com",
+    "address": "MG Road, Bangalore",
+    "album": "",
+    "city": "Bangalore",
+    "name": "Sangeet Choreo",
+    "slug": "sangeet-choreo-bangalore",
+    "type": "Sangeet Choreographer",
+    "pricing": 15000
+  },
+  {
+    "email": "contact@dancegurus.com",
+    "address": "T Nagar, Chennai",
+    "album": "",
+    "city": "Chennai",
+    "name": "Dance Gurus",
+    "slug": "dance-gurus-chennai",
+    "type": "Sangeet Choreographer",
+    "pricing": 17000
+  },
+  {
+    "email": "info@preweddingphoto.com",
+    "address": "Saket, Delhi",
+    "album": "",
+    "city": "Delhi",
+    "name": "Pre Wedding Photo",
+    "slug": "pre-wedding-photo-delhi",
+    "type": "Pre Wedding Photographers",
+    "pricing": 20000
+  },
+  {
+    "email": "contact@capturelove.com",
+    "address": "Banjara Hills, Hyderabad",
+    "album": "",
+    "city": "Hyderabad",
+    "name": "Capture Love",
+    "slug": "capture-love-hyderabad",
+    "type": "Pre Wedding Photographers",
+    "pricing": 22000
+  }
+]
+
+
+
+
+
+
+
+
+[
+  {
     "email": "contact@hotelparadise.com",
-    "cover": "https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938576_2023_09_18.jpg?crop=6,91,1009,567",
-    "album": []
+    "address": "Connaught Place, Delhi",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Delhi NCR",
+    "decorPrice": 15000,
+    "fixedCapacity": 800,
+    "floatingCapacity": 400,
+    "name": "Hotel Imperial",
+    "roomPrice": 5000,
+    "rooms": 100,
+    "slug": "hotel-imperial-f3b1gz",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "info@seaview.com",
-    "cover": "https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938579_entrance.jpg?crop=6,84,1009,567",
-    "album": []
+    "address": "Marine Drive, Mumbai",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Mumbai",
+    "decorPrice": 20000,
+    "fixedCapacity": 1200,
+    "floatingCapacity": 600,
+    "name": "Sea View Hotel",
+    "roomPrice": 7000,
+    "rooms": 80,
+    "slug": "sea-view-hotel-4r6tzj",
+    "type": "Hotels"
   },
   {
     "email": "reservations@siliconhotel.com",
-    "cover": "https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938577_radisson_blu_resort_spa__1_.jpg?crop=10,120,1182,665",
-    "album": []
+    "address": "MG Road, Bangalore",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Bangalore",
+    "decorPrice": 12000,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Silicon Hotel",
+    "roomPrice": 4000,
+    "rooms": 90,
+    "slug": "silicon-hotel-9a2vxm",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "booking@hyderabadpalace.com",
-    "cover": "https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938577_radisson_blu_resort_spa__1_.jpg?crop=10,120,1182,665",
-    "album": []
+    "address": "Banjara Hills, Hyderabad",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Hyderabad",
+    "decorPrice": 13000,
+    "fixedCapacity": 1100,
+    "floatingCapacity": 550,
+    "name": "Hyderabad Palace",
+    "roomPrice": 4500,
+    "rooms": 75,
+    "slug": "hyderabad-palace-j5k8bc",
+    "type": "Banquet Halls"
   },
   {
     "email": "contact@chennaigrande.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "T Nagar, Chennai",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Chennai",
+    "decorPrice": 11000,
+    "fixedCapacity": 900,
+    "floatingCapacity": 450,
+    "name": "Chennai Grande",
+    "roomPrice": 3800,
+    "rooms": 70,
+    "slug": "chennai-grande-u4n7xj",
+    "type": "Hotels"
   },
   {
     "email": "reservations@puneinn.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Koregaon Park, Pune",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Pune",
+    "decorPrice": 14000,
+    "fixedCapacity": 950,
+    "floatingCapacity": 475,
+    "name": "Pune Inn",
+    "roomPrice": 4100,
+    "rooms": 65,
+    "slug": "pune-inn-8d3zqk",
+    "type": "Restaurant/Party Lounge"
   },
   {
     "email": "info@royalkolkata.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Park Street, Kolkata",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Kolkata",
+    "decorPrice": 12500,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Royal Kolkata",
+    "roomPrice": 3900,
+    "rooms": 85,
+    "slug": "royal-kolkata-w2h5nv",
+    "type": "Resorts"
   },
   {
     "email": "sarfarajansari2000@gmail.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Kanpur road, Lucknow",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Lucknow",
+    "decorPrice": 8999,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Hotel Paradise",
+    "roomPrice": 3000,
+    "rooms": 50,
+    "slug": "hotel-paradise-m7d9kc",
+    "type": "Banquet Halls"
   },
   {
     "email": "contact@jaipurpalace.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "MI Road, Jaipur",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Jaipur",
+    "decorPrice": 13500,
+    "fixedCapacity": 1050,
+    "floatingCapacity": 525,
+    "name": "Jaipur Palace",
+    "roomPrice": 4200,
+    "rooms": 60,
+    "slug": "jaipur-palace-l0v6zr",
+    "type": "Lawns/FarmHouses"
   },
   {
     "email": "info@gurugramresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Sector 29, Gurugram",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Gurugram",
+    "decorPrice": 16000,
+    "fixedCapacity": 1150,
+    "floatingCapacity": 575,
+    "name": "Gurugram Resort",
+    "roomPrice": 4800,
+    "rooms": 95,
+    "slug": "gurugram-resort-q3t5xw",
+    "type": "Resorts"
   },
   {
     "email": "reservations@goaresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Baga Beach, Goa",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Goa",
+    "decorPrice": 18000,
+    "fixedCapacity": 1300,
+    "floatingCapacity": 650,
+    "name": "Goa Beach Resort",
+    "roomPrice": 7500,
+    "rooms": 60,
+    "slug": "goa-beach-resort-h1f9pz",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "contact@udaipurpalace.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Lake Pichola, Udaipur",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Udaipur",
+    "decorPrice": 17500,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Udaipur Palace",
+    "roomPrice": 6000,
+    "rooms": 70,
+    "slug": "udaipur-palace-a8j6qy",
+    "type": "Banquet Halls"
   },
   {
     "email": "info@chandigarhlakeview.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Sukhna Lake, Chandigarh",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Chandigarh",
+    "decorPrice": 15000,
+    "fixedCapacity": 1200,
+    "floatingCapacity": 600,
+    "name": "Chandigarh Lakeview",
+    "roomPrice": 4300,
+    "rooms": 85,
+    "slug": "chandigarh-lakeview-r5t2wf",
+    "type": "Hotels"
   },
   {
     "email": "reservations@ahmedabadinn.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "CG Road, Ahmedabad",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Ahmedabad",
+    "decorPrice": 14000,
+    "fixedCapacity": 950,
+    "floatingCapacity": 475,
+    "name": "Ahmedabad Inn",
+    "roomPrice": 3900,
+    "rooms": 70,
+    "slug": "ahmedabad-inn-v3k8hy",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "contact@chennaiheritage.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Marina Beach, Chennai",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Chennai",
+    "decorPrice": 15500,
+    "fixedCapacity": 1050,
+    "floatingCapacity": 525,
+    "name": "Chennai Heritage",
+    "roomPrice": 4500,
+    "rooms": 80,
+    "slug": "chennai-heritage-l4z9up",
+    "type": "Hotels"
   },
   {
     "email": "info@indoregrand.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "MG Road, Indore",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Indore",
+    "decorPrice": 13000,
+    "fixedCapacity": 850,
+    "floatingCapacity": 425,
+    "name": "Indore Grand",
+    "roomPrice": 3700,
+    "rooms": 55,
+    "slug": "indore-grand-x2d7ey",
+    "type": "Restaurant/Party Lounge"
   },
   {
     "email": "reservations@agrainn.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Tajganj, Agra",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Agra",
+    "decorPrice": 16000,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Agra Inn",
+    "roomPrice": 4200,
+    "rooms": 65,
+    "slug": "agra-inn-f9k2mj",
+    "type": "Lawns/FarmHouses"
   },
   {
     "email": "info@kanpurhotel.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Mall Road, Kanpur",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Kanpur",
+    "decorPrice": 11000,
+    "fixedCapacity": 900,
+    "floatingCapacity": 450,
+    "name": "Kanpur Hotel",
+    "roomPrice": 3500,
+    "rooms": 50,
+    "slug": "kanpur-hotel-c8r7zl",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "contact@kochiresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Marine Drive, Kochi",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Kochi",
+    "decorPrice": 14000,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Kochi Resort",
+    "roomPrice": 3900,
+    "rooms": 60,
+    "slug": "kochi-resort-t6v4mp",
+    "type": "Resorts"
   },
   {
     "email": "reservations@nagpurinn.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Sadar, Nagpur",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Nagpur",
+    "decorPrice": 12000,
+    "fixedCapacity": 950,
+    "floatingCapacity": 475,
+    "name": "Nagpur Inn",
+    "roomPrice": 3600,
+    "rooms": 55,
+    "slug": "nagpur-inn-b3w8nf",
+    "type": "Hotels"
   },
   {
     "email": "info@dehradunresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Rajpur Road, Dehradun",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Dehradun",
+    "decorPrice": 13000,
+    "fixedCapacity": 850,
+    "floatingCapacity": 425,
+    "name": "Dehradun Resort",
+    "roomPrice": 3800,
+    "rooms": 50,
+    "slug": "dehradun-resort-y5l1hj",
+    "type": "Restaurant/Party Lounge"
   },
   {
     "email": "contact@thaneresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Ghodbunder Road, Thane",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Thane",
+    "decorPrice": 15000,
+    "fixedCapacity": 1000,
+    "floatingCapacity": 500,
+    "name": "Thane Resort",
+    "roomPrice": 4200,
+    "rooms": 60,
+    "slug": "thane-resort-v9p6zw",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "reservations@surathotel.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Ring Road, Surat",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Surat",
+    "decorPrice": 14000,
+    "fixedCapacity": 900,
+    "floatingCapacity": 450,
+    "name": "Surat Hotel",
+    "roomPrice": 3700,
+    "rooms": 65,
+    "slug": "surat-hotel-q3w4tr",
+    "type": "Banquet Halls"
   },
   {
     "email": "info@vadodaraheritage.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Alkapuri, Vadodara",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Vadodara",
+    "decorPrice": 15000,
+    "fixedCapacity": 950,
+    "floatingCapacity": 475,
+    "name": "Vadodara Heritage",
+    "roomPrice": 3800,
+    "rooms": 70,
+    "slug": "vadodara-heritage-g1z9lc",
+    "type": "Resorts"
   },
   {
     "email": "contact@vizagresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Beach Road, Visakhapatnam",
+    "album": "",
+    "banquet": "Outdoor",
+    "city": "Visakhapatnam",
+    "decorPrice": 16000,
+    "fixedCapacity": 1200,
+    "floatingCapacity": 600,
+    "name": "Vizag Resort",
+    "roomPrice": 5000,
+    "rooms": 75,
+    "slug": "vizag-resort-p6j3kv",
+    "type": "Lawns/FarmHouses"
   },
   {
     "email": "reservations@raipurinn.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "GE Road, Raipur",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Raipur",
+    "decorPrice": 13000,
+    "fixedCapacity": 900,
+    "floatingCapacity": 450,
+    "name": "Raipur Inn",
+    "roomPrice": 3700,
+    "rooms": 55,
+    "slug": "raipur-inn-t2g4yz",
+    "type": "Restaurant/Party Lounge"
   },
   {
     "email": "info@coimbatoreresort.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "RS Puram, Coimbatore",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Coimbatore",
+    "decorPrice": 14000,
+    "fixedCapacity": 950,
+    "floatingCapacity": 475,
+    "name": "Coimbatore Resort",
+    "roomPrice": 3800,
+    "rooms": 60,
+    "slug": "coimbatore-resort-w8m2zx",
+    "type": "4 Star and Above Hotels"
   },
   {
     "email": "contact@jalandharinn.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "GT Road, Jalandhar",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Jalandhar",
+    "decorPrice": 13000,
+    "fixedCapacity": 850,
+    "floatingCapacity": 425,
+    "name": "Jalandhar Inn",
+    "roomPrice": 3600,
+    "rooms": 55,
+    "slug": "jalandhar-inn-k7q9nt",
+    "type": "Banquet Halls"
   },
   {
     "email": "reservations@ranchihotel.com",
-    "cover": "https://via.placeholder.com/150",
-    "album": []
+    "address": "Main Road, Ranchi",
+    "album": "",
+    "banquet": "Indoor",
+    "city": "Ranchi",
+    "decorPrice": 12000,
+    "fixedCapacity": 900,
+    "floatingCapacity": 450,
+    "name": "Ranchi Hotel",
+    "roomPrice": 3500,
+    "rooms": 50,
+    "slug": "ranchi-hotel-y9k4pz",
+    "type": "Hotels"
   }
 ]
+
+
+
+
+
+
+https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938576_2023_09_18.jpg?crop=6,91,1009,567
+https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938579_entrance.jpg?crop=6,84,1009,567
+https://image.wedmegood.com/resized/540X/uploads/member/11518/1715938577_radisson_blu_resort_spa__1_.jpg?crop=10,120,1182,665
+https://image.wedmegood.com/resized/1000X/uploads/member/19275/1683092720_DJI_0925.jpg?crop=13,32,2022,1138
+https://image.wedmegood.com/resized/450X/uploads/member/4558760/1693224693_Screenshot_from_2023_08_28_17_37_29.png?crop=3,211,462,260
+https://image.wedmegood.com/resized/450X/uploads/member/70722/1601879906_GF_mum.jpg?crop=11,28,1193,671
+https://image.wedmegood.com/resized/450X/uploads/member/20460/1442989723_img6.jpg
+https://images.wedmegood.com/react-frontend-v4/static/media/NewInfoIconCropped.5709ead4.png
+https://image.wedmegood.com/resized/450X/uploads/member/545639/1692861862_exterior.jpg?crop=5,136,1012,569
+https://image.wedmegood.com/resized/450X/uploads/member/19642/1442212568_slider_3.jpg
+
+
+
+

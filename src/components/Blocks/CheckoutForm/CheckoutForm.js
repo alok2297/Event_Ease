@@ -35,7 +35,7 @@ export const CheckoutForm = (props) => {
 
     const handleSubmit = async (e) => {
         try {
-            const response = await booking({...formData, email: data.email})
+            const response = await booking({ ...formData, email: data.email })
             if (response.ok) {
                 setMessage("Your request is submitted!!")
             }
@@ -85,27 +85,32 @@ export const CheckoutForm = (props) => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
-                    <input
-                        type="number"
-                        name="numberOfGuests"
-                        placeholder='Number of guest* (min 50)'
-                        min="20"
-                        max="500"
-                        required
-                        value={formData.numberOfGuests}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <input
-                        type="number"
-                        name="numberOfRooms"
-                        placeholder='Number of rooms'
-                        value={formData.numberOfRooms}
-                        onChange={handleChange}
-                    />
-                </div>
+                {
+                    data.vegPrice &&
+                    <React.Fragment>
+                        <div>
+                            <input
+                                type="number"
+                                name="numberOfGuests"
+                                placeholder='Number of guest* (min 50)'
+                                min="20"
+                                max="500"
+                                required
+                                value={formData.numberOfGuests}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="number"
+                                name="numberOfRooms"
+                                placeholder='Number of rooms'
+                                value={formData.numberOfRooms}
+                                onChange={handleChange}
+                            />
+                        </div>
+                    </React.Fragment>
+                }
             </div>
             <div className='radio-container'>
                 <div>

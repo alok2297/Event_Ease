@@ -63,7 +63,7 @@ const Information = () => {
             <div className="left-section">
               <InfoHeader hotelInfo={data}/>
               {/* <InfoPageNav/> */}
-              <InfoAreas areas={areasAvailable}/>
+              <InfoAreas data={data} areas={areasAvailable}/>
               <InfoPortfolio/>
             </div>
             <div className="right-section">

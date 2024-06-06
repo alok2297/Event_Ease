@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, MenuItem, Select, FormControl, InputLabel, Button, Grid } from '@mui/material';
 import cities from "../../../Data/Cities.json"
-import { setBanquet, getBanquet } from 'Api/services';
+import { setBanquet, getBanquet, getAdmin } from 'Api/services';
 
 export const Banquets = () => {
+  const [adminData, setAdminData] = useState()
   const [formData, setFormData] = useState({
     name: '',
     fixedCapacity: '',
@@ -15,18 +16,39 @@ export const Banquets = () => {
     banquet: '',
     album: '',
     city: '',
+    pricing: '',
   });
 
+  const banquetType = [
+    "4 Star and Above Hotels",
+    "Banquet Halls",
+    "Lawns/FarmHouses",
+    "Hotels",
+    "Resorts",
+    "Restaurant/Party Laounge",
+  ]
+
+  const fetchData = async () => {
+    try {
+      const data = await getBanquet();
+      setFormData({ ...data });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const getAdminData = async () => {
+    try {
+      const data = await getAdmin();
+      setAdminData(data.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getBanquet();
-        setFormData({...data});
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
     fetchData();
+    getAdminData();
   }, [])
 
   const handleChange = (e) => {
@@ -34,13 +56,13 @@ export const Banquets = () => {
   };
 
   const handleSave = async () => {
-    await setBanquet({...formData})
+    await setBanquet({ ...formData, type: adminData.vendorType })
   };
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
       <h1 className='content-heading'>
-        Add New Banquet
+        Add New Service
       </h1>
       <form noValidate autoComplete="off">
         <Grid container spacing={3}>
@@ -84,57 +106,80 @@ export const Banquets = () => {
               onChange={handleChange}
             />
           </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              label="Fixed Capacity"
-              variant="outlined"
-              type="number"
-              name="fixedCapacity"
-              value={formData.fixedCapacity}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              label="Floating Capacity"
-              variant="outlined"
-              type="number"
-              name="floatingCapacity"
-              value={formData.floatingCapacity}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              label="Number of rooms"
-              variant="outlined"
-              type="number"
-              name="rooms"
-              value={formData.rooms}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <FormControl variant="outlined" fullWidth required>
-              <InputLabel>Select Banquet</InputLabel>
-              <Select
-                name="banquet"
-                value={formData.banquet}
-                onChange={handleChange}
-                label="Select Banquet"
-              >
-                <MenuItem disabled>Select Banquet</MenuItem>
-                <MenuItem value="Indoor">Indoor</MenuItem>
-                <MenuItem value="Outdoor">Outdoor</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
+          {
+            adminData && adminData.vendorType === "Venues" &&
+            <React.Fragment>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  label="Fixed Capacity"
+                  variant="outlined"
+                  type="number"
+                  name="fixedCapacity"
+                  value={formData.fixedCapacity}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  label="Floating Capacity"
+                  variant="outlined"
+                  type="number"
+                  name="floatingCapacity"
+                  value={formData.floatingCapacity}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  label="Number of rooms"
+                  variant="outlined"
+                  type="number"
+                  name="rooms"
+                  value={formData.rooms}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <FormControl variant="outlined" fullWidth required>
+                  <InputLabel>Select Banquet</InputLabel>
+                  <Select
+                    name="banquet"
+                    value={formData.banquet}
+                    onChange={handleChange}
+                    label="Select Banquet"
+                  >
+                    <MenuItem disabled>Select Banquet</MenuItem>
+                    <MenuItem value="Indoor">Indoor</MenuItem>
+                    <MenuItem value="Outdoor">Outdoor</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12}>
+                <FormControl variant="outlined" fullWidth required>
+                  <InputLabel>Select Banquet Type</InputLabel>
+                  <Select
+                    name="type"
+                    value={formData.type}
+                    onChange={handleChange}
+                    label="Select Banquet Type"
+                  >
+                    <MenuItem disabled>Select Banquet Type</MenuItem>
+                    {
+                      banquetType.map((item, idx) => (
+                        <MenuItem key={idx} value={item}>{item}</MenuItem>
+                      ))
+                    }
+                  </Select>
+                </FormControl>
+              </Grid>
+            </React.Fragment>
+          }
           <Grid item xs={12}>
             <FormControl variant="outlined" fullWidth>
               <InputLabel>Select Album</InputLabel>
@@ -149,7 +194,10 @@ export const Banquets = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12}>
+          {
+            adminData && adminData.vendorType === "Venues" ?
+            <React.Fragment>
+                        <Grid item xs={12}>
             <TextField
               required
               fullWidth
@@ -173,6 +221,21 @@ export const Banquets = () => {
               onChange={handleChange}
             />
           </Grid>
+            </React.Fragment>
+            :
+            <Grid item xs={12}>
+            <TextField
+              required
+              fullWidth
+              label="Pricing"
+              variant="outlined"
+              type="number"
+              name="pricing"
+              value={formData.pricing}
+              onChange={handleChange}
+            />
+          </Grid>
+          }
           <Grid item xs={12}>
             <Button variant="contained" color="primary" style={{ backgroundColor: '#e72e77' }} onClick={handleSave}>
               Update

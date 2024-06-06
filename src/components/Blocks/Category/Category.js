@@ -3,6 +3,7 @@ import { Container } from "../../Elements/Container"
 import { Iconify } from "../../Elements/Icon";
 import { Breadcrumbs } from "../../Elements/Breadcrumbs";
 import { useNavigate } from "react-router-dom";
+import { slugify } from 'Utility';
 
 const Category = (props) => {
     const links = [
@@ -19,7 +20,12 @@ const Category = (props) => {
     const navigate = useNavigate();
 
     const handleClick = (item) => {
-        navigate("/venues")
+        if(item.slug === "venues"){
+            navigate("/venues")
+        }
+        else{
+            navigate(`/venues/category/${slugify(item.slug)}`)
+        }
     }
 
     const viewAll = () => {

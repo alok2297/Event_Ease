@@ -26,7 +26,7 @@ const Sidebar = ({ setPage, selectedPage }) => {
           className={selectedPage === 'banquets' ? 'active' : ''}
           onClick={() => setPage('banquets')}
         >
-          Banquets
+          Services
         </li>
         <li
           className={selectedPage === 'bookings' ? 'active' : ''}

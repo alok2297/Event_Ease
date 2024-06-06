@@ -76,14 +76,14 @@ export const booking = async ({email, userEmail, fullName, contactNumber, functi
   }
 };
 
-export const setBanquet = async ( {name, city, address, fixedCapacity, floatingCapacity, rooms, decorPrice, roomPrice, banquet, album}) => {
+export const setBanquet = async ( {name, city, address, fixedCapacity, floatingCapacity, rooms, decorPrice, roomPrice, banquet, album, type, pricing }) => {
   try {
     const response = await fetch('http://localhost:4000/api/vendors/set-banquet', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, name, city, address, fixedCapacity, floatingCapacity, rooms, decorPrice, roomPrice, banquet, album }),
+      body: JSON.stringify({ email, name, city, address, fixedCapacity, floatingCapacity, rooms, decorPrice, roomPrice, banquet, album, type, pricing }),
     });
 
     if (!response.ok) {
@@ -300,6 +300,28 @@ export const getVenue = async (slug) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ slug }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
+
+export const getAdmin = async () => {
+  try {
+    const response = await fetch(`http://localhost:4000/api/vendors/admin`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
     });
 
     if (!response.ok) {

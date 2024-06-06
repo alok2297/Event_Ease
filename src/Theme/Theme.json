@@ -88,6 +88,26 @@
         }
       ]
     },
+    "/venues/:id": {
+      "title": "Venue",
+      "component": "VenueSection",
+      "child": [
+        {
+          "component": "VenueSection",
+          "attributes": {}
+        }
+      ]
+    },
+    "/venues/category/:id": {
+      "title": "Venue",
+      "component": "VenueSection",
+      "child": [
+        {
+          "component": "VenueSection",
+          "attributes": {}
+        }
+      ]
+    },
     "/genie": {
       "title": "Genie",
       "component": "GenieService",
@@ -104,6 +124,16 @@
       "child": [
         {
           "component": "Vendors",
+          "attributes": {}
+        }
+      ]
+    },
+    "/vendors/:id": {
+      "title": "Venue",
+      "component": "VenueSection",
+      "child": [
+        {
+          "component": "VenueSection",
           "attributes": {}
         }
       ]

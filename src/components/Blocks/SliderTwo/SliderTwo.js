@@ -1,7 +1,7 @@
 import './SliderTwo.css';
 import { Container } from "../../Elements/Container"
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Iconify } from "../../Elements/Icon";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,9 +9,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { getVenues } from "Api/services";
+import { slugify } from 'Utility';
 
 const SliderTwo = () => {
   const [swiperRef, setSwiperRef] = useState(null);
+  const [data, setData] = useState("");
+
   const navigate = useNavigate();
   const prevHandler = () => {
     swiperRef.slidePrev();
@@ -23,7 +27,7 @@ const SliderTwo = () => {
 
   const handleClick = (event, item) => {
     event.preventDefault();
-    navigate("/venues")
+    navigate(`/venues/category/${slugify(item)}`)
   }
 
   const breakPoints = {
@@ -45,41 +49,82 @@ const SliderTwo = () => {
 
   const slides = [
     {
-      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
-      name: "Vedika and Rishi"
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg",
+      name: "Bridal Wear"
     },
     {
       img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/2/mua.jpg",
-      name: "Vedika and Rishi"
-    },
-    {
-      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg",
-      name: "Vedika and Rishi"
+      name: "Jewellery"
     },
     {
       img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/6/groom-wear.jpg",
-      name: "Vedika and Rishi"
+      name: "Groom Wear"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Wedding Pandits"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/2/mua.jpg",
+      name: "Bartenders"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Pre Wedding Shoot Locations"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/2/mua.jpg",
+      name: "Beauty and Wellness"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Photographers"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/2/mua.jpg",
+      name: "Bridal Makeup"
     },
     {
       img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/8/decorators.jpg",
-      name: "Vedika and Rishi"
+      name: "Decorators"
     },
     {
-      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg",
-      name: "Vedika and Rishi"
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/2/mua.jpg",
+      name: "Mehendi Artist"
     },
     {
-      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg",
-      name: "Vedika and Rishi"
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Catering Services"
     },
     {
-      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/1/bridal-wear.jpg",
-      name: "Vedika and Rishi"
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Wedding Entertainment"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Sangeet Choreographer"
+    },
+    {
+      img: "https://image.wedmegood.com/resized/300X/uploads/banner_image/3/photography.jpg",
+      name: "Pre Wedding Photographers"
     }
-  ];
+  ];  
+
+  const fetchData = async () => {
+    try {
+      const data = await getVenues();
+      setData(data.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+      fetchData();
+  }, [])
 
   return (<Container children={
-    <><div className="real-wedding-popular">Popular Searchers</div><div className="slider-container">
+    <><div className="real-wedding-popular">Popular Searches</div><div className="slider-container">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -91,7 +136,7 @@ const SliderTwo = () => {
       >
         {
           slides.map((item, id) => (
-            <SwiperSlide onClick={(e)=>handleClick(e,item)}key={id}>
+            <SwiperSlide onClick={(e)=>handleClick(e,item.name)}key={id}>
               <div className="wrapper-slider">
                 <div>
                   <div className="wrapper-image">

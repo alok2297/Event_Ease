@@ -10,6 +10,7 @@ export const ScrollToTop = () => {
 }
 
 export function slugify(Text) {
+  if(!Text) return
   return Text.toLowerCase()
     .trim()
     .replace(/[^\w\s-]/g, "")
@@ -40,7 +41,16 @@ export function getRandomColor() {
   );
 }
 
-export function getNumbersFromString (str) {
+export function getNumbersFromString(str) {
   const matches = str?.match(/\d+/g);
   return matches ? matches?.join('') : '';
 };
+
+export function deslugify(slug) {
+  return slug
+    .split('-')
+    .map(word =>
+      word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join(' ');
+}
